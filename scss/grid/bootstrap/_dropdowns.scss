@@ -49,13 +49,13 @@
   // Links within the dropdown menu
   > li {
     width: 100%;
-    > a {
+    a {
       display: block;
       padding: 8px 15px;
       clear: both;
       font-weight: normal;
       line-height: $line-height-base;
-      color: $dropdown-link-color;
+      color: $black;
       white-space: nowrap; // prevent links from randomly breaking onto new lines
     }
     &:first-child, 
@@ -70,7 +70,7 @@
 }
 
 // Hover/Focus state
-.dropdown-menu > li > a {
+.dropdown-menu > li a {
   &:hover,
   &:focus {
     text-decoration: none;

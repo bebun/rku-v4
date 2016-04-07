@@ -181,8 +181,10 @@
 			}
 			.love {
 				i {
+					display: inline-block;
+					padding-top: 3px;
 					vertical-align: middle;
-					color: $link;
+					color: $pink;
 				}
 			}
 		}
@@ -1049,13 +1051,13 @@
 				* {
 					color: $white;
 				}
+				span {
+					font-size: em(12);
+					display: block;
+				}
 			}
 			.price {
 				font-family: 'hind_bold', sans-serif;
-			}
-			span {
-				font-size: em(12);
-				display: block;
 			}
 		}
 		#area-agent {

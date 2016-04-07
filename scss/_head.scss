@@ -1,12 +1,57 @@
 header { 
 	position: relative;
 	z-index: $four;
-	
+	.select-location {
+		vertical-align: middle;
+		button {
+			padding: 6px 15px;
+			background-color: transparent;
+			@include transition(.1s ease-in);
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				@include border-radius(3px);
+			}
+		}
+	}
+	.property-type {
+		.dropdown-menu {
+			min-width: 350px;
+			> li {
+				a {
+					display: inline-block;
+				}
+				&:after {
+					@include clear;
+				}
+				&:last-child {
+					text-align: center;
+					a {
+						display: block;
+						color: $gray;
+						background-color: $softwhite;
+						border-top: 1px solid $softwhite2;
+						&:hover {
+							color: $green;
+						}
+					}
+				}
+			}
+		}
+		li {
+			> ul {
+				display: block;
+				padding: 5px 0;
+			}
+			li {
+				float: none;
+			}
+		}
+	}
 	.notification {
 		.notif-list {
 			border-radius: 3px 0 3px 3px;
 			padding: 0 15px;
-			min-width: 300px;
+			min-width: 350px;
 			.list-name {
 				font-size: em(11);
 				letter-spacing: 1px;

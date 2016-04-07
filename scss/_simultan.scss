@@ -16,10 +16,11 @@
 
 .rku-logo {
 	display: block;;
-	width: 169px;
-	height: 21px;
-	margin-top: 8px;
+	width: 145px;
+	height: 18px;
+	margin-top: 10px;
 	background: url(../images/rku-logo.png) no-repeat scroll;
+	background-size: cover;
 	text-indent: -9999em;
 	vertical-align: middle;
 }
@@ -158,10 +159,8 @@
 }
 
 .full-image-container {
-	position: relative;
 	width: 100%;
 	display: block;
-	overflow: hidden;
 	.full-image-in-box {
 		display: block;
 		width: 100%;

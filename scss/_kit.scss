@@ -17,9 +17,7 @@
 
 @import "font";
 
-html, body {
-	height: 100%;
-}
+
 
 html, body {
 	color: $text;
@@ -114,7 +112,7 @@ strong {
 		font-size: em(13);
 	}
 	&.md {
-		padding: 6px 25px;
+		padding: 7px 25px;
 		height: 35px;
 		min-width: 140px;
 		font-size: em(14);
@@ -156,6 +154,9 @@ strong {
 		}
 		&.purple {
 			@include btnbg($purple);
+		}
+		&.white {
+			@include btnbg($white);
 		}
 	}
 	&.no-bg {
@@ -307,11 +308,11 @@ textarea,
 	}
 	.dropdown-menu {
 		left: -1px;
-		min-width: 250px;
+		min-width: 101%;
 		max-height: 250px;
 		border: 1px solid darken($border, 10%);
 		overflow-y: auto;
-		@include border-radius(0 3px 3px 3px);
+		@include border-radius(0 0 3px 3px);
 		@include box-shadow(none);
 		li {
 			a {
@@ -458,7 +459,7 @@ textarea,
 					position: absolute;
 					top: 2.5px; 
 					left: 4px;
-					font-size: em(11);
+					font-size: em(10);
 					line-height: 0.8;
 					color: #09ad7e;
 					transition: all .2s;

@@ -10,9 +10,8 @@
 
 .navbar {
   position: relative;
-  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: 0;
-  padding: 7px 0;
+  padding: 3px 0;
 
   // Prevent floats from breaking the navbar
   @include clearfix;
@@ -207,7 +206,7 @@
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
     float: left;
-    margin: 0 0 0 15px;
+    margin: 3px 0 0 15px;
 
     li {
       float: left;
@@ -317,6 +316,7 @@
       i {
         color: $black;
       }
+
     }
 
     @media (max-width: $grid-float-breakpoint-max) {
@@ -333,6 +333,8 @@
         }
       }
       .open .dropdown-menu {
+        left: -1px;
+        @include border-radius(0 3px 3px 3px);
         > li > a {
           color: $white;
           padding: 8px 30px;

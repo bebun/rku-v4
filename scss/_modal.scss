@@ -1,0 +1,16 @@
+.has-modal-position {
+	height: 100%;
+	margin: 0 auto;
+	.modal-center {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+}
+
+#setLocation {
+	.modal-dialog {
+		width: 33.33333%;
+	}
+}
