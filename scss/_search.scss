@@ -1,0 +1,45 @@
+#main-search {
+	position: relative;
+	z-index: $two;
+	background-color: #fafafa;
+	border-bottom: 1px solid $border;
+	@include box-shadow(0 1px 5px rgba(155, 159, 162, 0.7));
+	.main-search-info {
+		padding: 15px 0;
+		i {
+			color: $black;
+		}
+	}
+	.for-location-search {
+		input {
+			padding-right: 35px;
+		}
+	}
+	.free-text {
+		background-color: #fafafa;
+		border-color: #e6e6e6;
+	}
+	.search-detail {
+		padding: 7px 0 6px;
+		color: $green;
+		i {
+			font-size: em(8);
+			color: $green;
+		}
+	}
+	#search-detail-content {
+		display: none;
+		padding: 30px 0;
+		background-color: #fcfcfc;
+		border-top: 1px solid lighten($border, 18%);
+		.dropdown-menu {
+			min-width: 115%;
+		}
+		.form-group {
+			margin-bottom: 15px;
+		}
+		&.open {
+			display: block;
+		}
+	}
+}

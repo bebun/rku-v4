@@ -1,0 +1,32 @@
+header { 
+	position: relative;
+	z-index: $four;
+	
+	.notification {
+		.notif-list {
+			border-radius: 3px 0 3px 3px;
+			padding: 0 15px;
+			min-width: 300px;
+			.list-name {
+				font-size: em(11);
+				letter-spacing: 1px;
+				position: relative;
+				font-family: 'hind_bold', Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				span {
+					display: inline-block;
+					background-color: $white;
+					padding: 10px 15px 10px 0;
+				}
+				&:before {
+					content: '';
+					border-bottom: 1px solid $border;
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}

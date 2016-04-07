@@ -1,0 +1,132 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+// The dropdown wrapper (div)
+.dropup,
+.dropdown {
+  position: relative;
+}
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+// The dropdown menu (ul)
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $one;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: 200px;
+  padding: 0;
+  margin: 0; // override default ul
+  list-style: none;
+  font-size: $font-size-base;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background-color: $white;
+  background-clip: padding-box;
+  @include border-radius(0 3px 3px 3px);
+  @include box-shadow(0 2px 5px rgba(0,0,0,.4));
+
+  // Aligns the dropdown menu to right
+  //
+  // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+    @include nav-divider($dropdown-divider-bg);
+  }
+
+  // Links within the dropdown menu
+  > li {
+    width: 100%;
+    > a {
+      display: block;
+      padding: 8px 15px;
+      clear: both;
+      font-weight: normal;
+      line-height: $line-height-base;
+      color: $dropdown-link-color;
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+    }
+    &:first-child, 
+    &:first-child > a {
+      border-radius: 0 3px 0 0;
+    }
+    &:last-child, 
+    &:last-child > a {
+      @include border-bottom-radius(3px);
+    }
+  }
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $green;
+  }
+}
+
+// Open state for the dropdown
+.open {
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  // Reverse the caret
+  .caret {
+    border-top: 0;
+    border-bottom: $caret-width-base dashed;
+    border-bottom: $caret-width-base solid \9; // IE8
+    content: "";
+  }
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+    @include border-radius(3px);
+    @include box-shadow(0 -2px 5px rgba(0,0,0,.4));
+  }
+}
+
+
+// Component alignment
+//
+// Reiterate per navbar.less and the modified component alignment there.
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-right {
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+    // Necessary for overrides of the default right aligned menu.
+    // Will remove come v4 in all likelihood.
+    .dropdown-menu-left {
+      left: 0;
+      right: auto;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.top-foot {
+	padding: 5px 0;
+	background-color: $black;
+	height: 34px;
+	overflow: hidden;
+	&.open {
+		height: 342px;
+	}
+	.open-more {
+		display: block;
+		font-size: em(12);
+		color: $gray2;
+		&:hover {
+			color: $white;
+		}
+	}
+	.title {
+		font-family: 'hind_bold', sans-serif;
+		font-size: em(13);
+		margin-bottom: 10px;
+	}
+	.title, .short-link-list > li > a {
+		color: $white;
+	}
+	.top-foot-content {
+		margin: 10px 0;
+	}
+	.short-link {
+		padding-bottom: 30px;
+		border-bottom: 1px solid #0e0e10;
+	}
+	.popular-link {
+		padding-top: 30px;
+		border-top: 1px solid #2e2e34;
+		line-height: em(18);
+		.title {
+			margin-bottom: 0;
+		}
+		p {
+			display: inline;
+			font-size: em(11);
+			a {
+				color: $white;
+				&:after {
+					content: ',';
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.short-link-list > li {
+		font-size: em(11);
+		line-height: em(24);
+		> a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.dropdown-menu {
+		max-height: 210px;
+		overflow: auto;
+		li > a {
+			&:hover {
+				color: $link;
+			}
+		}
+	}
+}
+
+.mid-foot {
+	background-color: #1a1a1e;
+	padding: 15px 0;
+	li {
+		float: left;
+		margin-right: 30px;
+		font-size: em(11);
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			color: $white;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&:after {
+		@include clear;
+	}
+	.social-media-link {
+		float: right;
+		font-size: em(21);
+		li {
+			margin-right: 0;
+			margin-left: 15px;
+			a:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.bottom-foot {
+	background-color: #0e0e10;
+	padding: 15px 0;
+	.rku-logo {
+		width: 113px;
+		height: 14px;
+		background-size: cover;
+	}
+	p {
+		color: #7e7e8d;
+		font-size: em(11);
+		line-height: em(28);
+	}
+	.sponsored {
+		display: inline-block;
+		padding: 8px 0 7px;
+	}
+}

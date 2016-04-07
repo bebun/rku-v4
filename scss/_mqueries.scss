@@ -1,0 +1,479 @@
+@media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+	html, body {
+		font-size: 13px;
+	}
+	#content {
+		#priority-property { 
+			.priority { 
+				.text {
+					p, .spec {
+						line-height: em(21);
+					}
+				}
+			}
+		}
+		#property-list {
+			.property-image {
+				height: 190px;
+			}
+		}
+		.property-others {
+			.others-content {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+@media (max-width: $screen-lg-min) {
+	#content {
+		.property-others {
+			.others-content {
+				margin-bottom: 15px;
+			}
+		}
+		.property-calculator {
+			.fixed-data, .flex-data {
+				margin-left: -15px;
+			}
+		}
+		.mortgage-detail, .apply {
+			padding: 0 15px;
+		}
+		.mortgage-detail {
+			margin-top: 15px;
+		}
+	}
+}
+@media (max-width: $screen-md-min) {
+
+	.on-desktop {
+		display: none;
+	}
+	.no-side-pad {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.no-left-pad {
+		padding-left: 15px;
+	}
+	.no-right-pad {
+		padding-right: 15px;
+	}
+	.btn {
+		&.sm, &.md, &.lg {
+			min-width: 0;
+		}
+	}
+	#breadscrumb {
+		ul {
+			width: 100%;
+			white-space: nowrap;
+			overflow: auto;
+			li {
+				font-size: em(14);
+				padding: 10px 0;
+			}
+		}
+	}
+	.select {
+		.free-text {
+			padding: 15px 15px 0;
+		}
+	}
+	.main-search-info {
+		.form-group {
+			margin-bottom: 15px;
+		}
+		.search-detail {
+			text-align: center;
+		}
+	}
+	#content { 
+		#priority-property {
+			padding-left: 0;
+			.priority {
+				.priority-price {
+					font-size: em(18);
+				}
+				.text {
+					bottom: -65%;
+					p {
+						font-size: em(12);
+						line-height: em(18);
+					}
+				}
+				.spec {
+					font-size: em(12);
+					line-height: em(18);
+				}
+				.priority-content {
+					top: 0;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.2);
+					@include filter-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1), vertical);
+					@include background-image(linear-gradient(top,  rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%));
+				}
+				.text {
+					bottom: 0;
+					height: 100%;
+					p {
+						font-size: em(12);
+						line-height: em(18);
+					}
+				}
+				.call {
+					bottom: 15px;
+				}
+				.priority-price {
+					font-size: em(18);
+				}
+				.spec {
+					font-size: em(12);
+				}
+			}
+		}
+		#property-list {
+			margin-bottom: 80px;
+			.property-list-content {
+				margin: 0;
+			}
+			.property-list-info {
+				margin-left: -15px;
+			}
+			.property-image {
+				height: 200px;
+			}
+		}
+		#top-section {
+			#hero-container {
+				.hero-image {
+					height: 250px;
+					@include border-radius(3px 3px 0 0);
+				}
+				.hero-content {
+					background-color: $black;
+					position: relative;
+					font-size: em(14);
+					@include border-radius(0 0 3px 3px);
+					.property-title {
+						font-size: em(14);
+					}
+					.hero-short-information {
+						margin-bottom: 0;
+						.right {
+							float: none;
+						}
+						.detail-property-price {
+							text-align: left;
+							h4 {
+								margin: 5px 0;
+								font-size: em(18);
+							}
+							.mortgage {
+								display: none;
+							}
+						}
+						.total-images { 
+							position: absolute;
+							top: -70px;
+							right: 10px;
+							width: 60px;
+							height: 60px;
+							img {
+								width: 60px;
+								height: 60px;
+							}
+						}
+						p {
+							font-size: em(12);
+						}
+					}
+					.hero-specs {
+						table {
+							display: none;
+						}
+						> div {
+							width: 100%;
+							padding: 10px;
+							font-size: em(13);
+							line-height: em(18);
+							label {
+								color: $gray;
+							}
+							span {
+								font-size: em(14);
+							}
+							div {
+								margin-bottom: 10px;
+							}
+						}
+					}
+				}
+			}
+		} 
+		#detail-sticky-nav { 
+			.sticky-nav-icon { 
+				padding: 0;
+				ul {
+					width: 100%;
+					text-align: center;
+					&, &:last-child {
+						float: left;
+					}
+				}
+				li {
+					width: 25%;
+					margin-bottom: 10px;
+					float: none;
+					text-align: center;
+					&:not(:last-child) {
+						margin-right: 0;
+					}
+				}
+				span {
+					font-size: em(12);
+				}
+				i {
+					font-size: em(18);
+				}
+			}
+		}
+		.mortgage-detail {
+			padding-top: 15px;
+			margin-top: 15px;
+			border-top: 1px solid $border;
+			text-align: center;
+		}
+		#property-information {
+			padding: 50px 0;
+		}
+		#property-mortgage-app {
+			// text-align: center;
+			.property-calculator {
+				.apply {
+					text-align: center;
+				}
+				.form-group {
+					text-align: center;
+					margin-bottom: 15px;
+					&.last {
+						margin-bottom: 15px;
+					}
+				}
+			}
+			.flex-data {
+				.select {
+					.dropdown-toggle {
+						padding: 8px 10px;
+						text-align: left;
+					}
+				}
+			}
+			.sm {
+				height: 35px;
+			}
+		}
+		#property-statistic {
+			.end {
+				float: none;
+			}
+			.quick-stat {
+				text-align: center;
+			}
+			.graph-head {
+				.select {
+					margin-top: 15px;
+					height: 35px;
+					.dropdown-toggle {
+						padding: 6px 10px;
+					}
+				}
+			}
+			.stat-graph-container {
+				.graph-body {
+					height: auto;
+				}
+				.graph-foot {
+					a {
+						margin-top: 15px;
+						text-align: center;
+						font-style: normal;
+					}
+				}
+			}
+		}
+		#property-contact {
+			.contact-info-content {
+				padding-bottom: 0;
+				.photo {
+					float: none;
+				}
+				.contact-photo {
+					margin: 15px auto;
+				}
+				.text {
+					padding-left: 0;
+					text-align: center;
+				}
+				.register {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+	.top-foot {
+		.short-link {
+			text-align: center;
+		}
+		.short-link-list {
+			margin-bottom: 30px;
+		}
+	}
+	.mid-foot {
+		ul {
+			text-align: center;
+		}
+		li {
+			float: none;
+			display: inline-block;
+			margin: 0 15px;
+		}
+		.social-media-link {
+			float: none;
+			margin-top: 30px;
+			text-align: center;
+		}
+	}
+	.bottom-foot {
+		text-align: center;
+		.rku-logo {
+			margin: 8px auto;
+		}
+		.right-align {
+			text-align: center;
+		}
+		.end {
+			float: none;
+		}
+		.sponsored {
+			margin: 15px 0 0;
+		}
+		
+	}
+}
+@media (max-width: $screen-sm-min) {
+	.no-side-pad {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.on-mobile {
+		display: block;
+	}
+	.select {
+		.dropdown-menu {
+			left: 0;
+			min-width: 100%;
+			@include border-radius(0 0 3px 3px);
+		}
+	}
+	#search-title {
+		&, .right-align {
+			text-align: center;
+		}
+	}
+	.view-type {
+		display: none;
+	}
+	#content {
+		&.detail-page {
+			padding-top: 0;
+		}
+		#priority-property {
+			padding-bottom: 0;
+			margin-bottom: 45px;
+			.box {
+				margin-bottom: 30px;
+			}
+			.priority {
+				.priority-content {
+					background-color: rgba(0, 0, 0, 0.2);
+					@include filter-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), vertical);
+					@include background-image(linear-gradient(top,  rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%));
+				}
+				.text {
+					p {
+						font-size: em(14);
+						line-height: em(21);
+					}
+				}
+				.priority-price {
+					font-size: em(21);
+				}
+				.spec {
+					font-size: em(14);
+				}
+			}
+		}
+		#property-list {
+			.property-list-content {
+				padding: 0 15px;
+			}
+			.property-list-action {
+				padding: 15px;
+				text-align: center;
+				.right-align {
+					text-align: center;
+				}
+				.checkbox {
+					margin: 15px 0 0;
+				}
+			}
+			.property-image {
+				height: 200px;
+			}
+			.property-list-info {
+				margin: 15px -15px 0;
+				.property-list-spec {
+					div {
+						display: block;
+					}
+				}
+			}
+		}
+		#content {
+
+		} 
+		#sidebar {
+			position: fixed;
+			left: -9999em;
+		}
+		&:after {
+			@include clear;
+		}
+	}
+	.mortgage {
+		.dropdown-menu {
+			max-width: 260px;
+			min-width: 0;
+		}
+		.mortgage-footer {
+			padding: 15px 15px 0;
+		}
+		button {
+			margin-bottom: 15px;
+		}
+	}
+	#short-article {
+		.short-article-image {
+			img {
+				width: 100%;
+			}
+			&.right, &.left {
+				img {
+					margin: 15px 0;
+					float: none;
+				}
+			}
+		}
+	}
+}

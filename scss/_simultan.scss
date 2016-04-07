@@ -1,0 +1,214 @@
+.on-mobile {
+	display: none;
+}
+.on-desktop {
+	display: block;
+}
+
+.dropdown-menu {
+	&.percent-width {
+		min-width: 0;
+		padding-right: 0;
+		width: 100%;
+		@include box-sizing(content-box);
+	}
+}
+
+.rku-logo {
+	display: block;;
+	width: 169px;
+	height: 21px;
+	margin-top: 8px;
+	background: url(../images/rku-logo.png) no-repeat scroll;
+	text-indent: -9999em;
+	vertical-align: middle;
+}
+
+.property-price {
+	font-family: 'hind_bold';
+	font-size: em(18);
+}
+
+.mortgage {
+	line-height: em(16);
+	margin-bottom: 15px;
+	&:hover {
+		i {
+			color: $purple;
+		}
+	}
+	i {
+		font-size: em(8);
+		vertical-align: middle;
+	}
+	.dropdown-menu {
+		margin-top: 5px;
+		min-width: 330px;
+		background-color: transparent;
+	}
+	.mortgage-header {
+		position: relative;
+		padding: 5px 15px;
+		background-color: #214798;
+		overflow: hidden;
+		.title {
+			padding: 3px 0 2px;
+			color: $white;
+			font-size: em(12);
+			text-transform: uppercase;
+			float: left;
+		}
+		.brand-logo {
+			height: 23px;
+			float: right;
+			position: relative;
+			z-index: 1;
+			img {
+				height: 100%;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -20px;
+			display: block;
+			height: 100%;
+			width: 150px;
+			background-color: #FFDE03;
+			@include transform(skewX(-30deg));
+		}
+		&:after {
+			@include clear;
+		}
+	}
+	.mortgage-body {
+		padding-bottom: 15px;
+		border-bottom: 1px solid $border;
+		background-color: $white;
+		> div {
+			padding: 15px 15px 0;
+			label {
+				font-family: 'hind_regular', sans-serif;
+				color: $gray2;
+			}
+			span {
+				color: $black;
+				&.installment {
+					font-family: 'hind_bold', sans-serif;
+					font-size: em(16);
+					color: #214798;
+				}
+			}
+		}
+		.terms {
+			margin: 0 15px;
+			font-size: em(11);
+			label {
+				display: block;
+				color: $gray2;
+			}
+			span {
+				color: $gray2;
+				&.tenure {
+					&:after {
+						content: '|';
+						display: inline-block;
+						margin: 0 3px 0 5px;
+					}
+				}
+			}
+		}
+	}
+	.mortgage-footer {
+		padding: 15px;
+		background-color: $softwhite;
+		div {
+			padding-right: 7.5px;
+			padding-left: 7.5px;
+		}
+	}
+}
+
+.text-editor {
+	position: relative;
+	overflow: hidden;
+	.text-editor-hide {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40%;
+		background: rgba(255, 255, 255, 0);
+		@include filter-gradient(rgba(250, 250, 250, 0), rgba(250, 250, 250, 1), vertical);
+		@include background-image(linear-gradient(top,  rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 1) 100%));
+	}
+	&.open {
+		height: auto !important;
+		@include transition(.1s linear);
+		.text-editor-hide {
+			display: none !important;
+		}
+	}
+}
+
+.open-more {
+	i {
+		font-size: em(9);
+	}
+}
+
+.full-image-container {
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	.full-image-in-box {
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: -50%;
+			right: -50%;
+			bottom: -50%;
+			left: -50%;
+			max-width: 100%;
+			min-height: 100%;
+			margin: auto;
+			z-index: -1;
+		}
+		&.vertical {
+			img {
+				min-width: 100%;
+				max-width: initial;
+				min-height: initial;
+			}
+		}
+	}
+	.full-image-content {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+		background-color: rgba(0, 0, 0, 0);
+		cursor: pointer;
+		@include filter-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), vertical);
+		@include background-image(linear-gradient(top,  rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%));
+		@include transition(.15s cubic-bezier(.48,.17,.56,.83));
+		.text {
+			display: block;
+			position: absolute;
+			width: 100%;
+			padding: 15px;
+			bottom: -10px;
+			* {
+				color: $white;
+				@include text-shadow(0 2px 2px rgba(0, 0, 0, 0.5));	
+			}
+			a {
+				display: block;
+			}
+		}
+	}
+}
