@@ -7,49 +7,49 @@
 // --------------------------------------------------
 
 .nav {
-  margin-bottom: 0;
-  padding-left: 0; // Override default ul/ol
-  list-style: none;
-  @include clearfix;
+	margin-bottom: 0;
+	padding-left: 0; // Override default ul/ol
+	list-style: none;
+	@include clearfix;
 
-  > li {
-    position: relative;
-    display: block;
+	> li {
+		position: relative;
+		display: block;
 
-    > a {
-      position: relative;
-      display: block;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
+		> a {
+			position: relative;
+			display: block;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
 
-    // Disabled state sets text to gray and nukes hover/tab effects
-    &.disabled > a {
-      color: $nav-disabled-link-color;
+		// Disabled state sets text to gray and nukes hover/tab effects
+		&.disabled > a {
+			color: $nav-disabled-link-color;
 
-      &:hover,
-      &:focus {
-        color: $nav-disabled-link-hover-color;
-        text-decoration: none;
-        background-color: transparent;
-        cursor: $cursor-disabled;
-      }
-    }
-  }
+			&:hover,
+			&:focus {
+				color: $nav-disabled-link-hover-color;
+				text-decoration: none;
+				background-color: transparent;
+				cursor: $cursor-disabled;
+			}
+		}
+	}
 
-  // Open dropdowns
-  .open > a {
-    &,
-    &:hover,
-    &:focus {
-      background-color: $nav-link-hover-bg;
-    }
-  }
-  > li > a > img {
-    max-width: none;
-  }
+	// Open dropdowns
+	.open > a {
+		&,
+		&:hover,
+		&:focus {
+			background-color: $nav-link-hover-bg;
+		}
+	}
+	> li > a > img {
+		max-width: none;
+	}
 }
 
 
@@ -58,38 +58,37 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  > li {
-    float: left;
-    // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
+	> li {
+		float: left;
+		// Make the list-items overlay the bottom border
+		margin-bottom: -1px;
 
-    // Actual tabs (as links)
-    > a {
-      padding: 15px;
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-      color: $gray2;
-      background-color: $softwhite2;
-      @include transition(.1s linear);
-      &:hover {
-        font-family: 'hind_bold', sans-serif;
-        color: $black;
-      }
-    }
+		// Actual tabs (as links)
+		> a {
+			padding: 15px;
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			color: $gray2;
+			background-color: $softwhite2;
+			@include transition(.1s linear);
+			&:hover {
+				color: $black;
+			}
+		}
 
-    // Active state, and its :hover to override normal :hover
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        font-family: 'hind_bold', sans-serif;
-        color: $black;
-        background-color: $white;
-        cursor: default;
-      }
-    }
-  }
+		// Active state, and its :hover to override normal :hover
+		&.active > a {
+			&,
+			&:hover,
+			&:focus {
+				font-family: $font-bold;
+				color: $black;
+				background-color: $white;
+				cursor: default;
+			}
+		}
+	}
 }
 
 // Tabbable tabs
@@ -97,11 +96,52 @@
 
 // Hide tabbable panes to start, show them when `.active`
 .tab-content {
-  overflow-y: auto;
-  > .tab-pane {
-    display: none;
-  }
-  > .active {
-    display: block;
-  }
+	> .tab-pane {
+		display: none;
+	}
+	> .active {
+		display: block;
+	}
 }
+
+// Tab Line
+.tab-line {
+	border-bottom: 1px solid $border;
+	width: 100%;
+	li {
+		margin-right: 45px;
+		a {
+			display: inline-block;
+			background-color: transparent;
+			padding: 5px 0;
+			text-align: center;
+			border-bottom: 3px solid transparent;
+		}
+		&.active {
+			a {
+				background-color: transparent;
+				border-bottom-color: $green; 
+			}
+		}
+	}
+}
+
+// #report-tab {
+// 	&.tab-line {
+// 		li {
+// 			margin-right: 0;
+// 			a {
+// 				padding: 15px;
+// 			}
+// 			&.active {
+// 				a {
+// 					padding-top: 16px;
+// 					background-color: transparent;
+// 					border: 1px solid $border;
+// 					border-bottom: 1px solid $white; 
+// 					@include border-radius(3px 3px 0 0);
+// 				}
+// 			}
+// 		}
+// 	}
+// }

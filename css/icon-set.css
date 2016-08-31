@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'rkuv4';
-    src:    url('../font/icon-set/fonts/rkuv4.eot?cq5ev7');
-    src:    url('../font/icon-set/fonts/rkuv4.eot?cq5ev7#iefix') format('embedded-opentype'),
-        url('../font/icon-set/fonts/rkuv4.ttf?cq5ev7') format('truetype'),
-        url('../font/icon-set/fonts/rkuv4.woff?cq5ev7') format('woff'),
-        url('../font/icon-set/fonts/rkuv4.svg?cq5ev7#rkuv4') format('svg');
+    src:    url('../fonts/icon-set/fonts/rkuv4.eot?lslxa7');
+    src:    url('../fonts/icon-set/fonts/rkuv4.eot?lslxa7#iefix') format('embedded-opentype'),
+        url('../fonts/icon-set/fonts/rkuv4.ttf?lslxa7') format('truetype'),
+        url('../fonts/icon-set/fonts/rkuv4.woff?lslxa7') format('woff'),
+        url('../fonts/icon-set/fonts/rkuv4.svg?lslxa7#rkuv4') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,93 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.rku-compare:before {
+  content: "\e970";
+}
+.rku-project:before {
+  content: "\e96f";
+}
+.rku-golf:before {
+  content: "\e96c";
+}
+.rku-jogtrack:before {
+  content: "\e96d";
+}
+.rku-minimarket:before {
+  content: "\e96e";
+}
+.rku-gear:before {
+    content: "\e96a";
+}
+.rku-profile:before {
+    content: "\e967";
+}
+.rku-leads:before {
+    content: "\e969";
+}
+.rku-print:before {
+    content: "\e968";
+}
+.rku-dashboard:before {
+    content: "\e961";
+}
+.rku-home:before {
+    content: "\e962";
+}
+.rku-whatsapp:before {
+    content: "\e963";
+}
+.rku-home-search:before {
+    content: "\e964";
+}
+.rku-quote:before {
+    content: "\e965";
+}
+.rku-banner:before {
+    content: "\e966";
+}
+.rku-verified:before {
+    content: "\e960";
+}
+.rku-youtube:before {
+    content: "\e95e";
+}
+.rku-pinterest:before {
+    content: "\e95f";
+}
+.rku-upfront:before {
+    content: "\e95a";
+}
+.rku-forward:before {
+    content: "\e95b";
+}
+.rku-downbottom:before {
+    content: "\e95c";
+}
+.rku-backward:before {
+    content: "\e95d";
+}
+.rku-bbm:before {
+    content: "\e958";
+}
+.rku-line:before {
+    content: "\e959";
+}
+.rku-envelope:before {
+    content: "\e956";
+}
+.rku-phone-2:before {
+    content: "\e957";
+}
+.rku-exit:before {
+    content: "\e955";
+}
+.rku-label:before {
+    content: "\e953";
+}
+.rku-user:before {
+    content: "\e954";
+}
 .rku-flag:before {
     content: "\e951";
 }
@@ -42,7 +129,7 @@
 .rku-instagram:before {
     content: "\e94e";
 }
-.rku-rku-gplus:before {
+.rku-gplus:before {
     content: "\e94f";
 }
 .rku-doc-1:before {
@@ -273,4 +360,5 @@
 .rku-cross:before {
     content: "\e94b";
 }
+
 

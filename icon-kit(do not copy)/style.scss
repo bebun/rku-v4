@@ -1,0 +1,569 @@
+@import "variables";
+
+@font-face {
+    font-family: 'rkuv4';
+    src:    url('#{$icomoon-font-path}/rkuv4.eot?f7prej');
+    src:    url('#{$icomoon-font-path}/rkuv4.eot?f7prej#iefix') format('embedded-opentype'),
+        url('#{$icomoon-font-path}/rkuv4.ttf?f7prej') format('truetype'),
+        url('#{$icomoon-font-path}/rkuv4.woff?f7prej') format('woff'),
+        url('#{$icomoon-font-path}/rkuv4.svg?f7prej#rkuv4') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="rku-"], [class*=" rku-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'rkuv4' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.rku-linkedin {
+    &:before {
+        content: $rku-linkedin;
+    }
+}
+.rku-gear {
+    &:before {
+        content: $rku-gear;
+    }
+}
+.rku-profile {
+    &:before {
+        content: $rku-profile;
+    }
+}
+.rku-leads {
+    &:before {
+        content: $rku-leads;
+    }
+}
+.rku-print {
+    &:before {
+        content: $rku-print;
+    }
+}
+.rku-dashboard {
+    &:before {
+        content: $rku-dashboard;
+    }
+}
+.rku-home {
+    &:before {
+        content: $rku-home;
+    }
+}
+.rku-whatsapp {
+    &:before {
+        content: $rku-whatsapp;
+    }
+}
+.rku-home-search {
+    &:before {
+        content: $rku-home-search;
+    }
+}
+.rku-quote {
+    &:before {
+        content: $rku-quote;
+    }
+}
+.rku-banner {
+    &:before {
+        content: $rku-banner;
+    }
+}
+.rku-verified {
+    &:before {
+        content: $rku-verified;
+    }
+}
+.rku-youtube {
+    &:before {
+        content: $rku-youtube;
+    }
+}
+.rku-pinterest {
+    &:before {
+        content: $rku-pinterest;
+    }
+}
+.rku-upfront {
+    &:before {
+        content: $rku-upfront;
+    }
+}
+.rku-forward {
+    &:before {
+        content: $rku-forward;
+    }
+}
+.rku-downbottom {
+    &:before {
+        content: $rku-downbottom;
+    }
+}
+.rku-backward {
+    &:before {
+        content: $rku-backward;
+    }
+}
+.rku-bbm {
+    &:before {
+        content: $rku-bbm;
+    }
+}
+.rku-line {
+    &:before {
+        content: $rku-line;
+    }
+}
+.rku-envelope {
+    &:before {
+        content: $rku-envelope;
+    }
+}
+.rku-phone-2 {
+    &:before {
+        content: $rku-phone-2;
+    }
+}
+.rku-exit {
+    &:before {
+        content: $rku-exit;
+    }
+}
+.rku-label {
+    &:before {
+        content: $rku-label;
+    }
+}
+.rku-user {
+    &:before {
+        content: $rku-user;
+    }
+}
+.rku-flag {
+    &:before {
+        content: $rku-flag;
+    }
+}
+.rku-share {
+    &:before {
+        content: $rku-share;
+    }
+}
+.rku-statistic {
+    &:before {
+        content: $rku-statistic;
+    }
+}
+.rku-facebook {
+    &:before {
+        content: $rku-facebook;
+    }
+}
+.rku-twitter {
+    &:before {
+        content: $rku-twitter;
+    }
+}
+.rku-instagram {
+    &:before {
+        content: $rku-instagram;
+    }
+}
+.rku-gplus {
+    &:before {
+        content: $rku-gplus;
+    }
+}
+.rku-doc-1 {
+    &:before {
+        content: $rku-doc-1;
+    }
+}
+.rku-doc-2 {
+    &:before {
+        content: $rku-doc-2;
+    }
+}
+.rku-message-1 {
+    &:before {
+        content: $rku-message-1;
+    }
+}
+.rku-message-2 {
+    &:before {
+        content: $rku-message-2;
+    }
+}
+.rku-marker-1 {
+    &:before {
+        content: $rku-marker-1;
+    }
+}
+.rku-marker-2 {
+    &:before {
+        content: $rku-marker-2;
+    }
+}
+.rku-marker-3 {
+    &:before {
+        content: $rku-marker-3;
+    }
+}
+.rku-image-1 {
+    &:before {
+        content: $rku-image-1;
+    }
+}
+.rku-image-2 {
+    &:before {
+        content: $rku-image-2;
+    }
+}
+.rku-camera-1 {
+    &:before {
+        content: $rku-camera-1;
+    }
+}
+.rku-camera-2 {
+    &:before {
+        content: $rku-camera-2;
+    }
+}
+.rku-review {
+    &:before {
+        content: $rku-review;
+    }
+}
+.rku-rating-empty {
+    &:before {
+        content: $rku-rating-empty;
+    }
+}
+.rku-rating-half {
+    &:before {
+        content: $rku-rating-half;
+    }
+}
+.rku-rating-full {
+    &:before {
+        content: $rku-rating-full;
+    }
+}
+.rku-filter-1 {
+    &:before {
+        content: $rku-filter-1;
+    }
+}
+.rku-filter-2 {
+    &:before {
+        content: $rku-filter-2;
+    }
+}
+.rku-filter-3 {
+    &:before {
+        content: $rku-filter-3;
+    }
+}
+.rku-list {
+    &:before {
+        content: $rku-list;
+    }
+}
+.rku-grid {
+    &:before {
+        content: $rku-grid;
+    }
+}
+.rku-map {
+    &:before {
+        content: $rku-map;
+    }
+}
+.rku-sort-1 {
+    &:before {
+        content: $rku-sort-1;
+    }
+}
+.rku-sort-2 {
+    &:before {
+        content: $rku-sort-2;
+    }
+}
+.rku-menu-bar {
+    &:before {
+        content: $rku-menu-bar;
+    }
+}
+.rku-phone {
+    &:before {
+        content: $rku-phone;
+    }
+}
+.rku-sand-time {
+    &:before {
+        content: $rku-sand-time;
+    }
+}
+.rku-fax {
+    &:before {
+        content: $rku-fax;
+    }
+}
+.rku-calendar-1 {
+    &:before {
+        content: $rku-calendar-1;
+    }
+}
+.rku-calendar-2 {
+    &:before {
+        content: $rku-calendar-2;
+    }
+}
+.rku-menu-bullet {
+    &:before {
+        content: $rku-menu-bullet;
+    }
+}
+.rku-inbox {
+    &:before {
+        content: $rku-inbox;
+    }
+}
+.rku-magnifier {
+    &:before {
+        content: $rku-magnifier;
+    }
+}
+.rku-bell {
+    &:before {
+        content: $rku-bell;
+    }
+}
+.rku-expand-1 {
+    &:before {
+        content: $rku-expand-1;
+    }
+}
+.rku-expand-2 {
+    &:before {
+        content: $rku-expand-2;
+    }
+}
+.rku-land-area {
+    &:before {
+        content: $rku-land-area;
+    }
+}
+.rku-building-area {
+    &:before {
+        content: $rku-building-area;
+    }
+}
+.rku-mortgage {
+    &:before {
+        content: $rku-mortgage;
+    }
+}
+.rku-upload-1 {
+    &:before {
+        content: $rku-upload-1;
+    }
+}
+.rku-save {
+    &:before {
+        content: $rku-save;
+    }
+}
+.rku-delete {
+    &:before {
+        content: $rku-delete;
+    }
+}
+.rku-coin {
+    &:before {
+        content: $rku-coin;
+    }
+}
+.rku-view {
+    &:before {
+        content: $rku-view;
+    }
+}
+.rku-like {
+    &:before {
+        content: $rku-like;
+    }
+}
+.rku-dislike {
+    &:before {
+        content: $rku-dislike;
+    }
+}
+.rku-upload-2 {
+    &:before {
+        content: $rku-upload-2;
+    }
+}
+.rku-download {
+    &:before {
+        content: $rku-download;
+    }
+}
+.rku-file-pdf {
+    &:before {
+        content: $rku-file-pdf;
+    }
+}
+.rku-file-xls {
+    &:before {
+        content: $rku-file-xls;
+    }
+}
+.rku-file-doc {
+    &:before {
+        content: $rku-file-doc;
+    }
+}
+.rku-camera-3 {
+    &:before {
+        content: $rku-camera-3;
+    }
+}
+.rku-police {
+    &:before {
+        content: $rku-police;
+    }
+}
+.rku-dumbell {
+    &:before {
+        content: $rku-dumbell;
+    }
+}
+.rku-pool {
+    &:before {
+        content: $rku-pool;
+    }
+}
+.rku-ball {
+    &:before {
+        content: $rku-ball;
+    }
+}
+.rku-basket-ring {
+    &:before {
+        content: $rku-basket-ring;
+    }
+}
+.rku-parking {
+    &:before {
+        content: $rku-parking;
+    }
+}
+.rku-flower {
+    &:before {
+        content: $rku-flower;
+    }
+}
+.rku-hall {
+    &:before {
+        content: $rku-hall;
+    }
+}
+.rku-bed {
+    &:before {
+        content: $rku-bed;
+    }
+}
+.rku-sofa {
+    &:before {
+        content: $rku-sofa;
+    }
+}
+.rku-laundry {
+    &:before {
+        content: $rku-laundry;
+    }
+}
+.rku-shower {
+    &:before {
+        content: $rku-shower;
+    }
+}
+.rku-lift {
+    &:before {
+        content: $rku-lift;
+    }
+}
+.rku-heart-empty {
+    &:before {
+        content: $rku-heart-empty;
+    }
+}
+.rku-heart-full {
+    &:before {
+        content: $rku-heart-full;
+    }
+}
+.rku-angle-top {
+    &:before {
+        content: $rku-angle-top;
+    }
+}
+.rku-angle-right {
+    &:before {
+        content: $rku-angle-right;
+    }
+}
+.rku-angle-bottom {
+    &:before {
+        content: $rku-angle-bottom;
+    }
+}
+.rku-angle-left {
+    &:before {
+        content: $rku-angle-left;
+    }
+}
+.rku-arrow-top {
+    &:before {
+        content: $rku-arrow-top;
+    }
+}
+.rku-arrow-right {
+    &:before {
+        content: $rku-arrow-right;
+    }
+}
+.rku-arrow-bottom {
+    &:before {
+        content: $rku-arrow-bottom;
+    }
+}
+.rku-arrow-left {
+    &:before {
+        content: $rku-arrow-left;
+    }
+}
+.rku-check {
+    &:before {
+        content: $rku-check;
+    }
+}
+.rku-cross {
+    &:before {
+        content: $rku-cross;
+    }
+}
+

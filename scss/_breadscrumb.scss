@@ -1,27 +1,30 @@
 #breadscrumb {
 	position: relative;
-	background-color: #f0f0f0;
-	z-index: $three;
-	@include box-shadow(0 1px 0 #e5e5e5);
+	background-color: lighten($black, 5%);
+	z-index: 2;
+	> .container {
+		padding: 2px 15px 5px;
+	}
 	li {
 		display: inline-block;
-		font-size: em(11);
-		&:after {
-			content: '\e943';
-			font-family: 'RKUv4';
-			font-size: em(8);
-		}
-		&:last-child {
+		font-size: em(13);
+		&:not(:last-child) {
 			&:after {
-				content: '';
+				content: '\e943';
+				font-family: 'RKUv4';
+				font-size: em(8);
+				color: $gray2;
 			}
 		}
 	}
 	a {
-		color: $gray;
-	}
-	a.disabled {
 		color: $gray2;
-		cursor: text;
+		&.disabled {
+			color: $white;
+			cursor: text;
+		}
+		&:hover {
+			color: $white;
+		}
 	}
 }

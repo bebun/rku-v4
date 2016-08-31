@@ -3,10 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#009634"> <!--Header theme color for Chrome, Firefox OS, and Opera-->
-	<meta name="msapplication-navbutton-color" content="#009634"> <!--Header theme color for windows phone-->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#009634"> <!--Header theme color for iOS Safari-->
-	<title>RKU V4 - Search</title>
+	<meta name="theme-color" content="#1e1e22"> <!--Header theme color for Chrome, Firefox OS, and Opera-->
+	<meta name="msapplication-navbutton-color" content="#1e1e22"> <!--Header theme color for windows phone-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e22"> <!--Header theme color for iOS Safari-->
+	<meta name="apple-mobile-web-app-title" content="rumahku">
+	<meta name="application-name" content="rumahku">
+	<meta name="msapplication-TileColor" content="#1e1e22">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>RKU V4 - Detail</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/favicon//manifest.json">
+	<link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="stylesheet" href="css/icon-set.css">
 	<!--[if lt IE 8]><!-->
 	<link rel="stylesheet" href="css/icon-set-ie7.css">
@@ -18,13 +40,13 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">Menu <i class="rku-menu-bar"></i></button>
+					<button type="button" class="navbar-toggle" data-toggle="main-menu" data-target="#main-menu" aria-expanded="false">Menu <i class="rku-menu-bar"></i></button>
 					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
 				</div>
-				<div id="main-menu" class="collapse navbar-collapse">
+				<div class="navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="select-location">
-							<a href="#" class=""><span>Jakarta Barat</span></a>
+							<a href="" type="button" data-toggle="modal" data-target="#setLocation" class="btn no-bg" title="Ganti Lokasi?">Jakarta Barat</a>
 						</li>
 						<li class="dropdown property-type">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
@@ -81,8 +103,10 @@
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="">Menu <i class="rku-menu-bar"></i></a></li>
-						<li><a href="">Login</a></li>
+						<li><a href="" id="sidemenu-toggle" data-toggle="sidemenu">Menu <i class="rku-menu-bar"></i></a></li>
+						<li>
+							<a href="" type="button" data-toggle="modal" data-target="#login" class="btn no-bg" title="Ganti Lokasi?">Login</a>
+						</li>
 						<li class="dropdown notification">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-bell"></i></a>
 							<div class="dropdown-menu notif-list">
@@ -90,7 +114,7 @@
 							</div>
 						</li>
 						<li><a href="">Artikel</a></li>
-						<li><a href=""><span class="btn md border-only white ttu">Iklankan Properti Anda</span></a></li>
+						<li><a href=""><span class="btn md border-only white text-uppercase">Iklankan Properti Anda</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -130,10 +154,10 @@
 					<div class="container">
 						<div id="hero-container">
 							<div class="hero-image box">
-								<a href=""><img src="images/property/hero-images.jpg" alt=""></a>
+								<a href="" type="button" data-toggle="modal" data-target="#property-slide" class="bg-cover-center" style="background-image: url(images/property/hero-images.jpg)"></a>
 							</div>
 							<div class="wide-icon">
-								<a href=""><i class="rku-expand-1"></i></a>
+								<a href="" type="button" data-toggle="modal" data-target="#property-slide"><i class="rku-expand-1"></i></a>
 							</div>
 							<div class="hero-content">
 								<div class="hero-short-information">
@@ -200,14 +224,10 @@
 												</div>
 											</div>
 										</div>
-										<div class="total-images box right">
-											<a href="">
-												<div class="thumb-images">
-													<img src="images/property/thumb-images-1.jpg" alt="">
-												</div>
-												<div class="total-number">
-													12 Foto
-												</div>
+										<div class="hero-total-images box">
+											<a href="" type="button" data-toggle="modal" data-target="#property-slide" title="Lihat media">
+												<div class="image-package thumb-image bg-cover-center" style="background-image: url(images/property/thumb-images-1.jpg)"></div>
+												<div class="total-number">12 Foto</div>
 											</a>
 										</div>
 									</div>
@@ -308,8 +328,8 @@
 								</li>
 								<li class="float-right">
 									<a href="">
-										<i class="rku-save"></i>
-										<span>Simpan</span>
+										<i class="rku-heart-empty"></i>
+										<span>Favorit</span>
 									</a>
 								</li>
 							</ul>
@@ -343,7 +363,7 @@
 									<div class="text-editor-hide"></div>
 									<!-- END TEXT EDITOR CONTAINER -->
 								</div>
-								<div class="left-align">
+								<div class="text-left">
 									<a href="" class="open-more"><i class="rku-angle-bottom"></i> Selengkapnya</a>
 								</div>
 								<div class="property-address">
@@ -426,35 +446,35 @@
 							<div class="property-facilities">
 								<h6 class="head-title">Fasilitas Umum Pendukung</h6>
 								<ul class="row">
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-police"></i>
 										<label for="" class="normal">Keamanan 24/7</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-dumbell"></i>
 										<label for="" class="normal">Pusat Kebugaran</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-pool"></i>
 										<label for="" class="normal">Kolam Renang</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-ball"></i>
 										<label for="" class="normal">Pusat Olahraga</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-hall"></i>
 										<label for="" class="normal">Ruang Serbaguna</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-flower"></i>
 										<label for="" class="normal">Taman</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-parking"></i>
 										<label for="" class="normal">Parkir</label>
 									</li>
-									<li class="col-sm-6 col-md-4 col-lg-3">
+									<li class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
 										<i class="rku-laundry"></i>
 										<label for="" class="normal">Binatu	</label>
 									</li>
@@ -521,12 +541,10 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-lg-3 col-md-pull-8 col-lg-pull-9">
-							<div class="contact-info box">
+							<div class="contact-info">
 								<div class="contact-info-content">
 									<div class="photo">
-										<a href="" class="box image-package contact-photo">
-											<img src="images/agent/agent-1.jpg" alt="">
-										</a>
+										<a href="" class="box image-package contact-photo bg-cover-center" style="background-image: url(images/agent/agent-1.jpg)"></a>
 									</div>
 									<div class="text">
 										<a href="" class="contact-name">Toro del Benicio</a>
@@ -535,15 +553,23 @@
 										<span class="register">Terdaftar sejak: Desember 2013</span>
 									</div>
 									<div class="text">
-										<a href=""><span class="btn md full-width border-only green margin-bottom-1">Lihat Kontak</span></a>
+										<a href="" type="button" data-toggle="modal" data-target="#contact-request"><span class="btn md full-width border-only green margin-bottom-1">Lihat Kontak</span></a>
 										<a href=""><span class="btn md full-width with-bg green">Kirim Pesan</span></a>
 									</div>
 									<div class="btn-group">
-										<div class="row">span
+										<div class="row">
 											<a href="" class="col-xs-6 col-sm-6 no-right-pad"><span class="btn full-width md no-bg"><i class="rku-share"></i> Bagikan</span></a>
-											<a href="" class="col-xs-6 col-sm-6 no-left-pad"><span class="btn full-width md no-bg"><i class="rku-flag"></i> Laporkan</span></a>
+											<a href="" class="col-xs-6 col-sm-6 no-left-pad" data-toggle="modal" data-target="#report-flag"><span class="btn full-width md no-bg"><i class="rku-flag"></i> Laporkan</span></a>
 										</div>
 									</div>
+								</div>
+								<div class="share-list">
+									<ul class="social-media">
+										<li><a href="" class="facebook"><i class="rku-facebook"></i></a></li>
+										<li><a href="" class="twitter"><i class="rku-twitter"></i></a></li>
+										<li><a href="" class="gplus"><i class="rku-gplus"></i></a></li>
+										<li><a href="" class="mail" data-toggle="modal" data-target="#send-mail"><i class="rku-envelope"></i></a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -560,10 +586,10 @@
 								</div>
 								<div class="facilities-list box">
 									<ul id="facilities-tab" class="nav nav-tabs" role="tablist">
-										<li role="presentation" class="col-sm-6 no-side-pad active left">
+										<li role="presentation" class="col-xs-6 no-side-pad active left">
 											<a href="#facilities" id="facilities-tab" role="tab" data-toggle="tab" aria-controls="facilites" aria-expanded="true">Facilities</a>
 										</li>
-										<li role="presentation" class="col-sm-6 no-side-pad right">
+										<li role="presentation" class="col-xs-6 no-side-pad right">
 											<a href="#surround-property" id="surround-property-tab" role="tab" data-toggle="tab" aria-controls="surroundProperty" aria-expanded="true">Properti</a>
 										</li>
 									</ul>
@@ -1116,7 +1142,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 centered">
-								<div class="center-align">
+								<div class="text-center">
 									<h6 class="head-title">Pengajuan KPR</h6>
 									<p>Gunakan kalkulator KPR untuk memperkirakan angsuran per bulan cicilan KPR Anda.</p>
 									<p>Anda juga dapat langsung mengajukan permohonan KPR Bank Permata, melalui form yang diberikan.</p>
@@ -1134,7 +1160,7 @@
 											<form action="">
 												<div class="property-calculator">
 													<div class="row">
-														<div class="col-sm-5 col-sm-push-1 col-md-6">
+														<div class="col-sm-5 col-sm-push-1 col-md-6 col-md-push-1 col-lg-push-0">
 															<div class="fixed-data">
 																<div class="form-group">
 																	<label for="" class="normal">Harga Beli Properti</label>
@@ -1150,7 +1176,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="col-sm-5 col-sm-push-1 col-md-6">
+														<div class="col-sm-5 col-sm-push-1 col-md-6 col-md-push-1 col-lg-push-0">
 															<div class="flex-data">
 																<div class="form-group">
 																	<label for="" class="normal">Estimasi Suku Bunga</label>
@@ -1188,11 +1214,13 @@
 														</div>
 													</div>
 													<div class="mortgage-detail">
-														<a href="">+ Lihat detail</a>
+														<div class="col-sm-12"><a href="">+ Lihat detail</a></div>
 													</div>
 													<div class="apply">
-														<a href=""><span class="btn md with-bg green">Ajukan Sekarang</span></a>
-														<span>Kalkulator KPR disediakan oleh Rumahku.com</span>
+														<div class="col-sm-12">
+															<a href=""><span class="btn md with-bg green">Ajukan Sekarang</span></a>
+															<span>Kalkulator KPR disediakan oleh Rumahku.com</span>
+														</div>
 													</div>
 												</div>
 											</form>
@@ -1204,7 +1232,7 @@
 					</div>
 				</div>
 				<div id="property-statistic">
-					<div class="center-align">
+					<div class="text-center">
 						<h6 class="head-title">Pergerakan Harga</h6>
 					</div>
 					<div class="container">
@@ -1241,105 +1269,281 @@
 										<div class="row">
 											<div class="col-md-6 col-lg-6">
 												<div class="btn-group" role="group">
-													<a href=""><span class="btn sm border-only softwhite2 active">Sentul</span></a>
-													<a href=""><span class="btn sm border-only softwhite2">Bogor</span></a>
-													<a href=""><span class="btn sm border-only softwhite2">Jawa Barat</span></a>
+													<ul id="report-tab" class="tab" role="tablist">
+														<li role="presentation" class="active">
+															<a href="#property-tab" id="property-section" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true"><span class="btn sm border-only softwhite2">Sentul</span></a>
+														</li>
+														<li role="presentation">
+															<a href="#lead-tab" id="lead-section" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true"><span class="btn sm border-only softwhite2">Bogor</span></a>
+														</li>
+														<li role="presentation">
+															<a href="#deposit-tab" id="deposit-section" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true"><span class="btn sm border-only softwhite2">Jawa Barat</span></a>
+														</li>
+													</ul>
 												</div>
 											</div>
 											<div class="col-md-6 col-lg-2 end">
 												<div class="select dropdown sm full-width with-label-inside">
-													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">1 Tahun<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">1 Bulan<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
 													<div class="dropdown-menu percent-width">
 														<ul>
-															<li><a href="">1 Bulan</a></li>
-															<li><a href="">3 Bulan</a></li>
-															<li><a href="">6 Bulan</a></li>
-															<li><a href="">1 Tahun</a></li>
-															<li><a href="">3 Tahun</a></li>
-															<li><a href="">5 Tahun</a></li>
+															<li><a href="">1 bulan</a></li>
+															<li><a href="">3 bulan</a></li>
+															<li><a href="">6 bulan</a></li>
+															<li><a href="">1 tahun</a></li>
+															<li><a href="">5 tahun</a></li>
+															<li><a href="">10 tahun</a></li>
 														</ul>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="graph-body">
-										<div class="graph-content">
-											<div class="graph-chart">
-												<div class="graph-group apartment">
-													
+									<div class="tab-content">
+										<div class="tab-pane fade active in" id="property-tab" aria-labelledby="property-section">
+											<div class="graph-body">
+												<div class="graph-content">
+													<div class="graph-chart">
+														<div class="graph-group apartment">
+															
+														</div>
+													</div>
+													<div class="graph-total">
+														<ul>
+															<li>5,4 M</li>
+															<li>4,8 M</li>
+															<li>4,2 M</li>
+															<li>3,6 M</li>
+															<li>3,0 M</li>
+															<li>2,4 M</li>
+															<li>1,8 M</li>
+															<li>1,2 M</li>
+															<li>600 jt</li>
+															<li>0</li>
+														</ul>
+													</div>
+													<div class="graph-time">
+														<table>
+															<tr>
+																<td>Jun '15</td>
+																<td>Jul '15</td>
+																<td>Aug '15</td>
+																<td>Sep '15</td>
+																<td>Okt '15</td>
+																<td>Nov '15</td>
+																<td>Des '15</td>
+																<td>Jan '16</td>
+																<td>Feb '16</td>
+																<td>Mar '16</td>
+																<td>Apr '16</td>
+																<td>Mei '16</td>
+															</tr>
+														</table>
+													</div>
 												</div>
 											</div>
-											<div class="graph-total">
-												<ul>
-													<li>5,4 M</li>
-													<li>4,8 M</li>
-													<li>4,2 M</li>
-													<li>3,6 M</li>
-													<li>3,0 M</li>
-													<li>2,4 M</li>
-													<li>1,8 M</li>
-													<li>1,2 M</li>
-													<li>600 jt</li>
-													<li>0</li>
-												</ul>
-											</div>
-											<div class="graph-time">
-												<table>
-													<tr>
-														<td>Jun '15</td>
-														<td>Jul '15</td>
-														<td>Aug '15</td>
-														<td>Sep '15</td>
-														<td>Okt '15</td>
-														<td>Nov '15</td>
-														<td>Des '15</td>
-														<td>Jan '16</td>
-														<td>Feb '16</td>
-														<td>Mar '16</td>
-														<td>Apr '16</td>
-														<td>Mei '16</td>
-													</tr>
-												</table>
+											<div class="graph-foot">
+												<div class="row">
+													<div class="col-md-8 col-lg-7">
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-all-property" checked="check">
+																<label for="stat-all-property" class="normal">Semua</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-home">
+																<label for="stat-home" id="home" class="normal">Rumah</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-apartment">
+																<label for="stat-apartment" id="apartment" class="normal">Apartemen</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-shop">
+																<label for="stat-shop" id="shop" class="normal">Ruko</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-land">
+																<label for="stat-land" id="land" class="normal">Tanah</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 col-lg-3 end">
+														<a href="">Lihat statistik area lebih lengkap <i class="rku-angle-right"></i></a>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="graph-foot">
-										<div class="row">
-											<div class="col-md-8 col-lg-7">
-												<div class="checkbox">
-													<div class="form-group">
-														<input type="checkbox" id="stat-all-property" checked="check">
-														<label for="stat-all-property" class="normal">Semua</label>
+										<div class="tab-pane fade " id="lead-tab" aria-labelledby="lead-section">
+											<div class="graph-body">
+												<div class="graph-content">
+													<div class="graph-chart">
+														<div class="graph-group apartment">
+															
+														</div>
 													</div>
-												</div>
-												<div class="checkbox">
-													<div class="form-group">
-														<input type="checkbox" id="stat-home">
-														<label for="stat-home" id="home" class="normal">Rumah</label>
+													<div class="graph-total">
+														<ul>
+															<li>5,4 M</li>
+															<li>4,8 M</li>
+															<li>4,2 M</li>
+															<li>3,6 M</li>
+															<li>3,0 M</li>
+															<li>2,4 M</li>
+															<li>1,8 M</li>
+															<li>1,2 M</li>
+															<li>600 jt</li>
+															<li>0</li>
+														</ul>
 													</div>
-												</div>
-												<div class="checkbox">
-													<div class="form-group">
-														<input type="checkbox" id="stat-apartment">
-														<label for="stat-apartment" id="apartment" class="normal">Apartemen</label>
-													</div>
-												</div>
-												<div class="checkbox">
-													<div class="form-group">
-														<input type="checkbox" id="stat-shop">
-														<label for="stat-shop" id="shop" class="normal">Ruko</label>
-													</div>
-												</div>
-												<div class="checkbox">
-													<div class="form-group">
-														<input type="checkbox" id="stat-land">
-														<label for="stat-land" id="land" class="normal">Tanah</label>
+													<div class="graph-time">
+														<table>
+															<tr>
+																<td>Jun '15</td>
+																<td>Jul '15</td>
+																<td>Aug '15</td>
+																<td>Sep '15</td>
+																<td>Okt '15</td>
+																<td>Nov '15</td>
+																<td>Des '15</td>
+																<td>Jan '16</td>
+																<td>Feb '16</td>
+																<td>Mar '16</td>
+																<td>Apr '16</td>
+																<td>Mei '16</td>
+															</tr>
+														</table>
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4 col-lg-3 end">
-												<a href="">Lihat statistik area lebih lengkap <i class="rku-angle-right"></i></a>
+											<div class="graph-foot">
+												<div class="row">
+													<div class="col-md-8 col-lg-7">
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-all-property" checked="check">
+																<label for="stat-all-property" class="normal">Semua</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-home">
+																<label for="stat-home" id="home" class="normal">Rumah</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-apartment">
+																<label for="stat-apartment" id="apartment" class="normal">Apartemen</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-shop">
+																<label for="stat-shop" id="shop" class="normal">Ruko</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-land">
+																<label for="stat-land" id="land" class="normal">Tanah</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 col-lg-3 end">
+														<a href="">Lihat statistik area lebih lengkap <i class="rku-angle-right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="deposit-tab" aria-labelledby="deposit-section">
+											<div class="graph-body">
+												<div class="graph-content">
+													<div class="graph-chart">
+														<div class="graph-group apartment">
+															
+														</div>
+													</div>
+													<div class="graph-total">
+														<ul>
+															<li>5,4 M</li>
+															<li>4,8 M</li>
+															<li>4,2 M</li>
+															<li>3,6 M</li>
+															<li>3,0 M</li>
+															<li>2,4 M</li>
+															<li>1,8 M</li>
+															<li>1,2 M</li>
+															<li>600 jt</li>
+															<li>0</li>
+														</ul>
+													</div>
+													<div class="graph-time">
+														<table>
+															<tr>
+																<td>Jun '15</td>
+																<td>Jul '15</td>
+																<td>Aug '15</td>
+																<td>Sep '15</td>
+																<td>Okt '15</td>
+																<td>Nov '15</td>
+																<td>Des '15</td>
+																<td>Jan '16</td>
+																<td>Feb '16</td>
+																<td>Mar '16</td>
+																<td>Apr '16</td>
+																<td>Mei '16</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="graph-foot">
+												<div class="row">
+													<div class="col-md-8 col-lg-7">
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-all-property" checked="check">
+																<label for="stat-all-property" class="normal">Semua</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-home">
+																<label for="stat-home" id="home" class="normal">Rumah</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-apartment">
+																<label for="stat-apartment" id="apartment" class="normal">Apartemen</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-shop">
+																<label for="stat-shop" id="shop" class="normal">Ruko</label>
+															</div>
+														</div>
+														<div class="checkbox">
+															<div class="form-group">
+																<input type="checkbox" id="stat-land">
+																<label for="stat-land" id="land" class="normal">Tanah</label>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 col-lg-3 end">
+														<a href="">Lihat statistik area lebih lengkap <i class="rku-angle-right"></i></a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1349,13 +1553,13 @@
 					</div>
 				</div>
 				<div id="property-resume">
-					<div class="center-align">
+					<div class="text-center">
 						<h6 class="head-title">Ringkasan</h6>
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-8 centered">
-								<div class="center-align">
+								<div class="text-center">
 									<p><a href="">Rumah dijual dengan 4 kamar tidur dan 3 kamar mandi</a> ini terletak di <a href="">Sentul, Bogor - Jawa Barat</a>. Rumah dengan luas bangunan 180m<sup>2</sup> berada di atas area seluas 385m<sup>2</sup>, memiliki berbagai macam fasilitas umum pendukung seperti 24/7 keamanan, kolam renang, pusat kebugaran, pusat olahraga, ruang serba guna, binatu dan lainnya. Rumah seharga Rp 2,2 miliar ini memiliki fasilitas dan keuntungan sekitar seperti 5 sekolah dan 1 perguruan tinggi, 2 rumah sakit, pasar tradisional dan modern, 3 km menuju pintu tol Bogor - Jakarta, dekat dengan pusat perbelanjaan, tempat wisata, dan lainnya. Rumah ini berharga 2% lebih rendah dibanding properti setipe di <a href="">Sentul</a>, 15% lebih rendah dibanding properti setipe di <a href="">Bogor</a>, dan 37% lebih rendah di area <a href="">Jawa Barat</a>.</p>
 								</div>
 							</div>
@@ -1363,7 +1567,7 @@
 					</div>
 				</div>
 				<div id="property-contact">
-					<div class="center-align">
+					<div class="text-center">
 						<h6 class="head-title">Hubungi Pengiklan</h6>
 						<p>Hubungi pengiklan untuk mendapatkan informasi mengenai properti ini lebih lengkap.</p>
 					</div>
@@ -1373,9 +1577,7 @@
 								<div class="contact-info box">
 									<div class="contact-info-content">
 										<div class="photo">
-											<a href="" class="box image-package contact-photo">
-												<img src="images/agent/agent-1.jpg" alt="">
-											</a>
+											<a href="" class="box image-package contact-photo bg-cover-center" style="background-image: url(images/agent/agent-1.jpg)"></a>
 										</div>
 										<div class="text">
 											<a href="" class="contact-name">Toro del Benicio</a>
@@ -1386,8 +1588,8 @@
 									</div>
 									<div class="btn-group">
 										<div class="row">
-											<a href="" class="col-sm-6 no-right-pad"><span class="btn full-width md no-bg color-green">Lihat Kontak</span></a>
-											<a href="" class="col-sm-6 no-left-pad"><span class="btn full-width md with-bg green">Kirim Pesan</span></a>
+											<a href="" type="button" class="col-xs-6 col-sm-6 no-right-pad" data-toggle="modal" data-target="#contact-request"><span class="btn full-width md no-bg color-green">Lihat Kontak</span></a>
+											<a href="" class="col-xs-6 col-sm-6 no-left-pad"><span class="btn full-width md with-bg green">Kirim Pesan</span></a>
 										</div>
 									</div>
 								</div>
@@ -1398,26 +1600,21 @@
 			</div>
 			<div id="property-related" class="property-others">
 				<div class="container">
-					<h1 class="head-title small-hind"><span class="ttu">Properti Menarik Lainnya Di Area Ini</span> <a href="">(Sentul, Bogor)</a></h1>
+					<h1 class="head-title small-hind"><span class="text-uppercase">Properti Menarik Lainnya Di Area Ini</span> <a href="">(Sentul, Bogor)</a></h1>
 					<div class="row">
 						<div class="col-lg-4 col-lg-push-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<a href="" class="others-content box bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)">
 								<div class="full-image-content">
-									<a href="" class="text">
+									<div class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
 										<span class="property-price priority-price">Rp 1,250 Miliar</span>
-									</a>
+									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 						<div class="col-sm-6 col-lg-2 col-lg-pull-4 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1427,10 +1624,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1440,10 +1635,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1453,10 +1646,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1470,13 +1661,11 @@
 			</div>
 			<div id="property-history" class="property-others">
 				<div class="container">
-					<h1 class="head-title small-hind"><span class="ttu">Properti Yang Anda Lihat Sebelumnya</span></h1>
+					<h1 class="head-title small-hind"><span class="text-uppercase">Properti Yang Anda Lihat Sebelumnya</span></h1>
 					<div class="row">
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1486,10 +1675,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1499,10 +1686,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1512,10 +1697,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1525,10 +1708,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1538,10 +1719,8 @@
 							</div>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-2 no-right-pad">
-							<div class="others-content box full-image-container">
-								<a href="" class="full-image-in-box vertical">
-									<img src="images/shutterstock_102471257.jpg" alt="">
-								</a>
+							<div class="others-content box">
+								<a href="" class="full-image-in-box vertical bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg)"></a>
 								<div class="full-image-content">
 									<a href="" class="text">
 										<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
@@ -1555,10 +1734,9 @@
 			</div>
 		</div>
 	</div>
-	
 	<footer>
 		<div class="top-foot">
-			<div class="center-align">
+			<div class="text-center">
 				<a href="" class="open-more"><i class="rku-angle-top"></i> Lihat Tautan Populer</a>
 			</div>
 			<div class="top-foot-content">
@@ -1805,7 +1983,7 @@
 						<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
 					</div>
 					<div class="col-sm-12 col-md-3 no-right-pad end">
-						<div class="right-align">
+						<div class="text-right">
 							<a href="" class="sponsored"><img src="images/gsd-collo.png" alt=""></a>
 						</div>
 					</div>
@@ -1813,10 +1991,800 @@
 			</div>
 		</div>
 	</footer>
+	<!-- MENU SECTION -->
+	<div id="sidemenu-container">
+		<div class="backdrop"></div>
+		<div class="sidemenu-list">
+			<div class="sidemenu-close"><a href=""><i class="rku-cross"></i></a></div>
+			<ul class="side-mainmenu">
+				<li><a href="">Event</a></li>
+				<li><a href="">Rumahku VIP</a></li>
+				<li><a href="">Badge</a></li>
+				<li><a href="">Testimonial</a></li>
+				<li><a href="">Karir</a></li>
+			</ul>
+			<ul class="side-secmenu">
+				<li><a href="">FAQ</a></li>
+				<li><a href="">Bantuan</a></li>
+				<li><a href="">Syarat dan Kebijakan</a></li>
+				<li><a href="">Berikan feedback untuk kami</a></li>
+			</ul>
+			<div class="mail-support">
+				<a href="">
+					<p>Butuh bantuan cepat? Sampaikan pada kami</p>
+					<span>info@rumahku.com</span>
+				</a>
+			</div>
+			<div class="social-media">
+				<p>Kunjungi media sosial kami</p>
+				<ul>
+					<li><a href=""><i class="rku-facebook"></i></a></li>
+					<li><a href=""><i class="rku-twitter"></i></a></li>
+					<li><a href=""><i class="rku-instagram"></i></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				<p>Hak cipta &copy; 2016 PT. Naga Langit. <br>Dilindungi oleh undang-undang.</p>
+			</div>
+		</div>
+	</div>
+	<div id="main-menu">
+		<div class="whole-menu">
+			<div class="main-menu-header">
+				<button type="button" class="close-toggle" data-toggle="close-main-menu" aria-expanded="false">Tutup <i class="rku-cross"></i></button>
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+			</div>
+			<div class="main-menu-content">
+				<div class="user-login">
+					<a href="" class="padding-side-15"><span class="btn md full-width with-bg white text-uppercase">Login</span></a>
+				</div>
+				<div class="main-action">
+					<div class="list-your-property padding-side-15 margin-vert-15 ">
+						<a href=""><span class="btn md full-width border-only white text-uppercase">Iklankan Properti Anda</span></a>
+					</div>
+					<div class="select-location">
+						<a href="" type="button" data-toggle="modal" data-target="#setLocation" class="btn no-bg padding-top-0" title="Ganti Lokasi?"><span>Anda sedang melihat properti di wilayah</span>Jakarta Barat <i class="rku-angle-bottom"></i></a>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<a href="">Properti Baru</a>
+					<a href="">Direktori Apartemen</a>
+					<a href="">Direktori Agensi Properti</a>
+					<a href="">Rumahku Expo</a>
+					<a href="">Artikel</a>
+					<a href="">Event</a>
+					<a href="">Rumahku VIP</a>
+					<a href="">Badge</a>
+					<a href="">Testimonial</a>
+					<a href="">Karir</a>
+				</div>
+				<div class="sec-action">
+					<ul>
+						<li><a href="">FAQ</a></li>
+						<li><a href="">Bantuan</a></li>
+						<li><a href="">Syarat dan Kebijakan</a></li>
+						<li>
+							<a href="tel:+62215332555">
+								<span>Butuh bantuan cepat? Hubungi kami:</span>
+								<span>(021) 533 2555</span>
+							</a>
+							<p></p>
+						</li>
+					</ul>
+				</div>
+				<div class="social-media">
+					<p>Kunjungi media sosial kami</p>
+					<ul>
+						<li><a href=""><i class="rku-facebook"></i></a></li>
+						<li><a href=""><i class="rku-twitter"></i></a></li>
+						<li><a href=""><i class="rku-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+					<p>Hak cipta &copy; 2016 PT. Naga Langit. <br>Dilindungi oleh undang-undang.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MODAL SECTION -->
+	<div id="login" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position">
+			<div class="container">
+				<div class="col-md-11 col-lg-8 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-7 no-side-pad">
+							<div class="modal-inner">
+								<ul id="login-tab" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="col-xs-6 no-side-pad active left">
+										<a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk</a>
+									</li>
+									<li role="presentation" class="col-xs-6 no-side-pad right">
+										<a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar</a>
+									</li>
+								</ul>
+								<div id="tab-content" class="tab-content">
+									<div class="tab-pane fade active in" id="login-section" aria-labelledby="login-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Masuk Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau masuk dengan akun Rumahku</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan username atau email Anda">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="password" class="md full-width" placeholder="Masukkan password akun Anda">
+											</div>
+											<div class="password margin-top-3">
+												<div class="checkbox float-left">
+													<div class="form-group">
+														<input type="checkbox" id="show-pass">
+														<label for="show-pass" class="normal">Tunjukkan Password</label>
+													</div>
+												</div>
+												<div class="form-group float-right">
+													<a href="" class="small-text forgot-password">Lupa password?</a>
+												</div>
+											</div>
+											<div class="form-group margin-top-6 last">
+												<a href=""><span class="btn md full-width with-bg green">Masuk Ke Rumahku</span></a>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Tidak punya akun?</span> <a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar Sekarang</a>.
+										</div>
+									</div>
+									<div class="tab-pane fade" id="register-section" aria-labelledby="register-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Daftar Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau daftar dengan email Anda</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan nama lengkap Anda" required="required">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan email Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan no. telepon Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group last margin-top-6">
+												<a href=""><span class="btn md full-width with-bg green">Daftar</span></a>
+												<div class="small-text text-center">
+													Dengan menekan tombol "Daftar", Anda telah setuju dengan <a href="">syarat dan ketentuan</a> yang berlaku di Rumahku.com
+												</div>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Sudah punya akun?</span> <a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk di sini</a>.
+										</div>
+									</div>
+								</div>
+								<div class="modal-bottom"></div>
+							</div>
+						</div>
+						<div class="col-sm-5 no-side-pad mobile-only">
+							<div class="rku-promo"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="setLocation" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/loc-mark.png" alt="">
+							</div>
+						</div>
+						<p class="text-center">
+							Saat ini, Anda sedang melihat seluruh properti di wilayah:
+						</p>
+						<div class="col-sm-9 centered">
+							<div class="select dropdown md full-width with-label-inside">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jakarta Barat <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+								<div class="dropdown-menu">
+									<div class="free-text">
+										<div class="form-group">
+											<input type="text" class="md full-width" placeholder="Masukkan Kota">
+										</div>
+									</div>
+									<div class="list-name">
+										<span>Kota</span>
+									</div>
+									<ul>
+										<li><a href="">DKI Jakarta</a></li>
+										<li><a href="">Banten</a></li>
+										<li><a href="">Jawa Barat</a></li>
+										<li><a href="">Jawa Tengah</a></li>
+										<li><a href="">Jawa Timur</a></li>
+										<li><a href="">NTB</a></li>
+										<li><a href="">NTT</a></li>
+										<li><a href="">Bali</a></li>
+										<li><a href="">Lampung</a></li>
+										<li><a href="">Sumatera Selatan</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-action">
+							<div class="col-sm-5 centered">
+								<a href=""><span class="btn full-width md with-bg green">Ganti Lokasi</span></a>
+							</div>
+							<div class="col-sm-6 centered text-center">
+								<a href="" class="see-prop-on-loc">Lihat properti di wilayah ini</a>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="property-slide" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="slide-container">
+				<div class="slide-header">
+					<div class="container">
+						<h1 class="property-title">Rumah Dijual di Sentul, Bogor</h1>
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+					</div>
+				</div>
+				<div class="container">
+					<div class="tag-group">
+						<ul>
+							<li class="selected"><a href="">Tampak Depan</a></li>
+							<li><a href="">Tampak Samping</a></li>
+							<li><a href="">Tampak Belakang</a></li>
+							<li><a href="">Kamar Tidur</a></li>
+							<li><a href="">Kamar Mandi</a></li>
+							<li><a href="">Lainnya</a></li>
+							<li><a href="">Video</a></li>
+							<li><a href="">360&deg; Tour</a></li>
+						</ul>
+						<div class="counter">1 / 24</div>
+					</div>
+				</div>
+				<div class="photo-group">
+					<div id="carousel-property-slide" class="carousel slide" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+							<div class="item active">
+							  <img src="images/property/hero-images-2.jpg" alt="">
+							  <div class="carousel-caption">
+							    Ini adalah caption untuk gambar
+							  </div>
+							</div>
+							<div class="item">
+							  <img src="images/property/vertical-images.jpg" alt="">
+							  <div class="carousel-caption">
+							    Contoh caption untuk gambar vertical
+							  </div>
+							</div>
+						</div>
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-property-slide" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><i class="rku-angle-left"></i></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-property-slide" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><i class="rku-angle-right"></i></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					<div class="thumb-group">
+						<ul class="carousel-indicators">
+							<li data-target="#carousel-property-slide" data-slide-to="0" class="active">
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="1" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="2" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="3" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="4" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="5" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="6" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="7" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="8" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="9" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="10" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="11" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="12" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="13" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="14" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="15" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="16" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="17" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="18" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="19" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="20" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="21" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="22" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="23" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="24" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="25" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="26" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="27" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="28" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="29" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+							<li data-target="#carousel-property-slide" data-slide-to="30" >
+								<a href="" class="bg-cover-center" style="background-image: url(images/thumb/thumb-1.jpg)"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact-request" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-5 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div id="contact-stop" style="display: block">
+							<div class="col-sm-8 centered">
+								<div class="icon-header padding-top-30">
+									<img src="images/address-book.png" alt="">
+								</div>
+							</div>
+							<div class="padding-side-15">
+								<p class="text-center">Untuk memudahkan komunikasi dengan agent properti, harap masukkan identitas dan kontak Anda</p>
+							</div>
+							<div class="contact-form">
+								<form action="">
+									<div class="form-group padding-side-30">
+										<input type="text" class="md full-width" placeholder="Masukkan nama Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="tel" class="md full-width" placeholder="Masukkan nomor handphone Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="email" class="md full-width" placeholder="Masukkan email Anda">
+									</div>
+									<div class="form-group margin-top-6 last">
+										<a href=""><span class="btn md full-width with-bg green">Lanjut</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="contact-message" style="display: none">
+							<div class="contact-info-content">
+								<div class="photo">
+									<a href="" class="box image-package contact-photo">
+										<img src="images/agent/agent-1.jpg" alt="">
+									</a>
+								</div>
+								<div class="text">
+									<span class="contact-name">Toro del Benicio</span>
+									<div class="contact-number">
+										<label for="">Telepon</label>
+										<a href="tel:+62212255555">021 2255555</a>
+										<a href="tel:+6287751234522">087751234522</a>
+										<a href="tel:+62818242420">0818242420</a>
+									</div>
+									<div class="contact-number">
+										<label for="">BB Messenger</label>
+										<span>2128F625</span>
+									</div>
+								</div>
+							</div>
+							<div class="contact-message-content">
+								<form action="">
+									<div class="form-group margin-bottom-3">
+										<label for="" class="normal">Tulis pesan untuk Toro</label>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih subjek pesan properti ini- <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<ul>
+													<li><a href="">Detail Bangunan</a></li>
+													<li><a href="">Alamat</a></li>
+													<li><a href="">Lingkungan Sekitar</a></li>
+													<li><a href="">Fasilitas Pendukung</a></li>
+													<li><a href="">Fasilitas Sekitar</a></li>
+													<li><a href="">Lainnya</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="" id="" cols="30" rows="10" class="full-width margin-bottom-3" value>Hai Toro, saya tertarik dengan properti #RKU777888 (Rumah dijual di Sentul, Bogor). Saya ingin mendapatkan informasi lebih lanjut mengenai (Ambil dari subjek c:/ Detail Bangunan) dari properti ini.</textarea>
+									</div>
+									<div class="form-group">
+										<a href=""><span class="btn md full-width with-bg green">Kirim Pesan</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="report-flag" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/report.png" alt="">
+							</div>
+						</div>
+						<p class="text-center padding-side-15 margin-bottom-3">
+							Apakah ada yang salah mengenai properti ini? Laporkan kepada kami dengan lengkap.
+						</p>
+						<form action="">
+							<div class="padding-side-30">
+								<div class="select dropdown md full-width with-label-inside margin-bottom-3">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih jenis laporan - <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+									<div class="dropdown-menu">
+										<ul>
+											<li><a href="">Foto tidak sesuai</a></li>
+											<li><a href="">Harga tidak sesuai</a></li>
+											<li><a href="">Data tidak sesuai</a></li>
+											<li><a href="">Melanggar hak cipta</a></li>
+											<li><a href="">Lainnya</a></li>
+										</ul>
+									</div>
+								</div>
+								<textarea name="" id="" cols="30" rows="10" class="full-width"></textarea>
+							</div>
+							<div class="modal-action padding-side-30">
+								<a href=""><span class="btn full-width md with-bg green">Laporkan Properti</span></a>
+							</div>
+						</form>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="send-mail" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/send-mail.png" alt="">
+							</div>
+						</div>
+						<p class="text-center padding-side-15 margin-bottom-3">
+							Informasikan properti ini kepada kolega Anda
+						</p>
+						<form action="">
+							<div class="padding-side-30">
+								<div class="input">
+									<input type="name" class="md full-width margin-bottom-3" placeholder="Masukkan nama Anda">
+								</div>
+								<div class="input">
+									<input type="mail" class="md full-width margin-bottom-3" placeholder="Masukkan email Anda">
+								</div>
+								<div class="input">
+									<input type="mail" class="md full-width margin-bottom-3" placeholder="Masukkan email tujuan">
+								</div>
+								<textarea name="" id="" cols="30" rows="10" class="full-width" placeholder="Tuliskan pesan Anda disini"></textarea>
+							</div>
+							<div class="modal-action padding-side-30">
+								<a href=""><span class="btn full-width md with-bg green">Kirim email</span></a>
+							</div>
+						</form>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery1.12.0.min.js"></script>
 	<script src="js/bootstrap/collapse.js"></script>
 	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/modal.js"></script>
 	<script src="js/bootstrap/transition.js"></script>
 	<script src="js/bootstrap/tab.js"></script>
+	<script src="js/bootstrap/carousel.js"></script>
+	<script>
+		$('[data-toggle="sidemenu"]').click(function(e) {
+			e.preventDefault();
+			$('#sidemenu-container').addClass('toggled');
+			$('.sidemenu-close').click(function(a) {
+				a.preventDefault();
+				$('#sidemenu-container.toggled').removeClass('toggled');
+			})
+		});
+		$('[data-toggle="main-menu"]').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('toggled');
+			$('.close-toggle').click(function(a) {
+				a.preventDefault();
+				$('body.toggled').removeClass('toggled');
+			})
+		});
+	</script>
 </body>
 </html>

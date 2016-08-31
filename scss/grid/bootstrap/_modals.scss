@@ -10,6 +10,9 @@
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 // Container that the modal scrolls within
@@ -31,7 +34,7 @@
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     @include translate(0, -25%);
-    @include transition-transform(0.3s ease-out);
+    @include transition(0.05s ease-out);
   }
   &.in .modal-dialog { @include translate(0, 0) }
 }
@@ -44,17 +47,69 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  //margin: 10px;
+  .container {
+    &, > [class ^="col-"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+    [class ^="col-"] {
+      height: 100%;
+    }
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: -46px;
+  width: 46px;
+  height: 24px;
+  background-color: transparent;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: em(18);
+  border: none;
+  cursor: pointer;
+  z-index: $ten;
+  i {
+    vertical-align: middle;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 // Actual modal
 .modal-content {
   position: relative;
-  padding: 15px;
   background-color: $modal-content-bg;
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  @include border-radius(3px);
+  .select, input {
+    border-color: $softwhite2;
+  }
+  .list-name {
+    margin: 5px 15px;
+    span {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Modal content untuk blocking, jika menggunakan 2 grid left pada satu container
+.modal-inner {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
 // Modal background
@@ -64,57 +119,15 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-modal-background;
-  background-color: $modal-backdrop-bg;
+  z-index: 12;
+  background-color: rgba(0, 0, 0, 0.9);
   // Fade for backdrop
   &.fade { @include opacity(0); }
   &.in { @include opacity($modal-backdrop-opacity); }
 }
-
-// Modal header
-// Top section of the modal w/ title and dismiss
-.modal-header {
-  padding: $modal-title-padding;
-  border-bottom: 1px solid $modal-header-border-color;
-  @include clearfix;
-}
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
-}
-
-// Title text within header
-.modal-title {
-  margin: 0;
-  line-height: $modal-title-line-height;
-}
-
-// Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
-  position: relative;
-  padding: $modal-inner-padding;
-}
-
-// Footer (for actions)
-.modal-footer {
-  padding: $modal-inner-padding;
-  text-align: right; // right align buttons
-  border-top: 1px solid $modal-footer-border-color;
-  @include clearfix; // clear it in case folks use .pull-* classes on buttons
-
-  // Properly space out buttons
-  .btn + .btn {
-    margin-left: 5px;
-    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
-  }
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-  // and override it for block buttons as well
-  .btn-block + .btn-block {
-    margin-left: 0;
+.modal-open {
+  .modal-backdrop {
+    z-index: 13;
   }
 }
 
@@ -131,35 +144,522 @@
 @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
-    margin: 30px auto;
+    // margin: 30px auto;
+    margin: auto;
   }
   .modal-content {
-    @include box-shadow(0 5px 15px rgba(0,0,0,.5));
+    @include box-shadow(0 0px 15px rgba(0,0,0,.8));
   }
 
-  // Modal sizes
-  .modal-sm { width: $modal-sm; }
-}
-
-@media (min-width: $screen-md-min) {
-  .modal-lg { width: $modal-lg; }
 }
 
 // RKU CUSTOM MODAL
+.modal {
+  .icon-header {
+    text-align: center;
+    margin: 15px 0;
+  }
+  .form-group {
+    &.last {
+      border-top: 1px solid $softwhite2;
+      padding: 30px;
+    }
+  }
+}
+.modal-bottom {
+  width: 100%;
+  height: 5px;
+  background: $purple url(../images/footer-mod-bg.png) no-repeat left bottom;
+  position: absolute;
+  bottom: 0;
+}
+.modal-action {
+  padding: 15px;
+  margin-top: 30px;
+  background: $softwhite;
+  border-top: 1px solid $softwhite2;
+}
 
+// CENTRALIZE MODAL
 .has-modal-position {
-  height: 100%;
-  margin: 0 auto;
-  .modal-center {
-    position: absolute;
+  height: 100%; 
+  margin: 0 auto; 
+  .modal-center { // Di tengah layar secara vertikal
     width: 100%;
-    top: 50%;
-    @include transform(translateY(-50%));
+    // height: 100%;
+    top: 50%; 
+    @include transform(translateY(-50%)); 
+  }
+}
+.modal {
+  .select {
+    i {
+      color: $text;
+    }
+  }
+}
+#setLocation {
+  .modal-inner {
+    @include border-radius(2px);
+  }
+  .pick-location {
+    > a {
+      display: inline-block;
+      text-align: center
+    }
+  }
+  .select {
+    margin: 15px 0;
+    .free-text {
+      padding: 10px;
+      border: none;
+      input {
+        border-color: $gray3;
+        padding: 5px 5px 5px 15px;
+      }
+    }
+  }
+  .see-prop-on-loc {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: em(12);
+    color: $gray;
+    &:hover {
+      color: $link;
+    }
   }
 }
 
-#setLocation {
+
+#login {
+  input {
+    &:focus {
+      border-color: $gray2;
+    }
+  }
+  .modal-inner {
+    margin-right: -1px;
+    @include border-bottom-left-radius(3px)
+  }
+  .log-content {
+    margin-right: -1px;
+  }
+  .modal-content {
+    height: 535px;
+    // margin-top: 5px;
+    background-color: $white;
+    &:after {
+      @include clear;
+    }
+  }
+  .ask-account {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    padding: 5px;
+    background-color: $softwhite;
+  }
+  #login-tab {
+    overflow: hidden;
+    @include border-radius(3px 3px 0 0);
+    > li {
+      background-color: $softwhite2;
+      &.active {
+        background-color: $white;
+        z-index: 1;
+        &.left {
+          @include box-shadow(2px 0 10px rgba(0, 0, 0, 0.2));
+        }
+        &.right {
+          @include box-shadow(-2px 0 10px rgba(0, 0, 0, 0.2));
+        }
+      }
+      &.right {
+        @include border-radius(0);
+      }
+    }
+  }
+  .social-media-login {
+    padding: 30px 30px 15px;
+  }
+  .password {
+    &:after {
+      @include clear;
+    }
+    label {
+      font-size: em(12);
+      vertical-align: sub;
+      &:after {
+        font-size: em(12);
+      }
+    }
+  }
+  .tab-content {
+    .form-group {
+      padding: 0 30px;
+      &.last {
+        position: absolute;
+        width: 100%;
+        bottom: 35px;
+        border-top: 1px solid $softwhite2;
+        padding: 30px;
+      }
+    }
+  }
+  .list-name {
+    margin: 15px 30px 30px;
+    font-size: em(15);
+    color: $gray2;
+    span {
+      padding-left: 15px;
+      font-family: $font-regular;
+      font-size: em(12);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    &:before {
+      left: 0;
+      border-bottom-color: $gray3;
+    }
+  }
+  .rku-promo {
+    position: relative;
+    right: -1px;
+    height: 535px;
+    background: url(../images/rku-promo-register_.jpg) no-repeat center;
+    background-size: cover;
+    @include border-radius(0 2px 2px 0);
+    @include box-shadow(inset 2px 0 10px rgba(0, 0, 0, 0.4));
+  }
+  .forgot-password {
+    display: inline-block;
+    margin: 5px 0;
+    color: $gray2;
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+#property-slide {
+  padding-right: 0 !important;
   .modal-dialog {
-    width: 33.33333%;
+    .container {
+      position: relative;
+    }
+  }
+  .slide-container {
+    position: relative;
+    height: 100%;
+    padding: 15px 0;
+  }
+  .close-modal {
+    top: 10px;
+    right: 0;
+  }
+  .slide-header {
+    padding: 0;
+    .property-title {
+      margin-top: 15px;
+      font-size: em(18);
+      font-family: $font-semibold;
+      color: $white;
+    }
+    &:after {
+      @include clear;
+    }
+  }
+  .tag-group {
+    border-bottom: 1px solid $gray;
+    ul {
+      float: left;
+      &:after {
+        @include clear;
+      }
+    }
+    li {
+      float: left;
+      border-bottom: 3px solid transparent;
+      margin-right: 30px;
+      a {
+        display: block;
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+          color: $white;
+        }
+      }
+      &.selected {
+        border-bottom-color: $green;
+        a {
+          color: $white;
+        }
+      }
+    }
+    .counter {
+      float: right;
+      padding: 5px;
+      color: $white;
+    }
+    &:after {
+      @include clear;
+    }
+  }
+  .photo-group {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 150px);
+    .item {
+      width: 100%;
+      height: 100%;
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+        max-height: 85%;
+        margin: auto;
+      }
+    }
+    &:after {
+      @include clear;
+    }
+  }
+  .carousel {
+    height: 100%;
+    .carousel-control {
+      width: 80px;
+      opacity: 0;
+    }
+    .carousel-caption {
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &:hover {
+      .carousel-control {
+        opacity: 0.4;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .carousel-inner {
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .glyphicon-chevron-left, 
+  .glyphicon-chevron-right {
+    font-size: em(15);
+  }
+  .thumb-group {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    overflow-x: auto;
+    ul {
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      z-index: initial;
+      width: initial;
+      margin-left: 0;
+      &:after {
+        @include clear;
+      }
+    }
+    li {
+      display: inline-block;
+      background-color: $black;
+      margin-right: -1px;
+      width: initial;
+      height: initial;
+      margin: initial;
+      text-indent: initial;
+      cursor: pointer;
+      border: 2px solid transparent;
+      @include border-radius(1px);
+      a {
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        opacity: 0.2;
+      }
+      &.active {
+        border-color: $white;
+        a {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        border-color: $white;
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#contact-request {
+  .modal-content {
+    height: 535px;
+  }
+  #contact-stop {
+    .contact-form {
+      margin: 60px 0;
+    }
+    .last {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  .contact-info-content {
+    &:after {
+      @include clear;
+    }
+  }
+  .photo {
+    float: left;
+    .contact-photo {
+      margin-top: 0;
+    }
+  }
+  .contact-name {
+    margin-bottom: 10px;
+  }
+  .text {
+    padding-left: 100px;
+    text-align: left;
+  }
+  .contact-number {
+    margin-bottom: 10px;
+    font-size: em(16);
+    a, span {
+      display: inline-block;
+      color: $text;
+    }
+    a {
+      &:not(:last-child) {
+        &:after {
+          content: ',';
+        }
+      }
+    }
+    label {
+      display: block;
+      margin-right: 5px;
+      font-size: em(10);
+      font-family: $font-regular;
+      color: $gray2;
+      i {
+        vertical-align: middle;
+      }
+    }
+  }
+  .contact-message-content {
+    border-top: 1px solid $softwhite2;
+    padding: 15px;
+    label {
+      color: $gray2;
+    }
+    textarea {
+      padding: 15px;
+      height: 200px;
+      resize: none;
+      overflow-y: auto;
+    }
+  }
+}
+
+#imageCropper {
+  .cropper-container {
+    background-color: $white;
+    padding: 15px;
+  }
+  .image-cropper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background: url(../images/cropbg.jpg) repeat;
+    border: 1px solid $border;
+    .image-cropper {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+    .cropper-modal, .cropper-cutter {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .cropper-modal {
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+    .cropper-cutter {
+      background-color: rgba(255, 255, 255, .2);
+      outline: 1px solid $blue;
+      outline-color: rgba(42, 125, 198, .95);
+    }
+    .cropper-center {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      cursor: move;
+    }
+    .cropper-corner {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: $blue;
+      &.top {
+        top: -3px;
+        left: -3px;
+      }
+      &.right {
+        top: -3px;
+        right: -3px;
+      }
+      &.bottom {
+        right: -3px;
+        bottom: -3px;
+      }
+      &.left {
+        bottom: -3px;
+        left: -3px;
+      }
+      &.top, &.bottom {
+        cursor: nw-resize;
+      }
+      &.right, &.left {
+        cursor: ne-resize;
+      }
+    }
   }
 }

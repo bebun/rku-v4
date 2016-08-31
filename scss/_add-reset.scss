@@ -1,19 +1,36 @@
 sup {
 	position: relative;
-	bottom: 5px;
-	vertical-align: top;
-	font-size: 60%;
+	top: -5px;
+	font-size: 70%;
+}
+
+button {
+	&:focus {
+		outline: none;
+	}
 }
 
 /* ============== TEXT ALIGN =========== */
-.right-align {
-	text-align: right;
+.text-uppercase {
+	text-transform: uppercase;
 }
-.left-align {
+.text-center {
+	text-align: center;
+}
+.text-left {
 	text-align: left;
 }
-.center-align {
-	text-align: center;
+.text-right {
+	text-align: right;
+}
+/* ===================================== */
+
+/* ================= FONT ============== */
+.font-bold {
+	font-family: $font-bold;
+}
+.font-semibold {
+	font-family: $font-semibold;
 }
 /* ===================================== */
 
@@ -28,14 +45,27 @@ sup {
 .no-left-pad {
 	padding-left: 0;
 }
-/* ===================================== */
-
-/* =============== FLOAT =============== */
-.float-right {
-	float: right;
+.padding-top-30 {
+	padding-top: 30px;
 }
-.float-left {
-	float: left;
+.padding-bottom-0 {
+	padding-bottom: 0;
+}
+.padding-side-15 {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.padding-side-30 {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.padding-vert-15 {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.padding-vert-30 {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 /* ===================================== */
 
@@ -53,6 +83,58 @@ sup {
 	.margin-left-#{$i} {
 		margin-left: 5px * $i;
 	}
+	.padding-top-#{$i} {
+		padding-top: 5px * $i;
+	}
+	.padding-right-#{$i} {
+		padding-right: 5px * $i;
+	}
+	.padding-bottom-#{$i} {
+		padding-bottom: 5px * $i;
+	}
+	.padding-left-#{$i} {
+		padding-left: 5px * $i;
+	}
+}
+.margin-vert-15 {
+	@extend .margin-top-3;
+	@extend .margin-bottom-3;
+}
+.margin-vert-30 {
+	@extend .margin-top-6;
+	@extend .margin-bottom-6;
+}
+.margin-side-0 {
+	margin-right: 0;
+	margin-left: 0;
+}
+.margin-side-15 {
+	@extend .margin-right-3;
+	@extend .margin-left-3;
+}
+.margin-side-30 {
+	@extend .margin-right-6;
+	@extend .margin-left-6;
 }
 
 /* ===================================== */
+
+/* =============== FLOAT =============== */
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+/* ===================================== */
+
+.color-red {
+	color: $red;
+}
+.color-green {
+	color: $green;
+}
+
+.text-uppercase {
+	text-transform: uppercase !important;
+}

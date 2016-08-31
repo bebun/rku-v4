@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1e1e22"> <!--Header theme color for Chrome, Firefox OS, and Opera-->
+	<meta name="msapplication-navbutton-color" content="#1e1e22"> <!--Header theme color for windows phone-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e22"> <!--Header theme color for iOS Safari-->
+	<meta name="apple-mobile-web-app-title" content="rumahku">
+	<meta name="application-name" content="rumahku">
+	<meta name="msapplication-TileColor" content="#1e1e22">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>RKU V4 - Dashboard - Favorit - Properti</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/favicon//manifest.json">
+	<link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="css/icon-set.css">
+	<!--[if lt IE 8]><!-->
+	<link rel="stylesheet" href="css/icon-set-ie7.css">
+	<!--<![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/dini.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="main-menu" data-target="#main-menu" aria-expanded="false">Menu <i class="rku-menu-bar"></i></button>
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="select-location">
+							<a href="" type="button" data-toggle="modal" data-target="#setLocation" class="btn no-bg" title="Ganti Lokasi?">Jakarta Barat</a>
+						</li>
+						<li class="dropdown property-type">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li><a href="">Semua Properti</a></li>
+							</ul>
+						</li>
+						<li class="dropdown property-type">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li><a href="">Semua Properti</a></li>
+							</ul>
+						</li>
+						<li><a href="">Properti Baru</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="">Direktori Apartemen</a></li>
+								<li><a href="">Direktori Agensi Properti</a></li>
+								<li><a href="">Rumahku Expo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="" id="sidemenu-toggle" data-toggle="sidemenu">Menu <i class="rku-menu-bar"></i></a></li>
+						<li class="dropdown user-login">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false" title="Username">
+								<div class="image-package icon bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+								<i class="rku-angle-bottom"></i>
+							</a>
+							<div class="dropdown-menu user-menu-list">
+								<ul>
+									<li><a href=""><i class="rku-heart-empty"></i> Properti Favorit</a></li>
+									<li><a href=""><i class="rku-label"></i> Pencarian Tersimpan</a></li>
+									<li><a href=""><i class="rku-message-2"></i> Pesan</a></li>
+									<li><a href=""><i class="rku-user"></i> Profile</a></li>
+									<li><a href=""><i class="rku-exit"></i> Keluar</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown notification">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-bell"></i></a>
+							<div class="dropdown-menu notif-list">
+								<div class="list-name"><span>Properti Favorit</span></div>
+							</div>
+						</li>
+						<li><a href="">Artikel</a></li>
+						<li><a href=""><span class="btn md border-only white text-uppercase">Iklankan Properti Anda</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div id="breadscrumb">
+		<div class="container">
+			<ul>
+				<li>
+					<a href="">Beranda</a>
+				</li>
+				<li>
+					<a href="">Dashboard</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="disabled">Edit Profil</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="content-wrapper">
+		<form action="">
+			<div id="content">
+				<div id="dashboard">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="db-menu-wrapper">
+									<div class="db-user-info text-center">
+										<div class="db-user-photo image-package contact-photo bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+										<div class="db-user-fullname">Wibowo Kuncorojakti <label for="" class="user-pro box">PRO</label></div>
+										<div class="db-user-email">wibowo.k@mis.com</div>
+										<div class="user-verification">Pengguna Terverifikasi <i class="rku-verified"></i></div>
+									</div>
+									<ul class="db-menu-list">
+										<li><a href=""><i class="rku-dashboard"></i> Dashboard</a></li>
+										<li><a href=""><i class="rku-home"></i> Properti Saya</a></li>
+										<li class="dropdown">
+											<span class="unread">1</span>
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-heart-empty"></i> Favorit</a>
+											<ul class="dropdown-menu">
+												<li><a href="">Semua - <span class="amount">6</span></a></li>
+												<li><a href="">Pencarian - <span class="amount">3</span> <span class="unread">(1)</span></a></li>
+												<li><a href="">Properti - <span class="amount">1</span></a></li>
+												<li><a href="">Agen - <span class="amount">2</span></a></li>
+												<li><a href="">Artikel</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-coin"></i> Deposit</a>
+											<ul class="dropdown-menu">
+												<li><a href="">Rekap</a></li>
+												<li><a href="">Top Up</a></li>
+												<li><a href="">Laporan Transaksi</a></li>
+											</ul>
+										</li>
+										<li><a href=""><i class="rku-statistic"></i> Laporan Properti</a></li>
+										<li><a href=""><i class="rku-banner"></i> Klaim Spanduk</a></li>
+										<li class="dropdown">
+											<span class="unread">1</span>
+											<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-home-search"></i> Carikan Properti</a>
+											<ul class="dropdown-menu">
+												<li><a href="">Permintaan <span class="amount">2</span></a></li>
+												<li><a href="">Kebutuhan <span class="amount">3</span> <span class="unread">(1)</span></a></li>
+											</ul>
+										</li>
+										<li><a href=""><i class="rku-quote"></i> Testimonial</a></li>
+									</ul>
+									<ul class="db-menu-list setting">
+										<li class="active"><a href="">Edit Profil</a></li>
+										<li><a href="">Pengaturan</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<h6 class="head-title margin-top-3">Edit Profil</h6>
+								<ul id="media-tab" class="nav nav-tabs tab-line margin-bottom-3" role="tablist">
+									<li class="active" role="presentation">
+										<a href="#bio" id="bio-tab" role="tab" data-toggle="tab">Biodata dan Profil</a>
+									</li>
+									<li role="presentation">
+										<a href="#job" id="job-tab" role="tab" data-toggle="tab">Profesi</a>
+									</li>
+									<li role="presentation">
+										<a href="#socmed" id="socmed-tab" role="tab" data-toggle="tab">Media Sosial</a>
+									</li>
+									<li role="presentation">
+										<a href="#area" id="area-tab" role="tab" data-toggle="tab">Spesialis Area</a>
+									</li>
+								</ul>
+								<div id="tab-content" class="tab-content">
+									<div class="tab-pane fade active in" id="bio" aria-labelledby="bio-tab">
+										<div class="row">
+											<div class="col-sm-8">
+												<section id="rku-change-profile">
+													<div>
+														<label for="">Username</label>
+														<div class="input">
+															<input class="full-width" type="text" value="wibowo.k">
+														</div>
+														<p>Anda hanya dapat melakukan perubahan username satu kali</p>
+													</div>
+													<div>
+														<label for="">Nama</label>
+														<div class="input">
+															<input class="full-width" type="text" value="Wibowo Kuncorojakti">
+														</div>
+													</div>
+													<div>
+														<label for="">Jenis Kelamin</label>
+														<div class="radio margin-top-1">
+															<div class="row">
+																<div class="col-sm-9">
+																	<div class="form-group">
+																		<input type="radio" id="men" name="favorit-status">
+																		<label for="men" class="normal"><span><span></span></span> Laki-laki</label>
+																	</div>
+																	<div class="form-group">
+																		<input type="radio" id="woman" name="favorit-status">
+																		<label for="woman" class="normal"><span><span></span></span> Perempuan</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<label for="">Tanggal Lahir</label>
+														<div class="input">
+															<input type="date">
+														</div>
+													</div>
+													<div>
+														<label for="">Tentang Saya</label>
+														<textarea name="" id="" cols="30" rows="10" class="full-width margin-bottom-3" placeholder="Tuliskan deskripsi menarik tentang diri Anda"></textarea>
+													</div>
+													<div>
+														<div class="form-group">
+															<label for="">Alamat</label>
+															<div class="input">
+																<input class="full-width" type="text">
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-6">
+																	<label class="normal margin-top-3" for="">Provinsi</label>
+																	<div class="select dropdown with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Provinsi <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div class="dropdown-menu">
+																			<div class="free-text">
+																				<div class="form-group">
+																					<input type="text" class="md full-width" placeholder="Masukkan Kota">
+																				</div>
+																			</div>
+																			<ul>
+																				<li><a href="">Provinsi A</a></li>
+																				<li><a href="">Provinsi B</a></li>
+																				<li><a href="">Provinsi C</a></li>
+																				<li><a href="">Provinsi D</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<label class="normal margin-top-3" for="">Kota</label>
+																	<div class="select dropdown with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Provinsi Dahulu <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div class="dropdown-menu">
+																			<div class="free-text">
+																				<div class="form-group">
+																					<input type="text" class="md full-width" placeholder="Masukkan Kota">
+																				</div>
+																			</div>
+																			<ul>
+																				<li><a href="">Kota A</a></li>
+																				<li><a href="">Kota B</a></li>
+																				<li><a href="">Kota C</a></li>
+																				<li><a href="">Kota D</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-6">
+																	<label class="normal margin-top-3" for="">Area</label>
+																	<div class="select dropdown with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Kota Dahulu <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div class="dropdown-menu">
+																			<div class="free-text">
+																				<div class="form-group">
+																					<input type="text" class="md full-width" placeholder="Masukkan Kota">
+																				</div>
+																			</div>
+																			<ul>
+																				<li><a href="">Area A</a></li>
+																				<li><a href="">Area B</a></li>
+																				<li><a href="">Area C</a></li>
+																				<li><a href="">Area D</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<label class="normal margin-top-3" for="">Kode Pos</label>
+																	<div class="input">
+																		<input type="text" placeholder="">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<label for="">Tipe User</label>
+														<div class="form-group">
+															<div class="select dropdown with-label-inside margin-bottom-3">
+																<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih tipe user <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																<div class="dropdown-menu">
+																	<ul>
+																		<li><a href="">Saya agen properti</a></li>
+																		<li><a href="">Saya ingin menjual rumah</a></li>
+																		<li><a href="">Saya ingin membeli rumah</a></li>
+																		<li><a href="">Saya ingin mencari informasi properti</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<label for="">Informasi Kontak</label>
+														<div class="form-group">
+															<label class="normal" for="">No. Telepon</label>
+															<div class="input">
+																<input type="text">
+															</div>
+															<p>Sertakan dengan kode area</p>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-6">
+																	<label for="" class="normal margin-top-3">No. Handpohone</label>	
+																	<div class="input">
+																		<input class="full-width" type="text">
+																	</div>
+																</div>
+																<div class="col-sm-6">
+																	<label for="" class="normal margin-top-3">No. Handpohone 2</label>	
+																	<div class="input">
+																		<input class="full-width" type="text">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="row">
+																<div class="col-sm-3">
+																	<label class="normal margin-top-3" for="">Pin BB</label>
+																	<div class="input">
+																		<input class="full-width" type="text">
+																	</div>
+																</div>
+																<div class="col-sm-5">
+																	<label class="normal margin-top-3" for="">Whatsapp</label>
+																	<div class="input">
+																		<input class="full-width" type="text">
+																	</div>
+																</div>
+																<div class="col-sm-4">
+																	<label class="normal margin-top-3" for="">Line</label>
+																	<div class="input">
+																		<input class="full-width" type="text">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<label for="">Website</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+													</div>
+													<div class="text-right margin-bottom-3">
+														<a href=""><span class="btn md with-bg green">Simpan</span></a>
+													</div>
+												</section>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="job" aria-labelledby="job-tab">
+										<div class="row">
+											<div class="col-sm-8">
+												<section id="rku-change-profile">
+													<div>
+														<label for="">Penghargaan</label>
+														<textarea class="full-width" cols="30" rows="10" type="text" placeholder="Penghargaan yang Anda raih"></textarea>
+													</div>
+													<div>
+														<label for="">Pengalaman Kerja</label>
+														<textarea class="full-width" cols="30" rows="10" type="text" placeholder="Penghargaan yang Anda raih"></textarea>
+													</div>
+													<div>
+														<label for="">Tipe Klien</label>
+														<ul class="row">
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="buyer">
+																		<label for="buyer" class="normal"> Pembeli Properti</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="renter">
+																		<label for="renter" class="normal"> Penyewa</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="company">
+																		<label for="company" class="normal"> Perusahaan</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="investor">
+																		<label for="investor" class="normal"> Investor</label>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<label for="">Tipe Properti</label>
+														<ul class="row">
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="house">
+																		<label for="house" class="normal"> Rumah</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="land">
+																		<label for="land" class="normal"> Tanah</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="apartment">
+																		<label for="apartment" class="normal"> Apartemen</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="villa">
+																		<label for="villa" class="normal"> Vila</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="office">
+																		<label for="office" class="normal"> Ruang Kantor</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="kiosk">
+																		<label for="kiosk" class="normal"> Kios atau Toko</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="shop">
+																		<label for="shop" class="normal"> Ruko</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="kost">
+																		<label for="kost" class="normal"> Kost</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="warehouse">
+																		<label for="warehouse" class="normal"> Gudang atau Pabrik</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="hotel">
+																		<label for="hotel" class="normal"> Hotel</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="gas">
+																		<label for="gas" class="normal"> SPBU</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="bulding">
+																		<label for="bulding" class="normal"> Gedung Kantor</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="condotel">
+																		<label for="condotel" class="normal"> Condotel</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="villatel">
+																		<label for="villatel" class="normal"> Villatel</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="commercial">
+																		<label for="commercial" class="normal"> Komersil</label>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<label for="">Spesialis</label>
+														<ul class="row">
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="sell">
+																		<label for="sell" class="normal"> Jual Rumah/Apartemen</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="sellluxury">
+																		<label for="sellluxury" class="normal"> Jual Rumah Mewah</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="sellland">
+																		<label for="sellland" class="normal"> Jual Tanah Komersial</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="nego">
+																		<label for="nego" class="normal"> Negosiasi</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="auction">
+																		<label for="auction" class="normal"> Lelang</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="management">
+																		<label for="management" class="normal"> Menejemen Properti</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="relocation">
+																		<label for="relocation" class="normal"> Relokasi</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="lease">
+																		<label for="lease" class="normal"> Sewa Menyewa</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="kpr">
+																		<label for="kpr" class="normal"> Pengurrusan KPR</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="sertificate">
+																		<label for="sertificate" class="normal"> Pengurussan Sertifikat</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="tax">
+																		<label for="tax" class="normal"> Pengurusan Pajak</label>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<label for="">Sertifikasi</label>
+														<ul>
+															<li>
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="arebi">
+																		<label for="arebi" class="normal"> AREBI</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="other">
+																		<label for="other" class="normal"> Lainnya</label>
+																		<div class="input">
+																			<input type="text">
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<label for="">Bahasa</label>
+														<ul class="row">
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="ina">
+																		<label for="ina" class="normal"> Indonesia</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="en">
+																		<label for="en" class="normal"> English</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="man">
+																		<label for="man" class="normal"> Mandarin</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="malay">
+																		<label for="malay" class="normal"> Malaysia</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="arb">
+																		<label for="arb" class="normal"> Arabic</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="deu">
+																		<label for="deu" class="normal"> Deutch</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-4">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="esp">
+																		<label for="esp" class="normal"> Espanol</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-8">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="fr">
+																		<label for="fr" class="normal"> Prancis</label>
+																	</div>
+																</div>
+															</li>
+															<li class="col-sm-6 col-md-12">
+																<div class="checkbox">
+																	<div class="form-group">
+																		<input type="checkbox" id="other2">
+																		<label for="other2" class="normal"> Lainnya</label>
+																		<div class="input">
+																			<input type="text">
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="text-right margin-bottom-3">
+														<a href=""><span class="btn md with-bg green">Simpan</span></a>
+													</div>
+												</section>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="socmed" aria-labelledby="socmed-tab">
+										<div class="row">
+											<div class="col-sm-8">
+												<section id="rku-change-profile">
+													<div>
+														<label for="">Facebook</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: https://wwww.facebook.com/Rumahku</p>
+													</div>
+													<div>
+														<label for="">Twitter</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: https://twitter.com/rumahku</p>
+													</div>
+													<div>
+														<label for="">Google+</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: https://plus.google.com/u/1/+Rumahkucom</p>
+													</div>
+													<div>
+														<label for="">LinnkedIn</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: https://www.linkedin.com/company/pt-naga-langit</p>
+													</div>
+													<div>
+														<label for="">Pinterest</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: https://www.pinterest.com/rumahkucom</p>
+													</div>
+													<div>
+														<label for="">Instagram</label>
+														<div class="input">
+															<input class="full-width" type="text">
+														</div>
+														<p>contoh: rumahkucom</p>
+													</div>
+													<div class="text-right margin-bottom-3">
+														<a href=""><span class="btn md with-bg green">Simpan</span></a>
+													</div>
+												</section>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="area" aria-labelledby="area-tab">
+										<div class="row">
+											<div class="col-sm-4 col-sm-push-8">
+												<a href=""><span class="btn md full-width with-bg purple">Tambah Spesialis Area</span></a>
+												<div id="favorit-search">
+													<div class="total-count box margin-vert-15">
+														<div class="number">8</div>
+														<p class="text-center margin-bottom-3">Spesialis area yang Anda pilih</p>
+														<div class="area-tags">
+															<label for="" class="normal article-category green">Cilandak <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Cipete <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Fatmawati <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Ragunan <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Pondok Indah <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Slipi <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Palmerah <a href=""><i class="rku-cross"></i></a></label>
+															<label for="" class="normal article-category green">Puri <a href=""><i class="rku-cross"></i></a></label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-8 col-sm-pull-4">
+												<div id="rku-specialist-area">
+													<div class="notice info margin-bottom-3">
+														<p><strong>Tahukah Anda?</strong> Dengan menggunakan fitur spesialis area, para pencari rumah ataupun pemilik yang hendak menjual propertinya akan mengerti bahwa Anda fokus dan menguasai area tersebut. <a href="">Pelajari <i class="rku-angle-right"></i></a></p>
+													</div>
+													<ul class="area-collapse">
+														<li>
+															<div class="collapse-title">Jakarta Selatan, DKI Jakarta</div>
+															<span>- <strong>5</strong> area dipilih</span>
+															<div class="collapse-down">
+																<a href=""><i class="rku-angle-bottom"></i></a>
+															</div>
+															<div class="content-collapse margin-top-4" hidden>
+																<div class="form-group">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<div class="select dropdown with-label-inside margin-bottom-3">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Provinsi <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																				<div class="dropdown-menu">
+																					<div class="free-text">
+																						<div class="form-group">
+																							<input type="text" class="md full-width" placeholder="Masukkan Provinsi">
+																						</div>
+																					</div>
+																					<ul>
+																						<li><a href="">Provinsi A</a></li>
+																						<li><a href="">Provinsi B</a></li>
+																						<li><a href="">Provinsi C</a></li>
+																						<li><a href="">Provinsi D</a></li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-sm-6">
+																			<div class="select dropdown with-label-inside">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Kota Dahulu <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																				<div class="dropdown-menu">
+																					<div class="free-text">
+																						<div class="form-group">
+																							<input type="text" class="md full-width" placeholder="Masukkan Kota">
+																						</div>
+																					</div>
+																					<ul>
+																						<li><a href="">Area A</a></li>
+																						<li><a href="">Area B</a></li>
+																						<li><a href="">Area C</a></li>
+																						<li><a href="">Area D</a></li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="area-choose">
+																	<div class="head-action">
+																		<div class="row">
+																			<div class="col-sm-6">
+																				<div class="checkbox margin-top-2">
+																					<div class="form-group">
+																						<input id="all" type="checkbox">
+																						<label for="all" class="normal">Pilih Semua</label>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="col-sm-6">
+																				<div class="input">
+																					<input class="full-width" type="text" placeholder="Cari area yang dipilih">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="all-area">
+																		<ul>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="ampera">
+																						<label for="ampera" class="normal"> Ampera</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="antasari">
+																						<label for="antasari" class="normal"> Antasari</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="bangka">
+																						<label for="bangka" class="normal"> Bangka</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="bintaro">
+																						<label for="bintaro" class="normal"> Bintaro</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="bloks">
+																						<label for="bloks" class="normal"> Blok S</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="bukitduri">
+																						<label for="bukitduri" class="normal"> Bukit Duri</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="casablanca">
+																						<label for="casablanca" class="normal"> Casablanca</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="cilandak">
+																						<label for="cilandak" class="normal"> Cilandak</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="cipete">
+																						<label for="cipete" class="normal"> Cipete</label>
+																					</div>
+																				</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="padding-vert-15 text-right">
+																	<a href=""><span class="btn text-only color-gray">Reset</span></a>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="collapse-title">Jakarta Barat, DKI Jakarta</div>
+															<span>- <strong>3</strong> area dipilih</span>
+															<div class="collapse-down">
+																<a href=""><i class="rku-angle-top"></i></a>
+															</div>
+															<div class="content-collapse margin-top-4">
+																<div class="form-group">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<div class="select dropdown with-label-inside margin-bottom-3">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Provinsi <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																				<div class="dropdown-menu">
+																					<div class="free-text">
+																						<div class="form-group">
+																							<input type="text" class="md full-width" placeholder="Masukkan Provinsi">
+																						</div>
+																					</div>
+																					<ul>
+																						<li><a href="">Provinsi A</a></li>
+																						<li><a href="">Provinsi B</a></li>
+																						<li><a href="">Provinsi C</a></li>
+																						<li><a href="">Provinsi D</a></li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="col-sm-6">
+																			<div class="select dropdown with-label-inside margin-bottom-3">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="false">Pilih Kota Dahulu <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																				<div class="dropdown-menu">
+																					<div class="free-text">
+																						<div class="form-group">
+																							<input type="text" class="md full-width" placeholder="Masukkan Kota">
+																						</div>
+																					</div>
+																					<ul>
+																						<li><a href="">Area A</a></li>
+																						<li><a href="">Area B</a></li>
+																						<li><a href="">Area C</a></li>
+																						<li><a href="">Area D</a></li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="area-choose">
+																	<div class="head-action">
+																		<div class="row">
+																			<div class="col-sm-6">
+																				<div class="checkbox margin-top-2">
+																					<div class="form-group">
+																						<input id="all" type="checkbox">
+																						<label for="all" class="normal">Pilih Semua</label>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="col-sm-6">
+																				<div class="input">
+																					<input class="full-width" type="text" placeholder="Cari area yang dipilih">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="all-area">
+																		<ul>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="angke">
+																						<label for="angke" class="normal"> Angke</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="asemka">
+																						<label for="asemka" class="normal"> Asemka</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="cengkareng">
+																						<label for="cengkareng" class="normal"> Cengkareng</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="citra">
+																						<label for="citra" class="normal"> Citra Garden</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="cityresort">
+																						<label for="cityresort" class="normal"> City Resort</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="daanmogot">
+																						<label for="daanmogot" class="normal"> Daan Mogot</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="duri">
+																						<label for="duri" class="normal"> Duri</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="duriintan">
+																						<label for="duriintan" class="normal"> Duri Intan</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="durikelapa">
+																						<label for="durikelapa" class="normal"> Duri Kelapa</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="gajahhmada">
+																						<label for="gajahhmada" class="normal"> Gajah Mada</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="gelong">
+																						<label for="gelong" class="normal"> Gelong</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="glodok">
+																						<label for="glodok" class="normal"> Glodok</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="greengarden">
+																						<label for="greengarden" class="normal"> Green Garden</label>
+																					</div>
+																				</div>
+																			</li>
+																			<li class="col-sm-6 col-md-4">
+																				<div class="checkbox">
+																					<div class="form-group">
+																						<input type="checkbox" id="greenlake">
+																						<label for="greenlake" class="normal"> Green Lake City</label>
+																					</div>
+																				</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="padding-vert-15 text-right">
+																	<a href=""><span class="btn text-only color-gray">Reset</span></a>
+																</div>
+															</div>
+														</li>
+													</ul>
+													<div class="text-right margin-bottom-3">
+														<a href=""><span class="btn md with-bg green">Simpan</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<footer>
+		<div class="top-foot">
+			<div class="text-center">
+				<a href="" class="open-more"><i class="rku-angle-top"></i> Lihat Tautan Populer</a>
+			</div>
+			<div class="top-foot-content">
+				<div class="container">
+					<div class="">
+						<div class="short-link row">
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Jual Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Kemanggisan</a></li>
+									<li><a href="">Tomang</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li><a href="">Grogol</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Sewa Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Petojo</a></li>
+									<li><a href="">Daan Mogot</a></li>
+									<li><a href="">Joglo</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Dijual di Jakarta Barat</a></li>
+									<li><a href="">Tanah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Ruko Dijual di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruko Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruang Kantor Disewakan di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="popular-link row">
+						<h1 class="title">Pencarian Populer:</h1>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mid-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-side-pad">
+						<ul>
+							<li><a href="">Tentang Rumahku</a></li>
+							<li><a href="">Redaksi</a></li>
+							<li><a href="">Kebijakan Layanan</a></li>
+							<li><a href="">Daftar Membership</a></li>
+							<li><a href="">Karir</a></li>
+							<li><a href="">Hubungi Rumahku</a></li>
+							<li><a href="">Sitemap</a></li>
+							<li><a href="">Widget</a></li>
+							<li><a href="">RSS</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-12 col-md-4 no-side-pad">
+						<ul class="social-media-link">
+							<li><a href=""><i class="rku-facebook"></i></a></li>
+							<li><a href=""><i class="rku-twitter"></i></a></li>
+							<li><a href=""><i class="rku-instagram"></i></a></li>
+							<li><a href=""><i class="rku-gplus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-left-pad">
+						<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+						<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+					</div>
+					<div class="col-sm-12 col-md-3 no-right-pad end">
+						<div class="text-right">
+							<a href="" class="sponsored"><img src="images/gsd-collo.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- SIDEMENU SECTION -->
+	<div id="sidemenu-container">
+		<div class="backdrop"></div>
+		<div class="sidemenu-list">
+			<div class="sidemenu-close"><a href=""><i class="rku-cross"></i></a></div>
+			<ul class="only-on-small-desktop">
+				<li><a href=""><span class="btn md full-width with-bg white margin-bottom-3">Iklankan Properti Anda</span></a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="">Artikel</a></li>
+			</ul>
+			<ul class="side-mainmenu">
+				<li><a href="">Event</a></li>
+				<li><a href="">Rumahku VIP</a></li>
+				<li><a href="">Badge</a></li>
+				<li><a href="">Testimonial</a></li>
+				<li><a href="">Karir</a></li>
+			</ul>
+			<ul class="side-secmenu">
+				<li><a href="">FAQ</a></li>
+				<li><a href="">Bantuan</a></li>
+				<li><a href="">Syarat dan Kebijakan</a></li>
+				<li><a href="">Berikan feedback untuk kami</a></li>
+			</ul>
+			<div class="mail-support">
+				<a href="">
+					<p>Butuh bantuan cepat? Sampaikan pada kami</p>
+					<span>info@rumahku.com</span>
+				</a>
+			</div>
+			<div class="social-media">
+				<p>Kunjungi media sosial kami</p>
+				<ul>
+					<li><a href=""><i class="rku-facebook"></i></a></li>
+					<li><a href=""><i class="rku-twitter"></i></a></li>
+					<li><a href=""><i class="rku-instagram"></i></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+			</div>
+		</div>
+	</div>
+	<div id="main-menu">
+		<div class="whole-menu">
+			<div class="main-menu-header">
+				<button type="button" class="close-toggle" data-toggle="close-main-menu" aria-expanded="false">Tutup <i class="rku-cross"></i></button>
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+			</div>
+			<div class="main-menu-content">
+				<div class="user-login">
+					<a href="">
+						<div class="image-package thumb-image"><img src="images/user-photo.jpg" alt=""></div>
+						<span class="name">Jamal Parveeja</span>
+						<span>Lihat profil</span>
+					</a>
+				</div>
+				<div class="main-action">
+					<div class="list-your-property padding-side-15 margin-vert-15 ">
+						<a href=""><span class="btn lg full-width border-only white text-uppercase">Iklankan Properti Anda</span></a>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<a href="">Properti Baru</a>
+					<a href="">Direktori Apartemen</a>
+					<a href="">Direktori Agensi Properti</a>
+					<a href="">Rumahku Expo</a>
+					<a href="">Artikel</a>
+					<a href="">Event</a>
+					<a href="">Rumahku VIP</a>
+					<a href="">Badge</a>
+					<a href="">Testimonial</a>
+					<a href="">Karir</a>
+				</div>
+				<div class="sec-action">
+					<ul>
+						<li><a href="">FAQ</a></li>
+						<li><a href="">Bantuan</a></li>
+						<li><a href="">Syarat dan Kebijakan</a></li>
+						<li>
+							<a href="tel:+62215332555">
+								<span>Butuh bantuan cepat? Hubungi kami:</span>
+								<span>(021) 533 2555</span>
+							</a>
+							<p></p>
+						</li>
+					</ul>
+				</div>
+				<div class="social-media">
+					<p>Kunjungi media sosial kami</p>
+					<ul>
+						<li><a href=""><i class="rku-facebook"></i></a></li>
+						<li><a href=""><i class="rku-twitter"></i></a></li>
+						<li><a href=""><i class="rku-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+					<p>Hak cipta &copy; 2016 PT. Naga Langit. <br>Dilindungi oleh undang-undang.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MODAL SECTION -->
+	<div id="login" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position">
+			<div class="container">
+				<div class="col-sm-8 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-7 no-side-pad">
+							<div class="modal-inner">
+								<ul id="login-tab" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="col-sm-6 no-side-pad active left">
+										<a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk</a>
+									</li>
+									<li role="presentation" class="col-sm-6 no-side-pad right">
+										<a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar</a>
+									</li>
+								</ul>
+								<div id="tab-content" class="tab-content">
+									<div class="tab-pane fade active in" id="login-section" aria-labelledby="login-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Masuk Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau masuk dengan akun Rumahku</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan username atau email Anda">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="password" class="md full-width" placeholder="Masukkan password akun Anda">
+											</div>
+											<div class="form-group">
+												<a href="" class="small-text forgot-password">Lupa password?</a>
+											</div>
+											<div class="form-group margin-top-6 last">
+												<a href=""><span class="btn md full-width with-bg green">Masuk Ke Rumahku</span></a>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Tidak punya akun?</span> <a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar Sekarang</a>.
+										</div>
+									</div>
+									<div class="tab-pane fade" id="register-section" aria-labelledby="register-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Daftar Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau daftar dengan email Anda</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan nama lengkap Anda" required="required">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan email Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan no. telepon Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group last margin-top-6">
+												<a href=""><span class="btn md full-width with-bg green">Daftar</span></a>
+												<div class="small-text text-center">
+													Dengan menekan tombol "Daftar", Anda telah setuju dengan <a href="">syarat dan ketentuan</a> yang berlaku di Rumahku.com
+												</div>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Sudah punya akun?</span> <a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk di sini</a>.
+										</div>
+									</div>
+								</div>
+								<div class="modal-bottom"></div>
+							</div>
+						</div>
+						<div class="col-sm-5 no-side-pad">
+							<div class="rku-promo"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+					
+		</div>
+	</div>
+	<div id="setLocation" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/loc-mark.png" alt="">
+							</div>
+						</div>
+						<p class="text-center">
+							Saat ini, Anda sedang melihat seluruh properti di wilayah:
+						</p>
+						<div class="col-sm-9 centered">
+							<div class="select dropdown md full-width with-label-inside">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jakarta Barat <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+								<div class="dropdown-menu">
+									<div class="free-text">
+										<div class="form-group">
+											<input type="text" class="md full-width" placeholder="Masukkan Kota">
+										</div>
+									</div>
+									<div class="list-name">
+										<span>Kota</span>
+									</div>
+									<ul>
+										<li><a href="">DKI Jakarta</a></li>
+										<li><a href="">Banten</a></li>
+										<li><a href="">Jawa Barat</a></li>
+										<li><a href="">Jawa Tengah</a></li>
+										<li><a href="">Jawa Timur</a></li>
+										<li><a href="">NTB</a></li>
+										<li><a href="">NTT</a></li>
+										<li><a href="">Bali</a></li>
+										<li><a href="">Lampung</a></li>
+										<li><a href="">Sumatera Selatan</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-action">
+							<div class="col-sm-5 centered">
+								<a href=""><span class="btn full-width md with-bg green">Ganti Lokasi</span></a>
+							</div>
+							<div class="col-sm-6 centered text-center">
+								<a href="" class="see-prop-on-loc">Lihat properti di wilayah ini</a>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact-request" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-5 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div id="contact-stop" style="display: block">
+							<div class="col-sm-8 centered">
+								<div class="icon-header padding-top-30">
+									<img src="images/address-book.png" alt="">
+								</div>
+							</div>
+							<div class="padding-side-15">
+								<p class="text-center">Untuk memudahkan komunikasi dengan agent properti, harap masukkan identitas dan kontak Anda</p>
+							</div>
+							<div class="contact-form">
+								<form action="">
+									<div class="form-group padding-side-30">
+										<input type="text" class="md full-width" placeholder="Masukkan nama Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="tel" class="md full-width" placeholder="Masukkan nomor handphone Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="email" class="md full-width" placeholder="Masukkan email Anda">
+									</div>
+									<div class="form-group margin-top-6 last">
+										<a href=""><span class="btn md full-width with-bg green">Lanjut</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="contact-message" style="display: none">
+							<div class="contact-info-content">
+								<div class="photo">
+									<a href="" class="box image-package contact-photo">
+										<img src="images/agent/agent-1.jpg" alt="">
+									</a>
+								</div>
+								<div class="text">
+									<span class="contact-name">Toro del Benicio</span>
+									<div class="contact-number">
+										<label for="">Telepon</label>
+										<a href="tel:+62212255555">021 2255555</a>
+										<a href="tel:+6287751234522">087751234522</a>
+										<a href="tel:+62818242420">0818242420</a>
+									</div>
+									<div class="contact-number">
+										<label for="">BB Messenger</label>
+										<span>2128F625</span>
+									</div>
+								</div>
+							</div>
+							<div class="contact-message-content">
+								<form action="">
+									<div class="form-group margin-bottom-3">
+										<label for="" class="normal">Tulis pesan untuk Toro</label>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih subjek pesan properti ini- <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<ul>
+													<li><a href="">Detail Bangunan</a></li>
+													<li><a href="">Alamat</a></li>
+													<li><a href="">Lingkungan Sekitar</a></li>
+													<li><a href="">Fasilitas Pendukung</a></li>
+													<li><a href="">Fasilitas Sekitar</a></li>
+													<li><a href="">Lainnya</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="" id="" cols="30" rows="10" class="full-width margin-bottom-3" value>Hai Toro, saya tertarik dengan properti #RKU777888 (Rumah dijual di Sentul, Bogor). Saya ingin mendapatkan informasi lebih lanjut mengenai (Ambil dari subjek c:/ Detail Bangunan) dari properti ini.</textarea>
+									</div>
+									<div class="form-group">
+										<a href=""><span class="btn md full-width with-bg green">Kirim Pesan</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery1.12.0.min.js"></script>
+	<script src="js/bootstrap/collapse.js"></script>
+	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/modal.js"></script>
+	<script src="js/bootstrap/transition.js"></script>
+	<script src="js/bootstrap/tab.js"></script>
+	<script>
+		$('[data-toggle="sidemenu"]').click(function(e) {
+			e.preventDefault();
+			$('#sidemenu-container').toggleClass('toggled');
+			$('.sidemenu-close').click(function(a) {
+				a.preventDefault();
+				$('#sidemenu-container.toggled').removeClass('toggled');
+			})
+		});
+		$('[data-toggle="main-menu"]').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('toggled');
+			$('.close-toggle').click(function(a) {
+				a.preventDefault();
+				$('body.toggled').removeClass('toggled');
+			})
+		});
+		$('.toggle').click(function(e) {
+			e.preventDefault();
+			$(this).toggleClass('off');
+		});
+	</script>
+</body>
+</html>

@@ -1,21 +1,82 @@
+.select-location {
+	&.on-mobile {
+		font-size: em(13);
+		background-color: #000;
+		z-index: 15;
+		position: relative;
+		> a {
+			width: 100%;
+			padding: 7px 15px;
+			display: block;
+			color: $gray2;
+			text-align: center;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+			> span {
+				color: $white;
+			}
+		}
+	}
+}
+
 header { 
 	position: relative;
-	z-index: $four;
+	z-index: 13;
 	.select-location {
 		vertical-align: middle;
-		button {
-			padding: 6px 15px;
-			background-color: transparent;
-			@include transition(.1s ease-in);
+		a {
+			width: 150px;
+			padding: 8px 10px 6px;
+			background-color: rgba(255, 255, 255, 0.2);
+			text-align: center;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			@include transition(.05s ease-in);
 			&:hover {
-				background-color: rgba(255, 255, 255, 0.1);
+				background-color: rgba(255, 255, 255, 0.4);
+				@include text-shadow(0 0 5px rgba(0, 0, 0, 0.8));
 				@include border-radius(3px);
 			}
+		}
+		i {
+			font-size: em(14);
+			margin-right: 5px;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -12px;
+			left: 50%;
+			opacity: 0;
+			border: {
+				width: 8px;
+				style: none solid solid;
+				color: $white transparent;
+			}
+			@include transform(translateX(-50%));
+		}
+	}
+	.red-sign {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 10px;
+		height: 10px;
+		display: none;
+		background-color: $red;
+		border: 2px solid $white;
+		@include border-radius(50%);
+		&.active {
+			display: block;
 		}
 	}
 	.property-type {
 		.dropdown-menu {
-			min-width: 350px;
+			min-width: 550px;
 			> li {
 				a {
 					display: inline-block;
@@ -23,16 +84,28 @@ header {
 				&:after {
 					@include clear;
 				}
-				&:last-child {
-					text-align: center;
-					a {
-						display: block;
-						color: $gray;
-						background-color: $softwhite;
-						border-top: 1px solid $softwhite2;
-						&:hover {
-							color: $green;
-						}
+			}
+		}
+		&.sold {
+			.dropdown-menu {
+				background: #fbfbfd url(../images/menu-bg-sold.png) no-repeat right bottom;
+			}
+			&.open {
+				> a {
+					&, &:hover, &:focus {
+						background-color: #fbfbfd;
+					}
+				}
+			}
+		}
+		&.rent {
+			.dropdown-menu {
+				background: #f0efed url(../images/menu-bg-rent.png) no-repeat right bottom;
+			}
+			&.open {
+				> a {
+					&, &:hover, &:focus {
+						background-color: #f0efed;
 					}
 				}
 			}
@@ -47,30 +120,549 @@ header {
 			}
 		}
 	}
+
 	.notification {
+		position: relative;
+		::-webkit-scrollbar {
+			width: 4px !important;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: rgba(0, 0, 0, 0.2);
+			@include border-radius(2px);
+		}
+		::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0.1);
+		}
 		.notif-list {
-			border-radius: 3px 0 3px 3px;
-			padding: 0 15px;
-			min-width: 350px;
-			.list-name {
-				font-size: em(11);
-				letter-spacing: 1px;
-				position: relative;
-				font-family: 'hind_bold', Helvetica, Arial, sans-serif;
-				text-transform: uppercase;
-				span {
-					display: inline-block;
+			width: 350px;
+			overflow-x: hidden;
+			@include border-radius(3px 0 3px 3px);
+			ul {
+				border-top: 1px solid $border;
+				max-height: 350px;
+				overflow-y: scroll;
+			}
+			li {
+				padding: 0;
+			}
+			.thumb-image {
+				left: 15px;
+			}
+			.notif-desc {
+				margin-left: 55px;
+			}
+			.see-all {
+				a {
+					display: block;
 					background-color: $white;
-					padding: 10px 15px 10px 0;
+					padding: 10px 0;
+					border-top: 1px solid $border;
 				}
-				&:before {
-					content: '';
-					border-bottom: 1px solid $border;
-					position: absolute;
-					top: 50%;
-					width: 100%;
-					z-index: -1;
+			}
+		}
+		.list-name {
+			padding: 0 15px;
+		}
+		&.open {
+			.red-sign {
+				display: none;
+			}
+		}
+	}
+
+	.login-box {
+		.login {
+			padding: 15px;
+			min-width: 300px;
+			@include border-radius(3px 0 3px 3px);
+		}
+	}
+	.user-login {
+		> a {
+			padding: 5px 15px;
+			> i {
+				display: inline-block;
+				padding: 5px 5px 0;
+				font-size: em(11);
+			}
+		}
+		.image-package {
+			float: left;
+			margin-right: 5px;
+		}
+		.red-sign {
+			right: 32px;
+		}
+	}
+	.user-menu-list {
+		min-width: 220px;
+		@include border-radius(3px 0 3px 3px !important);
+		i {
+			font-size: em(13);
+			color: $black;
+			margin-right: 5px;
+		}
+		ul {
+			li {
+				float: none;
+				display: block;
+				a {
+					display: block;
+					padding: 0 15px 15px;
+					color: $black;
+					text-transform: none;
+					font-family: $font-regular;
+					font-size: em(15);
+					&:hover {
+						&, i {
+							color: $green;
+						}
+					}
 				}
+				&:first-child {
+					padding-top: 15px;
+				}
+				&:last-child {
+					a {
+						border-top: 1px solid $softwhite2;
+						padding: 10px 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#sidemenu-container, 
+#main-menu {
+	position: absolute;
+	height: 100%;
+	opacity: 0;
+	z-index: -1;
+	@include transition(all .1s ease-in-out);
+	.social-media {
+		ul {
+			margin: 5px 0;
+		}
+		li {
+			display: inline-block;
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+			i {
+				font-size: em(24);
+			}
+		}
+		a {
+			&:hover {
+				@include text-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+			}
+		}
+	}
+}
+
+#sidemenu-container {
+	.backdrop {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.sidemenu-list {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 350px;
+		height: 100%;
+		padding: 15px 30px 30px;
+		background-color: rgb(0,107,55); // Old browsers
+		@include filter-gradient(#006b37, #03222b, vertical); // IE6-9
+		@include background-image(linear-gradient(top,  rgba(0,107,55,1) 0%,rgba(0,76,57,1) 50%,rgba(3,34,43,1) 100%));
+		@include box-shadow(-4px 0 20px rgba(0, 0, 0, 0.2));
+		@include transform(translateX(350px) translateY(0));
+		@include transition(all .15s ease-out);
+		a, p {
+			color: $white;
+			font-size: em(14);
+		}
+		a {
+			display: block;
+			@include transition(.05s ease-in);
+			
+		}
+	}
+	.side-mainmenu {
+		margin-bottom: 30px;
+		li {
+			a {
+				padding: 10px 0;
+				margin: 5px 0;
+				font-family: $font-semibold;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				&:hover {
+					padding-left: 5px;
+				}
+			}
+			&:last-child {
+				a {
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.side-secmenu {
+		margin-bottom: 30px;
+		li {
+			a {
+				padding: 5px 0;
+				font-size: em(13);
+				&:hover {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+	.only-on-small-desktop {
+		li {
+			a {
+				padding: 10px 0;
+				margin: 5px 0;
+				text-transform: uppercase;
+				font-family: $font-semibold;
+				letter-spacing: 2px;
+				@include transition(.05s ease-in);
+			}
+			.btn {
+				color: $text;
+				letter-spacing: 0;
+			}
+			&:first-child {
+				a {
+					padding: 0;
+					margin: 0;
+				}
+			}
+			&:hover {
+				a {
+					padding-left: 5px;
+				}
+				&:first-child {
+					a {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.mail-support {
+		margin-bottom: 30px;
+		a {
+			display: block;
+			font-size: em(13);
+			span {
+				font-family: $font-semibold;
+			}
+			&:hover {
+				span {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+	.copyright {
+		position: absolute;
+		bottom: 15px;
+		opacity: 0.3;
+		.rku-logo {
+			width: 102px;
+			height: 12px;
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: em(10);
+			line-height: em(20);
+		}
+	}
+	.sidemenu-close {
+		position: absolute;
+		top: 0;
+		left: -48px;
+		background-color: #006B37;
+		a {
+			display: block;
+			width: 49px;
+			height: 49px;
+			padding: 13px 16px;
+		}
+		i {
+			font-size: em(18);
+			color: $white;
+			vertical-align: middle;
+		}
+	}
+	&.toggled {
+		opacity: 1;
+		z-index: 13;
+		.sidemenu-list {
+			@include transform(translate(0, 0));
+		}
+	}
+}
+
+#main-menu {
+	display: none;
+	.whole-menu {
+		position: fixed;
+		top: 33px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0,107,55); // Old browsers
+		@include filter-gradient(#006b37, #03222b, vertical); // IE6-9
+		@include background-image(linear-gradient(top,  rgba(0,107,55,1) 0%,rgba(0,76,57,1) 50%,rgba(3,34,43,1) 100%));
+	}
+	.main-menu-header {
+		padding: 5px 15px 12px;
+		@include box-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+	}
+	.close-toggle {
+		float: right;
+		border: none;
+		background-color: transparent;
+		color: $white;
+		font-size: em(12);
+		font-family: $font-bold;
+		text-transform: uppercase;
+		margin: 13px 0px;
+		cursor: pointer;
+		&:focus, &:active {
+			outline: none;
+		}
+		i {
+			font-size: em(20);
+			vertical-align: sub;
+		}
+	}
+	.main-menu-content {
+		// position: fixed;
+		// top: 47px;
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		padding-bottom: 30px;
+		a {
+			color: $white;
+		}
+		> a {
+			display: block;
+			padding: 15px 0;
+			color: $white;
+			i {
+				font-size: em(10);
+			}
+		}
+		.dropdown-menu {
+			position: relative;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+			float: none;
+			@include border-radius(0);
+			@include box-shadow(none);
+			
+			> li {
+				@include clear;
+				&.all {
+					background-color: rgba(0, 0, 0, 0.1);
+				}
+				a {
+					font-family: $font-regular;
+				}
+			}
+		}
+	}
+	.user-login {
+		display: block;
+		padding: 15px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: rgba(0, 0, 0, 0.2);
+		> a {
+			display: block;
+			color: $white;
+			font-family: $font-regular;
+			text-align: center;
+			span {
+				display: block;
+			}
+		}
+		.thumb-image {
+			margin-bottom: 15px;
+		}
+	}
+	.user-access {
+		text-align: center;
+		span {
+			display: block;
+			font-size: em(14);
+			color: rgba(255, 255, 255, 0.6);
+			&.name {
+				color: $white;
+				margin-top: 15px;
+				font-size: em(18);
+				font-family: $font-semibold;
+			}
+		}
+		&:hover {
+			span {
+				color: $white;
+			}
+		}
+	}
+	.thumb-image {
+		float: none;
+		display: block;
+		margin: auto;
+		overflow: hidden;
+		@include border-radius(50%);
+	}
+	.main-action {
+		a {
+			display: block;
+			padding: 15px 0;
+			text-align: center;
+			text-align: center;
+			font-family: $font-regular;
+			font-size: em(16);
+		}
+		.select-location {
+			i {
+				font-size: em(8);
+			}
+		}
+	}
+	.sec-action {
+		display: block;
+		margin: 30px 0;
+		ul {
+			display: block;
+			text-align: center;
+			a {
+				display: block;
+				padding: 10px 0 0;
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+	.list-your-property {
+		.btn {
+			font-family: $font-semibold;
+		}
+	}
+	.copyright {
+		text-align: center;
+		margin-bottom: 30px;
+		opacity: 0.3;
+		.rku-logo {
+			margin: auto;
+			padding: 0;
+		}
+		p {
+			margin: 15px 0;
+			color: $white;
+			font-size: em(12);
+			line-height: em(20);
+		}
+	}
+	.social-media {
+		text-align: center;
+		margin-top: 45px;
+		margin-bottom: 30px;
+		p {
+			color: $white;
+		}
+		a {
+			display: block;
+			padding: 15px;
+		}
+	}
+}
+
+#chooseLocation {
+	position: fixed;
+	top: -170%;
+	padding: 60px 0 0;
+	width: 100%;
+	background-color: $white;
+	border-bottom: 3px solid $purple;
+	z-index: 12;
+	@include transition(.3s linear);
+	.title {
+		font-family: $font-semibold;
+	}
+	.city-selection {
+		padding: 0 60px;
+		text-align: center;
+		&:after {
+			@include clear;
+		}
+	}
+	.city {
+		display: inline-block;
+		padding: 5px 15px;
+		margin: 0 5px 15px;
+		background-color: $white;
+		color: $gray2;
+		border: 2px solid $gray3;
+		font-size: em(16);
+		@include border-radius(30px);
+		@include transition(.1s ease-out);
+		&:hover, &.selected {
+			@include box-shadow(0 2px 2px $gray3);
+		}
+		&:hover {
+			color: $gray;
+			border-color: $gray2;
+		}
+		&.selected {
+			color: $green;
+			border-color: $green;
+		}
+		&:last-child {
+			.city-image {
+				margin-right: 0;
+			}
+		}
+	}
+	.city-image, .city-name {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.city-image {
+		width: 35px;
+		height: 35px;
+		margin-right: 5px;
+		background-color: $gray3;
+		@include border-radius(50%);
+	}
+	.this-city {
+		background: #f8f8f8;
+		border-top: 1px solid $softwhite2;
+		span, a {
+			color: $gray2;
+		}
+		a {
+			border-bottom: 1px dashed $gray2;
+			padding-bottom: 2px;
+			&:hover {
+				color: $green;
+				border-bottom: 1px dashed $green;
 			}
 		}
 	}

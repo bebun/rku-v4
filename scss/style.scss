@@ -12,16 +12,29 @@ Navbar
 Navs
 Modals
 Panels
+Print
 Component Animations
 Misc
 Typography
 Button
-
+Simultan
 Head
 Breadscrumb
 Search
 Content
 Footer
+Body
+Dashboard setting
+Biodata & profile
+Article
+Detail article
+Help site
+Membership
+Career
+Testimonial
+About
+Redaksi
+Profile
 Media Queries
 
 
@@ -61,12 +74,20 @@ Media Queries
 @import "search";
 /* ===================================== */
 
+/* ============== DINI ================= */
+@import "_dini";
+/* ===================================== */
+
 /* ============= CONTENT =============== */
 @import "content";
 /* ===================================== */
 
 /* ============= FOOTER ================ */
 @import "footer";
+/* ===================================== */
+
+/* ============== BODY ================= */
+@import "body";
 /* ===================================== */
 
 /* ========== MEDIA QUERIES ============ */

@@ -1,0 +1,3676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1e1e22"> <!--Header theme color for Chrome, Firefox OS, and Opera-->
+	<meta name="msapplication-navbutton-color" content="#1e1e22"> <!--Header theme color for windows phone-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e22"> <!--Header theme color for iOS Safari-->
+	<meta name="apple-mobile-web-app-title" content="rumahku">
+	<meta name="application-name" content="rumahku">
+	<meta name="msapplication-TileColor" content="#1e1e22">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>RKU V4 - Dashboard - Favorit - Properti</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/favicon//manifest.json">
+	<link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="css/icon-set.css">
+	<!--[if lt IE 8]><!-->
+	<link rel="stylesheet" href="css/icon-set-ie7.css">
+	<!--<![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="main-menu" data-target="#main-menu" aria-expanded="false">Menu <i class="rku-menu-bar"></i></button>
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="select-location">
+							<a href="" type="button" data-toggle="modal" data-target="#setLocation" class="btn no-bg" title="Ganti Lokasi?">Jakarta Barat</a>
+						</li>
+						<li class="dropdown property-type">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li><a href="">Semua Properti</a></li>
+							</ul>
+						</li>
+						<li class="dropdown property-type">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-6 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li><a href="">Semua Properti</a></li>
+							</ul>
+						</li>
+						<li><a href="">Properti Baru</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="">Direktori Apartemen</a></li>
+								<li><a href="">Direktori Agensi Properti</a></li>
+								<li><a href="">Rumahku Expo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="" id="sidemenu-toggle" data-toggle="sidemenu">Menu <i class="rku-menu-bar"></i></a></li>
+						<li class="dropdown user-login">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false" title="Username">
+								<div class="image-package icon bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+								<i class="rku-angle-bottom"></i>
+							</a>
+							<div class="dropdown-menu user-menu-list">
+								<ul>
+									<li><a href=""><i class="rku-heart-empty"></i> Properti Favorit</a></li>
+									<li><a href=""><i class="rku-label"></i> Pencarian Tersimpan</a></li>
+									<li><a href=""><i class="rku-message-2"></i> Pesan</a></li>
+									<li><a href=""><i class="rku-user"></i> Profile</a></li>
+									<li><a href=""><i class="rku-exit"></i> Keluar</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown notification">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-bell"></i></a>
+							<div class="dropdown-menu notif-list">
+								<div class="list-name"><span>Properti Favorit</span></div>
+							</div>
+						</li>
+						<li><a href="">Artikel</a></li>
+						<li><a href=""><span class="btn md border-only white text-uppercase">Iklankan Properti Anda</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div id="breadscrumb">
+		<div class="container">
+			<ul>
+				<li>
+					<a href="">Beranda</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="disabled">Kalkulator KPR</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="content-wrapper">
+		<div class="page-description mortgage-cover">
+			<div class="container">
+				<div class="row">
+					<div class="bank-logo">
+						<img src="images/logo-bank-btn.png" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-md-6 col-lg-4 no-left-pad">
+						<div class="bank-kalkulator margin-top-2">
+							<div class="mortgage-form">
+								<div class="success padding-side-30 padding-vert-30">
+									<img src="images/success.png" alt="">
+									<h3 class="margin-top-6">Terkirim!!</h3>
+									<p class="text-center margin-vert-15">Aplikasi pengajuan KPR Anda telah diteruskan ke pihak Bank BTN. Selanjutnya Anda akan dihubungi oleh Bank BTN untuk konfirmasi data terkait.</p>
+									<div class="text-center margin-top-6 padding-top-6">
+										<a href=""><span class="btn md with-bg green">Kirim Pengajuan Lain</span></a>
+										<a href=""><span class="btn md text-only color-green">Kembali ke Rumahku.com</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="row">
+					<div class="col-sm-5 col-md-6 col-lg-4 no-left-pad">
+						<div class="bank-kalkulator margin-top-2">
+							<div class="welcome-message">
+								<h6>Kalkulator KPR</h6>
+							</div>
+							<div class="mortgage-form">
+								<p>Lengkapi kolom berikut, untuk mendapatkan nilai angsuran KPR Anda.</p>
+								<form action="" class="margin-vert-15">
+									<div class="form-group margin-bottom-3">
+										<label for="">Properti URL</label>
+										<div class="input">
+											<input type="text" class="md full-width" placeholder="Masukkan URL Properti Rumahku.com">
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<label for="">Harga Properti<span class="color-red">*</span></label>
+										<div class="input input-group price">
+											<input type="text" class="md full-width big">
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<label for="">Uang Muka<span class="color-red">*</span></label>
+										<div class="input input-group price percentage">
+											<input type="text" class="md first big" data-format="Rp 0,0[.]00">
+											<input type="text" class="md last mini" value="20">
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<label for="">Lama Pinjaman<span class="color-red">*</span></label>
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">15 Tahun<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu percent-width">
+												<ul>
+													<li><a href="">5 Tahun</a></li>
+													<li><a href="">10 Tahun</a></li>
+													<li><a href="">15 Tahun</a></li>
+													<li><a href="">20 Tahun</a></li>
+													<li><a href="">25 Tahun</a></li>
+													<li><a href="">30 Tahun</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-vert-15">
+										<span class="color-red">*</span>
+										<span>Wajib di isi</span>
+									</div>
+									<div class="form-group">
+										<button class="full-width"><span class="btn md with-bg full-width bank btabneg">Hitung Angsuran</span></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<div class="mortgage-tab">
+			<div class="container">
+				<div class="row">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation">
+							<a href="#rincian" id="rincian-tab" class="active " role="tab" data-toggle="tab">Rincian</a>
+						</li>
+						<li role="presentation">
+							<a href="#detail" id="detail-tab" role="tab" data-toggle="tab">Detail</a>
+						</li>
+						<li role="presentation">
+							<a href="#feature" id="feature-tab" role="tab" data-toggle="tab">Fitur</a>
+						</li>
+						<li role="presentation" class="apply-mortgage">
+							<a href="#apply" id="apply-tab" role="tab" data-toggle="tab">Ajukan Sekarang!</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 no-side-pad">
+					<div id="tab-content" class="mortgage-tab-content tab-content">
+						<div id="rincian" class="tab-pane fade active in" aria-labelledby="rincian-tab">
+							<div class="col-md-9">
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Jumlah Pinjaman Maksimum</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 960,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Uang Muka (DP)</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 240,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Lama Pinjaman</label>
+										</div>
+										<div class="right text-right">
+											<span>15 Tahun</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left padding-top-1">
+											<label for="" class="normal">Suku bunga tetap per tahun</label>
+										</div>
+										<div class="right">
+											<a href="" class="change-specs padding-top-1 margin-left-2"><span class="btn text-only color-green">Perbarui</span></a>
+											<div class="select md dropdown with-label-inside fifty-width end">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">11% (2 tahun) <label for=""><span class="btn icon square"><i class="rku-angle-bottom"></i></span></label></a>
+												<div class="dropdown-menu percent-width">
+													<ul>
+														<li><a href="">8.5% (1 tahun)</a></li>
+														<li><a href="">9.9% (2 tahun)</a></li>
+														<li><a href="">11% (3 tahun)</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mortgage-item stop">
+										<div class="left padding-top-1">
+											<label for="" class="normal">Suku bunga floating per tahun</label>
+										</div>
+										<div class="right">
+											<a href="" class="change-specs padding-top-1 margin-left-2"><span class="btn text-only color-green">Perbarui</span></a>
+											<div class="input input-group percentage fifty-width float-right">
+												<input type="text" class="md full-width" value="13.5">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Angsuran per bulan</label>
+										</div>
+										<div class="right text-right">
+											<span><strong>Rp 9,264,208</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<h6 class="title margin-bottom-2">Biaya Bank</h6>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Appraisal</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 2,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Administrasi</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 500,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Provisi</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 9,600,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Asuransi</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 9,600,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item total">
+										<div class="left">
+											<label for="" class="normal"><strong>Total</strong></label>
+										</div>
+										<div class="right text-right">
+											<span><strong>Rp 21,700,000</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<h6 class="title margin-bottom-2">Biaya Notaris</h6>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Akte jual beli</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 12,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Bea balik nama</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 12,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Akta SKMHT</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 6,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Akta APHT</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 12,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Perjanjian HT</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 12,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item">
+										<div class="left">
+											<label for="" class="normal">Cek Sertifikat, ZNT, PNPB HT</label>
+										</div>
+										<div class="right text-right">
+											<span>Rp 6,000,000</span>
+										</div>
+									</div>
+									<div class="mortgage-item total">
+										<div class="left">
+											<label for="" class="normal"><strong>Total</strong></label>
+										</div>
+										<div class="right text-right">
+											<span><strong>Rp 60,000,000</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<div class="left">
+											<h6 class="title">Pembayaran Pertama</h6>
+											<span>(DP + Angsuran + Total Biaya Bank + Total Biaya Notaris)</span>
+										</div>
+										<div class="right text-right">
+											<h6 class="title">Rp 330,964,208</h6>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<div class="info">
+											<p><strong>Catatan:</strong> Perhitungan ini berdasarkan asumsi kami pada aplikasi KPR secara umum. Data perhitungan di atas dapat berbeda dengan perhitungan bank. Untuk perhitungan yang akurat, silahkan hubungi bank penyedia pinjaman KPR. Khusus nilai tukar USD hanya berdasarkan perkiraan yang mendekati nilai sebenarnya. Dan nilai tukar USD bisa berubah sewaktu - waktu. <a href="" class="open-more">Selengkapnya.</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item stop">
+										<div class="btn-group">
+											<a href="" class="btn md border-only text"><i class="rku-print"></i> Cetak</a>
+											<a href="" class="btn md border-only text"><i class="rku-envelope"></i> Bagikan</a>
+											<a href="" class="btn md border-only text"><i class="rku-download"></i> Unduh</a>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<a href="" class="btn md border-only purple">Lihat Detail Angsuran</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="detail" class="tab-pane fade" aria-labelledby="detail-tab">
+							<div class="col-md-11">
+								<div class="rku-table">
+									<table>
+										<thead>
+											<tr>
+												<th>Bulan</th>
+												<th>Sisa Pinjaman</th>
+												<th>Porsi Pokok</th>
+												<th>Porsi Bunga</th>
+												<th>Angsuran</th>
+												<th>Bunga</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">1</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">2</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">3</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">4</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">5</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">6</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">7</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">8</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">9</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">10</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">11</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+											<tr>
+												<td data-title="Bulan">12</td>
+												<td data-title="Sisa Pinjaman">Rp 958,735,792</td>
+												<td data-title="Porsi Pokok">Rp 1,264,208</td>
+												<td data-title="Porsi Bunga">Rp 8,000,000</td>
+												<td data-title="Angsuran">Rp 9,264,208</td>
+												<td data-title="Bunga">10%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item">
+										<div class="info">
+											<p><strong>Catatan:</strong> Perhitungan ini berdasarkan asumsi kami pada aplikasi KPR secara umum. Data perhitungan di atas dapat berbeda dengan perhitungan bank. Untuk perhitungan yang akurat, silahkan hubungi bank penyedia pinjaman KPR. Khusus nilai tukar USD hanya berdasarkan perkiraan yang mendekati nilai sebenarnya. Dan nilai tukar USD bisa berubah sewaktu - waktu. <a href="" class="open-more">Selengkapnya.</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="mortgage-section">
+									<div class="mortgage-item stop">
+										<div class="btn-group">
+											<a href="" class="btn md border-only text"><i class="rku-print"></i> Cetak</a>
+											<a href="" class="btn md border-only text"><i class="rku-envelope"></i> Bagikan</a>
+											<a href="" class="btn md border-only text"><i class="rku-download"></i> Unduh</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="feature" class="tab-pane fade" aria-labelledby="detail-tab">
+							<div class="container">
+								Feature
+							</div>
+						</div>
+						<div id="apply" class="tab-pane fade" aria-labelledby="apply-tab">
+							<div class="container">
+								<form action="">
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Jenis Permohonan</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Jenis Permohonan<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">KPA - Kredit Pemilikan Apartemen</a></li>
+															<li><a href="">KPR - Kredit Pemilikan Rumah</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Tipe Kredit</label>
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Tipe Kredit<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Pengajuan Baru</a></li>
+															<li><a href="">Take Over Pengajuan</a></li>
+															<li><a href="">Top Up Pengajuan</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Area Properti</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Area Properti<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<div class="free-text">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Masukkan area properti">
+															</div>
+														</div>
+														<ul>
+															<li><a href="">Jakarta</a></li>
+															<li><a href="">Banten</a></li>
+															<li><a href="">Bali</a></li>
+															<li><a href="">Semarang</a></li>
+															<li><a href="">Yogyakarta</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Nama Lengkap</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1">
+													<label for="" class="normal">Jenis Kelamin</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="radio">
+													<div class="form-group">
+														<input type="radio" id="male" name="gender">
+														<label for="male" class="normal"><span><span></span></span> Laki - laki</label>
+													</div>
+													<div class="form-group">
+														<input type="radio" id="female" name="gender">
+														<label for="female" class="normal"><span><span></span></span> Perempuan</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Tempat Lahir</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Tanggal Lahir</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="row">
+													<div class="col-sm-4">
+														<div class="select dropdown md full-width with-label-inside margin-bottom-1">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Tanggal<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+															<div class="dropdown-menu percent-width">
+																<ul>
+																	<li><a href="">01</a></li>
+																	<li><a href="">02</a></li>
+																	<li><a href="">03</a></li>
+																	<li><a href="">04</a></li>
+																	<li><a href="">05</a></li>
+																	<li><a href="">06</a></li>
+																	<li><a href="">07</a></li>
+																	<li><a href="">08</a></li>
+																	<li><a href="">09</a></li>
+																	<li><a href="">10</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-4 no-left-pad">
+														<div class="select dropdown md full-width with-label-inside margin-bottom-1">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Bulan<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+															<div class="dropdown-menu percent-width">
+																<ul>
+																	<li><a href="">Januari</a></li>
+																	<li><a href="">Februari</a></li>
+																	<li><a href="">Maret</a></li>
+																	<li><a href="">April</a></li>
+																	<li><a href="">Mei</a></li>
+																	<li><a href="">Juni</a></li>
+																	<li><a href="">Juli</a></li>
+																	<li><a href="">Agustus</a></li>
+																	<li><a href="">September</a></li>
+																	<li><a href="">Oktober</a></li>
+																	<li><a href="">Nopember</a></li>
+																	<li><a href="">Desember</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-4 no-left-pad">
+														<div class="select dropdown md full-width with-label-inside margin-bottom-1">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Tahun<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+															<div class="dropdown-menu percent-width">
+																<ul>
+																	<li><a href="">2000</a></li>
+																	<li><a href="">2001</a></li>
+																	<li><a href="">2002</a></li>
+																	<li><a href="">2003</a></li>
+																	<li><a href="">2004</a></li>
+																	<li><a href="">2005</a></li>
+																	<li><a href="">2006</a></li>
+																	<li><a href="">2007</a></li>
+																	<li><a href="">2008</a></li>
+																	<li><a href="">2009</a></li>
+																	<li><a href="">2010</a></li>
+																	<li><a href="">2011</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Email</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">No. KTP</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+												<div class="input file margin-top-3">
+													<input type="file" name="" id="photo-input" class="inputfile" multiple="">
+													<label for="photo-input" class="btn sm with-bg green"> Pilih Foto</label>
+													<p class="margin-top-1 small-text">Silakan unggah foto KTP Anda.</p>
+													<p class="small-text">Hanya file dengan ekstensi .jpg, .png, atau .gif</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-3">
+													<label for="" class="normal">Alamat sesuai KTP</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="input margin-bottom-1">
+													<input type="text" class="md full-width">
+												</div>
+												<div class="input margin-bottom-1">
+													<input type="text" class="md full-width">
+												</div>
+												<div class="row">
+													<div class="col-sm-4">
+														<div class="row">
+															<div class="col-sm-4 no-right-pad">
+																<div class="padding-top-1">
+																	<label for="" class="normal">RT</label>
+																</div>
+															</div>
+															<div class="col-sm-8 no-left-pad">
+																<div class="input">
+																	<input type="text" class="md full-width">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-4">
+														<div class="row">
+															<div class="col-sm-4 no-right-pad">
+																<div class="padding-top-1">
+																	<label for="" class="normal">RW</label>
+																</div>
+															</div>
+															<div class="col-sm-8 no-left-pad">
+																<div class="input">
+																	<input type="text" class="md full-width">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Provinsi</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Provinsi<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Jakarta</a></li>
+															<li><a href="">Banten</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Kota</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kota<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Kota A</a></li>
+															<li><a href="">Kota B</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Area</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Area<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Area A</a></li>
+															<li><a href="">Area B</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Kode Pos</label>
+												</div>
+											</div>
+											<div class="col-sm-2">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox margin-bottom-6">
+										<div class="form-group">
+											<input type="checkbox" id="facilities-1" checked="">
+											<label for="facilities-1" class="normal"> Alamat domisili sama dengan KTP</label>
+										</div>
+									</div>
+									<div class="form-group margin-top-2 margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">No. Telepon</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="row">
+													<div class="col-sm-4">
+														<div class="input margin-bottom-1">
+															<input type="text" class="md full-width" placeholder="Kode Area">
+														</div>
+													</div>
+													<div class="col-sm-6 no-left-pad">
+														<div class="input margin-bottom-1">
+															<input type="text" class="md full-width" placeholder="No. Telepon">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">No. Handphone</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">No. Handphone 2</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Pekerjaan</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih pekerjaan -<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Karyawan</a></li>
+															<li><a href="">Wiraswasta</a></li>
+															<li><a href="">Profesional</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Jabatan</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih jabatan -<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Komisaris</a></li>
+															<li><a href="">Direksi</a></li>
+															<li><a href="">Manajer</a></li>
+															<li><a href="">Supervisor</a></li>
+															<li><a href="">Staff</a></li>
+															<li><a href="">Lainnya</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Perusahaan / Tempat Bekerja</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-3">
+													<label for="" class="normal">Alamat Perusahaan</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="input margin-bottom-1">
+													<input type="text" class="md full-width">
+												</div>
+												<div class="input margin-bottom-1">
+													<input type="text" class="md full-width">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Provinsi</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Provinsi<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Jakarta</a></li>
+															<li><a href="">Banten</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Kota</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kota<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Kota A</a></li>
+															<li><a href="">Kota B</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Area</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Area<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Area A</a></li>
+															<li><a href="">Area B</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Lama Bekerja</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih lama bekerja -<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Kurang dari 1 tahun</a></li>
+															<li><a href="">1 tahun</a></li>
+															<li><a href="">2 tahun</a></li>
+															<li><a href="">Lebih dari 2 tahun</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Penghasilan Per Bulan</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input input-group price">
+													<input type="text" class="md full-width big">
+												</div>
+												<div class="input file margin-top-3">
+													<input type="file" name="" id="photo-input" class="inputfile" multiple="">
+													<label for="photo-input" class="btn sm with-bg green"> Pilih Foto</label>
+													<p class="margin-top-1 small-text">Silakan unggah slip gaji Anda.</p>
+													<p class="small-text">Hanya file dengan ekstensi .jpg, .png, atau .gif</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Pengeluaran Per Bulan</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="input input-group price">
+													<input type="text" class="md full-width big">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="padding-top-1 padding-bottom-1">
+													<label for="" class="normal">Sedang Melunasi KPR Lainnya?</label>
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih -<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div class="dropdown-menu percent-width">
+														<ul>
+															<li><a href="">Ya</a></li>
+															<li><a href="">Tidak</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox margin-vert-30 padding-top-3">
+										<div class="form-group margin-bottom-3">
+											<div class="row">
+												<div class="col-sm-9">
+													<input type="checkbox" checked="" id="agree">
+													<label for="agree" class="normal small-text">Saya bersedia untuk dihubungi kembali oleh pihak Bank BTN, melalui sarana komunikasi apapun seperti telepon, sms atau email untuk mendapatkan kejelasan dan konfirmasi lebih lanjut mengenai permohonan KPR.</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<button><span class="btn md with-bg bank btabneg">Ajukan Sekarang</span></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 no-side-pad">
+					<div class="margin-vert-30">
+						<div class="ads ads-300">
+							<a href="">
+								<img src="images/ads/ads.gif" alt="">
+							</a>
+						</div>
+						<div class="bank-contact margin-bottom-3 box">
+							<h6 class="title">Informasi Lengkap</h6>
+							<div class="bank-contact-content">
+								<div>
+									<label for=""><i class="rku-marker-3"></i></label>
+									<address>
+										Menara Bank BTN <br>
+										Jl. Gajah Mada No. 1 <br>
+										Jakarta, 10130
+									</address>
+								</div>
+								<div class="margin-top-2">
+									<label for=""><i class="rku-phone"></i></label>
+									<a href="tel:+62216336789">(021) 6336789</a>
+								</div>
+								<div class="margin-top-2">
+									<label for=""><i class="rku-fax"></i></label>
+									<span>(021) 6336719</span>
+								</div>
+								<div class="margin-top-6 margin-bottom-1">
+									<strong>Contact Center</strong>
+								</div>
+								<div>
+									<label for=""><i class="rku-phone"></i></label>
+									<a href="tel:+62211500286">(021) 1500286</a>
+								</div>
+								<div class="margin-top-6 margin-bottom-1">
+									<strong>Email</strong>
+								</div>
+								<div>
+									<label for=""><i class="rku-envelope"></i></label>
+									<a href="mailto:btncontactcenter@btn.co.id">btncontactcenter@btn.co.id</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="top-foot">
+			<div class="text-center">
+				<a href="" class="open-more"><i class="rku-angle-top"></i> Lihat Tautan Populer</a>
+			</div>
+			<div class="top-foot-content">
+				<div class="container">
+					<div class="">
+						<div class="short-link row">
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Jual Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Kemanggisan</a></li>
+									<li><a href="">Tomang</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li><a href="">Grogol</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Sewa Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Petojo</a></li>
+									<li><a href="">Daan Mogot</a></li>
+									<li><a href="">Joglo</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Dijual di Jakarta Barat</a></li>
+									<li><a href="">Tanah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Ruko Dijual di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruko Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruang Kantor Disewakan di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="popular-link row">
+						<h1 class="title">Pencarian Populer:</h1>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mid-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-side-pad">
+						<ul>
+							<li><a href="">Tentang Rumahku</a></li>
+							<li><a href="">Redaksi</a></li>
+							<li><a href="">Kebijakan Layanan</a></li>
+							<li><a href="">Daftar Membership</a></li>
+							<li><a href="">Karir</a></li>
+							<li><a href="">Hubungi Rumahku</a></li>
+							<li><a href="">Sitemap</a></li>
+							<li><a href="">Widget</a></li>
+							<li><a href="">RSS</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-12 col-md-4 no-side-pad">
+						<ul class="social-media-link">
+							<li><a href=""><i class="rku-facebook"></i></a></li>
+							<li><a href=""><i class="rku-twitter"></i></a></li>
+							<li><a href=""><i class="rku-instagram"></i></a></li>
+							<li><a href=""><i class="rku-gplus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-left-pad">
+						<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+						<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+					</div>
+					<div class="col-sm-12 col-md-3 no-right-pad end">
+						<div class="text-right">
+							<a href="" class="sponsored"><img src="images/gsd-collo.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- SIDEMENU SECTION -->
+	<div id="sidemenu-container">
+		<div class="backdrop"></div>
+		<div class="sidemenu-list">
+			<div class="sidemenu-close"><a href=""><i class="rku-cross"></i></a></div>
+			<ul class="only-on-small-desktop">
+				<li><a href=""><span class="btn md full-width with-bg white margin-bottom-3">Iklankan Properti Anda</span></a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="">Artikel</a></li>
+			</ul>
+			<ul class="side-mainmenu">
+				<li><a href="">Event</a></li>
+				<li><a href="">Rumahku VIP</a></li>
+				<li><a href="">Badge</a></li>
+				<li><a href="">Testimonial</a></li>
+				<li><a href="">Karir</a></li>
+			</ul>
+			<ul class="side-secmenu">
+				<li><a href="">FAQ</a></li>
+				<li><a href="">Bantuan</a></li>
+				<li><a href="">Syarat dan Kebijakan</a></li>
+				<li><a href="">Berikan feedback untuk kami</a></li>
+			</ul>
+			<div class="mail-support">
+				<a href="">
+					<p>Butuh bantuan cepat? Sampaikan pada kami</p>
+					<span>info@rumahku.com</span>
+				</a>
+			</div>
+			<div class="social-media">
+				<p>Kunjungi media sosial kami</p>
+				<ul>
+					<li><a href=""><i class="rku-facebook"></i></a></li>
+					<li><a href=""><i class="rku-twitter"></i></a></li>
+					<li><a href=""><i class="rku-instagram"></i></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+			</div>
+		</div>
+	</div>
+	<div id="main-menu">
+		<div class="whole-menu">
+			<div class="main-menu-header">
+				<button type="button" class="close-toggle" data-toggle="close-main-menu" aria-expanded="false">Tutup <i class="rku-cross"></i></button>
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+			</div>
+			<div class="main-menu-content">
+				<div class="user-login">
+					<a href="">
+						<div class="image-package thumb-image bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+						<span class="name">Jamal Parveeja</span>
+						<span>Lihat profil</span>
+					</a>
+				</div>
+				<div class="main-action">
+					<div class="list-your-property padding-side-15 margin-vert-15 ">
+						<a href=""><span class="btn lg full-width border-only white text-uppercase">Iklankan Properti Anda</span></a>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+						<ul class="dropdown-menu">
+							<li>
+								<ul class="col-sm-6">
+									<li><a href="">Rumah</a></li>
+									<li><a href="">Apartemen</a></li>
+									<li><a href="">Kondominium</a></li>
+									<li><a href="">Tanah</a></li>
+									<li><a href="">Vila</a></li>
+								</ul>
+								<ul class="col-sm-6">
+									<li><a href="">Ruko</a></li>
+									<li><a href="">Perkantoran</a></li>
+									<li><a href="">Pabrik</a></li>
+									<li><a href="">Gudang</a></li>
+									<li><a href="">Ruang Usaha</a></li>
+								</ul>
+							</li>
+							<li class="all"><a href="">Semua Properti</a></li>
+						</ul>
+					</div>
+					<a href="">Properti Baru</a>
+					<a href="">Direktori Apartemen</a>
+					<a href="">Direktori Agensi Properti</a>
+					<a href="">Rumahku Expo</a>
+					<a href="">Artikel</a>
+					<a href="">Event</a>
+					<a href="">Rumahku VIP</a>
+					<a href="">Badge</a>
+					<a href="">Testimonial</a>
+					<a href="">Karir</a>
+				</div>
+				<div class="sec-action">
+					<ul>
+						<li><a href="">FAQ</a></li>
+						<li><a href="">Bantuan</a></li>
+						<li><a href="">Syarat dan Kebijakan</a></li>
+						<li>
+							<a href="tel:+62215332555">
+								<span>Butuh bantuan cepat? Hubungi kami:</span>
+								<span>(021) 533 2555</span>
+							</a>
+							<p></p>
+						</li>
+					</ul>
+				</div>
+				<div class="social-media">
+					<p>Kunjungi media sosial kami</p>
+					<ul>
+						<li><a href=""><i class="rku-facebook"></i></a></li>
+						<li><a href=""><i class="rku-twitter"></i></a></li>
+						<li><a href=""><i class="rku-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+					<p>Hak cipta &copy; 2016 PT. Naga Langit. <br>Dilindungi oleh undang-undang.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MODAL SECTION -->
+	<div id="login" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position">
+			<div class="container">
+				<div class="col-sm-8 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-7 no-side-pad">
+							<div class="modal-inner">
+								<ul id="login-tab" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="col-sm-6 no-side-pad active left">
+										<a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk</a>
+									</li>
+									<li role="presentation" class="col-sm-6 no-side-pad right">
+										<a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar</a>
+									</li>
+								</ul>
+								<div id="tab-content" class="tab-content">
+									<div class="tab-pane fade active in" id="login-section" aria-labelledby="login-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Masuk Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau masuk dengan akun Rumahku</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan username atau email Anda">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="password" class="md full-width" placeholder="Masukkan password akun Anda">
+											</div>
+											<div class="form-group">
+												<a href="" class="small-text forgot-password">Lupa password?</a>
+											</div>
+											<div class="form-group margin-top-6 last">
+												<a href=""><span class="btn md full-width with-bg green">Masuk Ke Rumahku</span></a>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Tidak punya akun?</span> <a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar Sekarang</a>.
+										</div>
+									</div>
+									<div class="tab-pane fade" id="register-section" aria-labelledby="register-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Daftar Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau daftar dengan email Anda</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan nama lengkap Anda" required="required">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan email Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan no. telepon Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group last margin-top-6">
+												<a href=""><span class="btn md full-width with-bg green">Daftar</span></a>
+												<div class="small-text text-center">
+													Dengan menekan tombol "Daftar", Anda telah setuju dengan <a href="">syarat dan ketentuan</a> yang berlaku di Rumahku.com
+												</div>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Sudah punya akun?</span> <a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk di sini</a>.
+										</div>
+									</div>
+								</div>
+								<div class="modal-bottom"></div>
+							</div>
+						</div>
+						<div class="col-sm-5 no-side-pad">
+							<div class="rku-promo"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+					
+		</div>
+	</div>
+	<div id="setLocation" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/loc-mark.png" alt="">
+							</div>
+						</div>
+						<p class="text-center">
+							Saat ini, Anda sedang melihat seluruh properti di wilayah:
+						</p>
+						<div class="col-sm-9 centered">
+							<div class="select dropdown md full-width with-label-inside">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jakarta Barat <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+								<div class="dropdown-menu">
+									<div class="free-text">
+										<div class="form-group">
+											<input type="text" class="md full-width" placeholder="Masukkan Kota">
+										</div>
+									</div>
+									<div class="list-name">
+										<span>Kota</span>
+									</div>
+									<ul>
+										<li><a href="">DKI Jakarta</a></li>
+										<li><a href="">Banten</a></li>
+										<li><a href="">Jawa Barat</a></li>
+										<li><a href="">Jawa Tengah</a></li>
+										<li><a href="">Jawa Timur</a></li>
+										<li><a href="">NTB</a></li>
+										<li><a href="">NTT</a></li>
+										<li><a href="">Bali</a></li>
+										<li><a href="">Lampung</a></li>
+										<li><a href="">Sumatera Selatan</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-action">
+							<div class="col-sm-5 centered">
+								<a href=""><span class="btn full-width md with-bg green">Ganti Lokasi</span></a>
+							</div>
+							<div class="col-sm-6 centered text-center">
+								<a href="" class="see-prop-on-loc">Lihat properti di wilayah ini</a>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery1.12.0.min.js"></script>
+	<script src="js/bootstrap/collapse.js"></script>
+	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/modal.js"></script>
+	<script src="js/bootstrap/transition.js"></script>
+	<script src="js/bootstrap/tab.js"></script>
+	<script>
+		$('[data-toggle="sidemenu"]').click(function(e) {
+			e.preventDefault();
+			$('#sidemenu-container').toggleClass('toggled');
+			$('.sidemenu-close').click(function(a) {
+				a.preventDefault();
+				$('#sidemenu-container.toggled').removeClass('toggled');
+			})
+		});
+		$('[data-toggle="main-menu"]').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('toggled');
+			$('.close-toggle').click(function(a) {
+				a.preventDefault();
+				$('body.toggled').removeClass('toggled');
+			})
+		});
+		$('.compare-minimize').click(function(e) {
+			e.preventDefault();
+			$('#compare').toggleClass('minime');
+		});
+		$('.trigger-to-write a').click(function(a) {
+			a.preventDefault();
+			$('.foot-chat').addClass('got-trigger');
+		});
+	</script>
+</body>
+</html>

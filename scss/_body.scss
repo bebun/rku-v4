@@ -1,0 +1,760 @@
+body {
+	&.sticky-scroll {
+		header {
+			z-index: 1;
+		}
+		#detail-sticky-nav {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			padding: 0;
+			z-index: 5;
+			@include box-shadow(0 0 15px rgba(0, 0, 0, 0.3));
+			.sticky-spec {
+				display: block;
+			}
+			.sticky-nav-icon {
+				&.on-desktop {
+					i {
+						font-size: em(21);
+						display: none;
+					}
+					li {
+						vertical-align: middle;
+						> a {
+							padding: 14px 0;
+						}
+					}
+				}
+				&.on-mobile {
+					padding: 10px 0 5px;
+					.kpr {
+						span {
+							display: inline-block;
+						}
+					}
+				}
+				.kpr {
+					display: inline-block;
+					a, i {
+						color: $white;
+					}
+					i {
+						font-size: em(8);
+						display: inline-block;
+					}
+					span {
+						display: initial;
+						font-family: $font-regular;
+						text-transform: none;
+					}
+				}
+			}
+		}
+		.sticky-nav-icon {
+			&.on-desktop {
+				ul {
+					vertical-align: middle;
+				}
+				li.active {
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+						height: 3px;
+						margin-bottom: -1px;
+						background-color: $green;
+					}
+				}
+			}
+		}
+		#top-section {
+			z-index: 3;
+			padding-bottom: 85px;
+		}
+		.kpr {
+			.dropdown-toggle {
+				position: relative;
+				padding: 17px 30px 17px 15px;
+				background: #214798;
+				color: $white;
+				overflow: hidden;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: -85px;
+					background: #FFDE03;
+					width: 100px;
+					height: 100%;
+					display: block;
+					@include transform(skewX(-28deg));
+				}
+			}
+			.dropdown-menu {
+				right: 0;
+				left: initial;
+			}
+		}
+	}
+	&.toggled {
+		overflow: hidden;
+		#main-menu {
+			opacity: 1;
+			z-index: 16;
+		}
+		.src-overlay {
+			z-index: 15;
+			opacity: 1;
+		}
+	}
+
+	&.open-search {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		::-webkit-scrollbar {
+			width: 4px !important;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: rgba(0, 0, 0, 0.2);
+			@include border-radius(2px);
+		}
+		::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0.1);
+		}
+		#main-search {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 15;
+			display: block;
+			@include transition(.1s, ease-out);
+			.search-trigger {
+				display: none;
+			}
+			.search-submit {
+				display: block;
+			}
+			.main-search-info, #search-detail-content {
+				display: block;
+			}
+			.search-container {
+				opacity: 1;
+			}
+		}
+	}
+	
+	&.search-focus, &.pick-location {
+		.src-overlay {
+			opacity: 1;
+			z-index: 12;
+			@include transition(0.1s linear);
+		}
+	}
+
+	&.home {
+		header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.navbar-default {
+			background-color: transparent;
+			@include filter-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), vertical); // IE6-9
+			@include background-image(linear-gradient(top,  rgba(0,0,0,0.5) 60%,rgba(0,0,0,0) 100%));
+		}
+		.head-title {
+			line-height: em(21);
+			&:after {
+				width: 100px;
+				margin: 22px auto 25px;
+			}
+		}
+
+		#content-wrapper {
+			height: 100vh;
+		}
+
+		.hero {
+			position: relative;
+			height: 100vh;
+		}
+
+		.hero-promo-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 80px;
+			margin-top: -80px;
+		}
+
+		.hero-promo {
+			padding: 20px 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+		.promo-image {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+			background-color: transparent;
+		}
+
+		.promo-text {
+			padding-left: 15px;
+			color: $white;
+			vertical-align: middle;
+		}
+
+		.promo-more {
+			padding: 7px 35px 0 0;
+			padding-right: 15px;
+		}
+
+		.hero-controls {
+			position: absolute;
+			top: -2px;
+			right: -20px;
+			height: 100%;
+			span.glyphicon {
+				position: relative;
+				width: inherit;
+				height: inherit;
+				vertical-align: middle;
+				top: -7px;
+				right: inherit;
+				bottom: inherit;
+				left: inherit;
+				text-align: center;
+				margin: 0;
+			}
+		}
+		.carousel-control {
+			display: block;
+			background: transparent;
+			position: relative;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			@include border-radius(3px);
+			@include transition(.05s, ease-out);
+			&.top {
+				margin-bottom: 8px;
+			}
+			&:hover {
+				background-color: $white;
+				color: $text;
+			}
+			&:active, &:focus {
+				color: $text;
+				background-color: darken($white, 10%);
+			}
+			i {
+				position: relative;
+				font-size: 30%;
+				top: -15px;	
+			}
+		}
+
+		.hero-bg {
+			position: absolute;
+			background: url(../images/hero-banner-home.jpg) no-repeat bottom center;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			height: 100vh;
+		}
+
+		.hero-table {
+			display: table;
+			width: 100%;
+			height: 100%;
+			height: 100vh;
+		}
+
+		.hero-cell {
+			padding-top: 21%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.hero-title {
+			margin-bottom: 20px;
+			font-family: 'libre_bold', Garamond, serif;
+			font-size: em(31);
+			color: $white;
+			@include text-shadow(0 1px 4px $black);
+		}
+
+		.hero-search-container {
+			&.on-mobile {
+				span {
+					padding: 10px;
+				}
+				i {
+					font-size: em(21);
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.hero-search {
+			padding: 15px;
+			background-color: rgba(0, 0, 0, .75);
+			@include border-radius(3px);
+			&:after {
+				@include clear;
+			}
+			label {
+				display: block;
+				color: $white;
+				padding: 8px 0;
+				margin-right: 5px;
+				text-align: center;
+			}
+			.select-group {
+				.select {
+					display: block;
+					margin-right: 5px;
+					label {
+						padding: 0;
+						margin-right: 0;
+					}
+				}
+			}
+			.input {
+				label {
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 8px 5px 0;
+					i {
+						font-size: em(24);
+					}
+				}
+				input {
+					padding-left: 35px;
+				}
+			}
+		}
+
+		.hero-location-container {
+			position: relative;
+			text-align: center;
+		}
+
+		.hero-location {
+			display: inline-block;
+			padding: 10px 15px;
+			background-color: rgba(0, 0, 0, 0.75);
+			font-size: em(12);
+			@include border-radius(0 0 3px 3px);
+			a:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&.openSearch {
+			height: 100%;
+			overflow: hidden;
+			.srcProperty {
+				top: 0;
+				z-index: 15;
+				@include transition(.1s linear);
+			}
+		}
+		.srcProperty {
+			position: absolute;
+			top: -100%;
+			width: 100%;
+			height: 100%;
+			background-color: #fafafa;
+			z-index: -1;
+			@include transition(.1s linear);
+			.title {
+				width: 100%;
+				padding: 10px 0;
+				background-color: $green;
+				color: $white;
+				font-family: $font-regular;
+				text-transform: uppercase;
+			}
+			form {
+				height: 100%;
+			}
+			.container {
+				position: absolute;
+				top: 45px;
+				width: 100%;
+				overflow: auto;
+				height: calc(100% - 140px);
+			}
+			.search-submit {
+				position: absolute;
+				bottom: 0;
+				display: block;
+			}
+		}
+
+		.map-preview {
+			position: relative;
+			width: 100%;
+			background: $white url(../images/map-display.jpg) no-repeat center center;
+		}
+
+		.map-preview-content {
+			padding: 170px 0 ;
+			background: url(../images/map-display-facility.png) no-repeat right center;
+			.head-title:after {
+				margin-right: inherit;
+				margin-left: inherit;
+			}
+		}
+
+		.new-article {
+			position: relative;
+			padding: 90px 0;
+			background: #fafafa url(../images/pattern/dotted-patt.png) repeat top center;
+			border-bottom: 1px solid #eaeaea;
+		}
+
+		.for-article {
+			margin-bottom: 30px;
+			.article-title-center {
+				position: relative;
+				height: 128px;
+			}
+			.article-title-container {
+				position: absolute;
+				top: 50%;
+				@include transform(translateY(-50%));
+			}
+			&.small {
+				a {
+					color: $text;
+					&:hover {
+						color: $green;
+					}
+				}
+				.article-image {
+					height: 128px;
+				}
+				.article-category {
+					position: absolute;
+					bottom: 5px;
+					left: 5px;
+				}
+			}
+			&.big {
+				.article-image {
+					height: 286px;
+					&:hover {
+						> a {
+							background-color: rgba(0, 0, 0, 0.6);
+						}
+					}
+				}
+				a {
+					width: 100%;
+					height: 100%;
+				}
+				.article-title-category {
+					margin: 10px;
+					label.label {
+						position: relative;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+
+		.premium-property {
+			display: block;
+			padding: 90px 0 0;
+			margin-bottom: -485px;
+			background: #f8f8f8 url(../images/pattern/dotted-patt.png) repeat top center;
+			overflow: hidden;
+			&:after {
+				content: '';
+				position: relative;
+				bottom: 350px;
+				display: block;
+				width: 130%;
+				height: 250px;
+				background: #f8f8f8 url(../images/pattern/dotted-patt.png) repeat top center;
+				z-index: 1;
+				@include transform(rotate(4deg));
+			}
+			.container {
+				position: relative;
+				z-index: 2;
+			}
+			li {
+				display: inline-block;
+				float: none;
+				margin-right: -3px;
+				margin-top: -6px;
+				&:not(:nth-child(2n+2)) {
+					display: inline-block;
+					&:last-child {
+						margin-right: auto;
+						margin-left: auto;
+						display: block;
+					}
+				}
+			}
+		}
+
+		.premium-property-image {
+			position: relative;
+			height: 350px;
+			overflow: hidden;
+			> a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				@include filter-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), vertical); // IE6-9
+				@include background-image(linear-gradient(top,  rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%));
+				@include transition(.8s ease-out);
+			}
+			img {
+				height: auto;
+				z-index: -1;
+			}
+			.text, .open-property {
+				position: absolute;
+				right: 0;
+				left: 0;
+				margin: auto;
+				color: $white;
+				z-index: 1;
+				@include transition(0.1s ease-out);
+			}
+			.text {
+				top: 50%;
+				@include transform(translateY(-50%));
+				@include text-shadow(0 1px 5px $black);
+				.head-title {
+					font-family: $font-semibold;
+					&:after {
+						margin-top: 8px;
+						margin-bottom: 10px;
+						background-color: $white;
+					}
+				}
+			}
+			.open-property {
+				top: 70%;
+				opacity: 0;
+				@include transform(translateY(-35%));
+			}
+			&:hover {
+				> a {
+					@include filter-gradient(rgba(0, 0, 0, 0.7), rgba(11, 47, 14, 0.6), vertical); // IE6-9
+					@include background-image(linear-gradient(top,  rgba(0,0,0,0.7) 0%, rgba(11,47,14,0.6) 100%));
+				}
+				.text {
+					top: 40%;
+				}
+				.open-property {
+					top: 60%;
+					opacity: 1;
+				}
+			}
+		}
+
+		.listing-distribution {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			.overlay-backdrop {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				@include filter-gradient(rgba(30,30,34,0), rgba(30,30,34,1), vertical); // IE6-9
+				@include background-image(linear-gradient(top,  rgba(30,30,34,0) 0%,rgba(30,30,34,1) 100%));
+			}
+		}
+
+		.distribution-container {
+			position: relative;
+			padding: 120px 0 0;
+			background: url(../images/rku-promo-building_.jpg) fixed no-repeat bottom center;
+			background-size: cover;
+		}
+
+		.distribution-content {
+			position: relative;
+			padding: 180px 0 100px;
+			z-index: 1;
+		}
+
+		.distribution-partner {
+			.title {
+				font-family: $font-regular;
+				font-size: em(13);
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				color: $white;
+			}
+			li {
+				a {
+					opacity: 0.5;
+					@include transition(.1s ease-out);
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.distribution-text {
+			color: $white;
+			.head-title {
+				&:after {
+					background-color: $white;
+					margin-top: 8px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.top-foot {
+			height: auto;
+		}
+		.open-more {
+			display: none;
+		}
+	}
+
+	&.search-focus {
+		display: block;
+		header {
+			z-index: 12;
+		}
+		#main-search {
+			z-index: 13;
+		}
+		// .open-detail {
+		// 	display: none;
+		// }
+	}
+	&.message-view {
+		width: 100%;
+		height: 100%;
+		::-webkit-scrollbar {
+			width: 4px !important;
+		}
+		::-webkit-scrollbar-thumb {
+			background-color: rgba(0, 0, 0, 0.2);
+			@include border-radius(2px);
+		}
+		::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0.1);
+		}
+		#content-wrapper, #content, #message {
+			height: 100%;
+		}
+		#content-wrapper {
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		#content {
+			padding-top: 0;
+		}
+	}
+
+	&.maintenance {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		header {
+			.rku-logo {
+				margin: auto;
+			}
+		}
+		.social-media {
+			margin: 30px 0 0;
+			li {
+				display: inline-block;
+			}
+			a {
+				padding:0 30px;
+			}
+			i {
+				font-size: em(30);
+			}
+		}
+		.maintenance-content {
+			width: 100%;
+			height: calc(100% - 124px);
+			padding: 2%;
+			background: #f1f2f2 url(../images/maintenance.png) center bottom no-repeat;
+			h4 {
+				font-size: em(21);
+			}
+			span {
+				color: $gray2;
+			}
+		}
+	}
+
+	&.pick-location {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		header {
+			z-index: 13 !important;
+		}
+		.select-location {
+			position: relative;
+			&:before {
+				opacity: 1;
+				@include transition-delay(0.2s);
+			}
+		}
+		.src-overlay {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		.navbar-default {
+			z-index: -1;
+		}
+		.navbar-header {
+			position: relative;
+			opacity: 0.2;
+			z-index: -1;
+		}
+		.navbar-nav {
+			li:not(.select-location) {
+				position: relative;
+				opacity: 0.2;
+				z-index: -1;
+			}
+			li.select-location {
+				a {
+					background-color: rgba(255, 255, 255, 0.4);
+					@include text-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+					@include border-radius(3px);
+				}
+					
+			}
+		}
+		#chooseLocation {
+			top: 55px;
+			z-index: 13;
+			@include transition(.2s linear);
+		}
+	}
+}

@@ -13,10 +13,11 @@ $green: #009634;
 $blue: #2a7dc6;
 $pink: #FF4E6F;
 $yellow: #FCB80D;
+$orange: #ff6600;
 
 $text: $black2;
-$border: $softwhite2;
-$link: $purple;
+$border: darken($softwhite2, 5%);
+$link: $green;
 $success: $green;
 $error: $red;
 $info: $blue;
@@ -35,8 +36,16 @@ $eight: 8;
 $nine: 9;
 $ten: 10;
 
+$modal-backdrop-bg: rgba(0, 0, 0, 0.95);
+
+// Font
+$font-regular: 'hind_regular', Helvetica, Arial, sans-serif;
+$font-bold: 'hind_bold', Helvetica, Arial, sans-serif;
+$font-semibold: 'hind_semibold', Helvetica, Arial, sans-serif;
+
+
 // eM Calculator
-$body-font: 14;
+$body-font: 15;
 @function em($pixels, $context: $body-font) {
 	@return #{$pixels/$context}em;
 }
@@ -47,6 +56,14 @@ $body-font: 14;
 	display: block;
 	content: '';
 	clear: both;
+}
+
+// Diplay Flex
+@mixin display-flex() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 // Button Border Only
@@ -74,4 +91,37 @@ $body-font: 14;
 		@include text-shadow(0 -1px 1px rgba(0, 0, 0, 0.4));
 		@include box-shadow(inset 0 2px 5px rgba(0, 0, 0, 0.2));
 	}
+}
+
+// Keyframes
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
 }

@@ -19,7 +19,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: $one;
+  z-index: $three;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 200px;
@@ -32,7 +32,6 @@
   background-clip: padding-box;
   @include border-radius(0 3px 3px 3px);
   @include box-shadow(0 2px 5px rgba(0,0,0,.4));
-
   // Aligns the dropdown menu to right
   //
   // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`

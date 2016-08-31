@@ -1,4 +1,4 @@
-/* ============== DROPDOWN =============== */
+/* ============= DROPDOWN ============== */
 @import "grid/bootstrap/dropdowns";
 /* ===================================== */
 
@@ -18,10 +18,18 @@
 @import "grid/bootstrap/panels";
 /* ===================================== */
 
+/* ======= RESPONSIVE UTILITIES ======== */
+@import "grid/bootstrap/responsive-utilities";
+/* ===================================== */
+
+/* ============= CAROUSEL ============== */
+@import "grid/bootstrap/carousel";
+/* ===================================== */
+
 /* ======= COMPONENT ANIMATIONS ======== */
 @import "grid/bootstrap/component-animations.scss";
 /* ===================================== */
 
 .end {
-	float: right;
+	@extend .float-right;
 }

@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#1e1e22"> <!--Header theme color for Chrome, Firefox OS, and Opera-->
+	<meta name="msapplication-navbutton-color" content="#1e1e22"> <!--Header theme color for windows phone-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1e1e22"> <!--Header theme color for iOS Safari-->
+	<meta name="apple-mobile-web-app-title" content="rumahku">
+	<meta name="application-name" content="rumahku">
+	<meta name="msapplication-TileColor" content="#1e1e22">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>RKU V4 - Search</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="images/favicon//manifest.json">
+	<link rel="mask-icon" href="images/favicon//safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="css/icon-set.css">
+	<!--[if lt IE 8]><!-->
+	<link rel="stylesheet" href="css/icon-set-ie7.css">
+	<!--<![endif]-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="search">
+	<div class="select-location on-mobile on-tablet text-center">
+		<a href="" id="mobileLocation" class="btn">Anda sedang melihat seluruh properti di <span>Kalimantan Selatan</span></a>
+	</div>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="main-menu" data-target="#main-menu" aria-expanded="false">Menu <i class="rku-menu-bar"></i></button>
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="select-location">
+							<a href="" id="setLocation" class="btn" title="Ganti Lokasi?"><i class="rku-marker-2"></i> Jakarta Selatan</a>
+						</li>
+						<li class="dropdown property-type sold">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-3 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-3 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown property-type rent">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-3 no-side-pad">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Villa</a></li>
+									</ul>
+									<ul class="col-sm-3 no-side-pad">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="">Properti Baru</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="">Direktori Apartemen</a></li>
+								<li><a href="">Direktori Agensi Properti</a></li>
+								<li><a href="">Rumahku Expo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="" id="sidemenu-toggle" data-toggle="sidemenu">Menu <i class="rku-menu-bar"></i></a></li>
+						<li class="dropdown user-login">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false" title="Username">
+								<div class="image-package icon bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+								<i class="rku-angle-bottom"></i>
+								<div class="red-sign active"></div>
+							</a>
+							<div class="dropdown-menu user-menu-list">
+								<ul>
+									<li><a href=""><i class="rku-heart-empty"></i> Properti Favorit</a></li>
+									<li><a href=""><i class="rku-label"></i> Pencarian Tersimpan</a></li>
+									<li><a href=""><i class="rku-message-2"></i> Pesan <strong>( 1 )</strong></a></li>
+									<li><a href=""><i class="rku-user"></i> Profile</a></li>
+									<li><a href=""><i class="rku-exit"></i> Keluar</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown notification">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false"><i class="rku-bell"></i><div class="red-sign active"></div></a>
+							<div class="dropdown-menu notif-list">
+								<div class="list-name"><span>Properti Favorit</span></div>
+							</div>
+						</li>
+						<li><a href="">Artikel</a></li>
+						<li><a href=""><span class="btn md border-only white text-uppercase">Iklankan Properti Anda</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div id="breadscrumb">
+		<div class="container">
+			<ul>
+				<li>
+					<a href="">Beranda</a>
+				</li>
+				<li>
+					<a href="">Semua Properti</a>
+				</li>
+				<li>
+					<a href="">Dijual</a>
+				</li>
+				<li>
+					<a href="">DKI Jakarta</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="disabled">Jakarta Barat</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="content-wrapper">
+		<form action="">
+			<div id="main-search">
+				<div class="search-container">
+					<div class="main-search-info">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12 col-md-4 no-side-pad">
+									<div class="src-trigger form-group for-location-search">
+										<label for="" class="on-mobile">Lokasi</label>
+										<div class="input with-label-inside">
+											<input type="text" class="md full-width" value="Jakarta Barat, DKI Jakarta" title="Jakarta Barat, DKI Jakarta">
+											<label for="" class="normal on-desktop">
+												<span class="btn square icon md"><i class="rku-magnifier"></i></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-2 no-right-pad">
+									<div class="src-trigger form-group">
+										<label for="" class="on-mobile">Luas Tanah</label>
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Luas Tanah <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<div class="free-text">
+													<div class="row">
+														<div class="col-sm-12 col-md-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Min.">
+															</div>
+														</div>
+														<label for="" class="normal on-desktop">-</label>
+														<div class="col-sm-12 col-md-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Max.">
+															</div>
+														</div>
+													</div>
+												</div>
+												<ul>
+													<li><a href=""><strong>Semua Pilihan</strong></a></li>
+													<li><a href="">Lebih dari 50m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 100m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 150m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 200m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 250m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 300m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 350m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 400m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 450m<sup>2</sup></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-2 no-right-pad">
+									<div class="src-trigger form-group">
+										<label for="" class="on-mobile">Luas Bangunan</label>
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle md" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Luas Bangunan <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<div class="free-text">
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Min.">
+															</div>
+														</div>
+														<label for="" class="normal">-</label>
+														<div class="col-sm-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Max.">
+															</div>
+														</div>
+													</div>
+												</div>
+												<ul>
+													<li><a href=""><strong>Semua Pilihan</strong></a></li>
+													<li><a href="">Lebih dari 50m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 100m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 150m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 200m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 250m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 300m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 350m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 400m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 450m<sup>2</sup></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-2 no-right-pad">
+									<div class="src-trigger form-group">
+										<label for="" class="on-mobile">Harga Properti</label>
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle md" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Harga Properti<label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<div class="free-text">
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Min.">
+															</div>
+														</div>
+														<label for="" class="normal">-</label>
+														<div class="col-sm-6">
+															<div class="form-group">
+																<input type="text" class="md full-width" placeholder="Max.">
+															</div>
+														</div>
+													</div>
+												</div>
+												<ul>
+													<li><a href=""><strong>Semua Pilihan</strong></a></li>
+													<li><a href="">Lebih dari 50m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 100m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 150m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 200m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 250m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 300m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 350m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 400m<sup>2</sup></a></li>
+													<li><a href="">Lebih dari 450m<sup>2</sup></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-2 no-right-pad on-desktop on-tablet">
+									<a href=""><span class="btn full-width md border-only white">Saring</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="" class="src-trigger on-desktop open-detail"><span class="search-detail">Detail <i class="rku-angle-bottom"></i></span></a>
+					<div id="search-detail-content">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-10 centered">
+									<div id="property-status" class="radio">
+										<label for="status">Status Properti</label>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<input type="radio" id="sale" name="property-status">
+													<label for="sale" class="normal"><span><span></span></span> Dijual</label>
+												</div>
+												<div class="form-group">
+													<input type="radio" id="rent" name="property-status">
+													<label for="rent" class="normal"><span><span></span></span> Disewa</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6 col-md-3">
+											<label for="" id="kt">Kamar Tidur</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Kamar Tidur <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Lebih dari 1</a></li>
+															<li><a href="">Lebih dari 2</a></li>
+															<li><a href="">Lebih dari 3</a></li>
+															<li><a href="">Lebih dari 4</a></li>
+															<li><a href="">Lebih dari 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<label for="" id="kt">Kamar Mandi</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Kamar Mandi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Lebih dari 1</a></li>
+															<li><a href="">Lebih dari 2</a></li>
+															<li><a href="">Lebih dari 3</a></li>
+															<li><a href="">Lebih dari 4</a></li>
+															<li><a href="">Lebih dari 5</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<label for="" id="kt">Sertifikat</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Sertifikat Properti <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">SHM</a></li>
+															<li><a href="">HGB</a></li>
+															<li><a href="">Girik</a></li>
+															<li><a href="">Adat</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<label for="" id="kt">Jumlah Lantai</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Lantai <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">1 Lantai</a></li>
+															<li><a href="">2 Lantai</a></li>
+															<li><a href="">3 Lantai</a></li>
+															<li><a href="">4 Lantai</a></li>
+															<li><a href="">Lebih dari 4 Lantai</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<label for="" id="kt">Provinsi</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Provinsi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href="">DKI Jakarta</a></li>
+															<li><a href="">Banten</a></li>
+															<li><a href="">Jawa Barat</a></li>
+															<li><a href="">Jawa Tengah</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<label for="" id="kt">Kota</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kota <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Kota A</a></li>
+															<li><a href="">Kota B</a></li>
+															<li><a href="">Kota C</a></li>
+															<li><a href="">Kota D</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<label for="" id="kt">Area</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Area <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Area A</a></li>
+															<li><a href="">Area B</a></li>
+															<li><a href="">Area C</a></li>
+															<li><a href="">Area D</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-2">
+											<label for="" id="kt">Satuan Luas</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">M<sup>2</sup> <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href="">M<sup>2</sup></a></li>
+															<li><a href="">Are</a></li>
+															<li><a href="">Hektar</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-8 col-md-4">
+											<label for="" id="kt">Dimensi Tanah</label>
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input">
+															<input type="text" class="full-width md" placeholder="Panjang">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input">
+															<input type="text" class="full-width md" placeholder="Lebar">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Kondisi Properti</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kondisi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Timur</a></li>
+															<li><a href="">Tenggara</a></li>
+															<li><a href="">Selatan</a></li>
+															<li><a href="">Barat Daya</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Interior</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Interior <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Full Furnished</a></li>
+															<li><a href="">Semi Furnished</a></li>
+															<li><a href="">No Furnished</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Garasi</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Mobil <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Maks. 1 Mobil</a></li>
+															<li><a href="">Maks. 2 Mobil</a></li>
+															<li><a href="">Maks. 3 Mobil</a></li>
+															<li><a href="">Maks. 4 Mobil</a></li>
+															<li><a href="">Lebih dari 4 Mobil</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Carport</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Mobil <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Maks. 1 Mobil</a></li>
+															<li><a href="">Maks. 2 Mobil</a></li>
+															<li><a href="">Maks. 3 Mobil</a></li>
+															<li><a href="">Maks. 4 Mobil</a></li>
+															<li><a href="">Lebih dari 4 Mobil</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Arah Bangunan</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Arah Bangunan <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">Timur</a></li>
+															<li><a href="">Tenggara</a></li>
+															<li><a href="">Selatan</a></li>
+															<li><a href="">Barat Daya</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-md-3">
+											<label for="" id="kt">Usia Bangunan</label>
+											<div class="form-group">
+												<div class="select dropdown md full-width with-label-inside">
+													<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Usia Bangunan <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+													<div id="kt" class="dropdown-menu">
+														<ul>
+															<li><a href=""><strong>Semua Pilihan</strong></a></li>
+															<li><a href="">&lt; 1 Tahun</a></li>
+															<li><a href="">1 Tahun</a></li>
+															<li><a href="">&gt; 1 Tahun</a></li>
+															<li><a href="">&gt; 2 Tahun</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="" class="src-trigger on-desktop close-detail"><span class="search-detail">Detail <i class="rku-angle-top"></i></span></a>
+					</div>	
+				</div>
+				<div class="search-trigger on-mobile on-tablet"><a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a></div>
+				<div class="search-submit">
+					<a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a>
+					<div class="text-center margin-top-1">
+						<a href=""><span class="btn md full-width text-only color-gray">Batal</span></a>
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-lg-9 no-left-pad">
+							<div id="search-title">
+								<div class="row">
+									<div class="col-sm-6 col-md-7">
+										<h1 class="search-title-content">Rumah Dijual di Arjuna Selatan, Jakarta Barat. 2 K. Tidur, 2 K. Mandi, L. Bangunan 100m<sup>2</sup> - 200m<sup>2</sup></h1>
+									</div>
+									<div class="col-sm-6 col-md-5 col-lg-4 col-lg-offset-1 text-right">
+										<div class="sort">
+											<div class="row">
+												<div class="col-xs-3 col-sm-3 no-right-pad">
+													<label for="sort" class="normal">Urutkan</label>
+												</div>
+												<div class="col-xs-9 col-sm-9">
+													<div class="form-group">
+														<div class="select dropdown md with-label-inside">
+															<a href="#" class="dropdown-toggle text-left" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Terbaru <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+															<div class="dropdown-menu">
+																<ul>
+																	<li><a href="">Terbaru</a></li>
+																	<li><a href="">Terlama</a></li>
+																	<li><a href="">Harga: Rendah ke Tinggi</a></li>
+																	<li><a href="">Harga: Tinggi ke Rendah</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div id="priority-property">
+								<div class="row">
+									<div class="col-sm-4 no-left-pad">
+										<a class="box priority bg-cover-center" style="background-image: url(http://rumahminimal.com/wp-content/uploads/2015/02/Foto-rumah-sederhana-tapi-elegan.jpg);">
+											<label for="" class="property-label prioritas">Prioritas</label>
+											<div class="priority-content full-image-content">
+												<div class="text">
+													<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
+													<span class="property-price priority-price">Rp 1,250 Miliar</span>
+													<div class="spec">
+														<div>
+															<label for="" class="normal">L. Bangunan:</label>
+															<span>160m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur:</label>
+															<span>3 + 1</span>
+														</div>
+													</div>
+												</div>
+												<div class="call" data-toggle="modal" data-target="#contact-request">
+													<span class="btn md with-bg green">Hubungi</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-sm-4 no-left-pad">
+										<a class="box priority bg-cover-center" style="background-image: url(http://rumahminimal.com/wp-content/uploads/2015/02/Foto-rumah-sederhana-tapi-elegan.jpg);">
+											<label for="" class="property-label prioritas">Prioritas</label>
+											<div class="priority-content full-image-content">
+												<div class="text">
+													<p class="property-title">Rumah Dijual di Jelambar, Jakarta Barat</p>
+													<span class="property-price priority-price">Rp 1,250 Miliar</span>
+													<div class="spec">
+														<div>
+															<label for="" class="normal">L. Bangunan:</label>
+															<span>160m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur:</label>
+															<span>3 + 1</span>
+														</div>
+													</div>
+												</div>
+												<div class="call" data-toggle="modal" data-target="#contact-request">
+													<span class="btn md with-bg green">Hubungi</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-sm-4 no-left-pad">
+										<a class="box priority bg-cover-center" style="background-image: url(http://rumahminimal.com/wp-content/uploads/2015/02/Foto-rumah-sederhana-tapi-elegan.jpg);">
+											<label for="" class="property-label prioritas">Prioritas</label>
+											<div class="priority-content full-image-content">
+												<div class="text">
+													<p class="property-title">Rumah Dijual di Kemanggisan, Jakarta Barat</p>
+													<div class="property-price priority-price">Rp 1,250 Miliar</div>
+													<div class="spec">
+														<div>
+															<label for="" class="normal">L. Bangunan:</label>
+															<span>160m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur:</label>
+															<span>3 + 1</span>
+														</div>
+													</div>
+												</div>
+												<div href="" class="call" data-toggle="modal" data-target="#contact-request">
+													<span class="btn md with-bg green">Hubungi</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div> -->
+							<div id="property-list">
+								<ul>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="box">
+										<div class="property-list-content">
+											<div class="col-sm-5 col-md-4 col-lg-3 no-side-pad">
+												<a href="" class="box property-image bg-cover-center" style="background-image: url(images/shutterstock_102471257.jpg);">
+													<div class="total-image"><i class="rku-image-1"></i>5</div>
+												</a>
+											</div>
+											<div class="col-sm-7 col-md-8 col-lg-9">
+												<div class="property-list-info">
+													<label for="" class="property-label premium">Premium</label>
+													<p class="property-title">Rumah Dijual di Arjuna Selatan, Jakarta Barat</p>
+													<h1 class="property-list-promo"><a href="">Rumah komplek bagus, bebas banjir, keamanan 24 jam</a></h1>
+													<span class="property-price">Rp 1,8 Miliar</span>
+													<div class="dropdown mortgage">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Rp 13,7 juta/bulan dengan KPR BTN <i class="rku-angle-bottom"></i></a>
+														<div class="dropdown-menu">
+															<div class="box">
+																<div class="mortgage-header">
+																	<div class="title">Aplikasi KPR</div>
+																	<div class="brand-logo"><img src="images/logo-bank-btn.png" alt=""></div>
+																</div>
+																<div class="mortgage-body">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">DP (20%)</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 360,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Pinjaman</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span>Rp 1,400,000,000</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<label for="">Angsuran</label>
+																		</div>
+																		<div class="col-sm-6">
+																			<span class="installment">Rp 13,658,643</span>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="terms">
+																			<label for="" class="normal">Keterangan:</label>
+																			<span class="tenure">Lama pinjaman 20 tahun</span>
+																			<span class="interest">Suku bunga (per tahun) 9,75%</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="mortgage-footer">
+																	<div class="row">
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width border-only green">Lihat Simulasi</span></a>
+																		</div>
+																		<div class="col-sm-6">
+																			<a href=""><span class="btn md full-width with-bg purple">Ajukan KPR</span></a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="property-list-spec">
+														<div>
+															<label for="" class="normal">L. Bangunan: </label>
+															<span>161m<sup>2</sup></span>
+														</div>
+														<div>
+															<label for="" class="normal">K. Tidur: </label>
+															<span>2</span>
+														</div>
+													</div>
+													<div class="property-list-owner">
+														<label for="" class="normal">Diiklankan oleh: </label>
+														<a href="">Tommy Tommahawk</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="property-list-action">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-sm-push-6">
+													<div class="text-right">
+														<div class="love">
+															<a href=""><span class="btn square md no-bg"><i class="rku-heart-full"></i></span></a>
+														</div>
+														<a href="" class="call" data-toggle="modal" data-target="#contact-request"><span class="btn md with-bg green">Hubungi</span></a>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-sm-pull-6 end">
+													<div class="checkbox">
+														<div class="form-group">
+															<input type="checkbox" id="compare1">
+															<label for="compare1" class="normal">Bandingkan properti ini</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>									
+								</ul>
+								<div class="load-list">
+									<span class="load-icon"></span>
+									<span>Sedang memuat..</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-3 no-side-pad">
+							<aside id="sidebar">
+								<div id="area-information" class="box">
+									<div id="area-description">
+										<h1 class="head-title">Jakarta Barat, DKI Jakarta</h1>
+										<p>Jakarta Barat merupakan salah satu dari 5 kota administrasi di Daerah Khusus Ibukota Jakarta. Jakarta Barat secara administratif terbagi menjadi 8 kecamatan dan 56 kelurahan.</p>
+									</div>
+									<div id="where-you-are">
+										<p>Saat ini Anda sedang melihat daerah</p>
+										<span>Tomang.</span>
+									</div>
+									<div id="popular-area">
+										<p>Lokasi populer lainnya di <a href="">Jakarta Barat</a>.</p>
+										<ul>
+											<li class="col-sm-6"><a href="">Tanjung Duren</a></li>
+											<li class="col-sm-6"><a href="">Puri Indah</a></li>
+											<li class="col-sm-6"><a href="">Taman Cosmos</a></li>
+											<li class="col-sm-6"><a href="">Taman Ratu</a></li>
+											<li class="col-sm-6"><a href="">Alfa Indah</a></li>
+											<li class="col-sm-6"><a href="">Angke</a></li>
+											<li class="col-sm-6"><a href="">Arjuna Selatan</a></li>
+											<li class="col-sm-6"><a href="">Arjuna Utara</a></li>
+											<li class="col-sm-6"><a href="">Asemka</a></li>
+											<li class="col-sm-6"><a href="">Cengkareng</a></li>
+										</ul>
+										<a href="" class="open-more"><i class="rku-angle-bottom"></i> Selengkapnya</a>
+									</div>
+									<div id="area-statistic">
+										<div id="sold">
+											<div class="price">Rp 12 juta/m<sup>2</sup></div>
+											<span class="desc">Harga properti dijual</span>
+											<span class="range">(Mei 2015 - Apr 2016)</span>
+										</div>
+										<div id="rent">
+											<div class="price">Rp 15,2 juta/m<sup>2</sup> per tahun</div>
+											<span class="desc">Harga properti disewakan</span>
+											<span class="range">(Mei 2015 - Apr 2016)</span>
+										</div>
+										<a href=""><span class="btn md full-width border-only white">Info Detail</span></a>
+									</div>
+									<div id="area-agent">
+										<p>Hubungi agen properti di wilayah ini:</p>
+										<ul>
+											<li>
+												<div class="checkbox">
+													<div class="form-group">
+														<input type="checkbox" id="area-agent1" checked="check">
+														<label for="area-agent1" class="normal"></label>
+													</div>
+												</div>
+												<div class="agent-photo">
+													<a href="" class="box image-package thumb-image">
+														<img src="images/agent/agent-1.jpg" alt="">
+													</a>
+												</div>
+												<div class="agent-information">
+													<div class="span-group">
+														<span class="name" title="Jeconiah Perikja Singh">Jeconiah Perikja Singh</span>
+														<span class="company-name">Agen Independen</span>
+														<span class="properti-numb">12 Properti</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox">
+													<div class="form-group">
+														<input type="checkbox" id="area-agent2" checked="check">
+														<label for="area-agent2" class="normal"></label>
+													</div>
+												</div>
+												<div class="agent-photo">
+													<a href="" class="box image-package thumb-image">
+														<img src="images/agent/agent-1.jpg" alt="">
+													</a>
+												</div>
+												<div class="agent-information">
+													<div class="span-group">
+														<span class="name" title="Jeconiah Perikja Singh Paraji Marito">Jeconiah Perikja Singh Paraji Marito</span>
+														<span class="company-name">Agen Independen</span>
+														<span class="properti-numb">0 Properti</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="checkbox">
+													<div class="form-group">
+														<input type="checkbox" id="area-agent3" checked="check">
+														<label for="area-agent3" class="normal"></label>
+													</div>
+												</div>
+												<div class="agent-photo">
+													<a href="" class="box image-package thumb-image">
+														<img src="images/agent/agent-1.jpg" alt="">
+													</a>
+												</div>
+												<div class="agent-information">
+													<div class="span-group">
+														<span class="name" title="Jeconiah Perikja Singh">Jeconiah Perikja Singh</span>
+														<span class="company-name">Agen Independen</span>
+														<span class="properti-numb">12 Properti</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<a href=""><span class="btn md full-width border-only green">Hubungi Agen</span></a>
+									</div>
+								</div>
+								<div class="ads ads-300">
+									<a href="">
+										<img src="images/ads/ads.gif" alt="">
+									</a>
+								</div>
+								<div id="new-property" class="box">
+									<h1 class="head-title">Properti Baru Pilihan</h1>
+									<ul>
+										<li>
+											<div class="new-property-image">
+												<a href="" class="box image-package thumb-image bg-cover-center" style="background-image: url(images/new-property/prop-1.jpg)"></a>
+											</div>
+											<div class="new-property-content">
+												<a href="">
+													<span class="new-property-title">Lotus Park at Grenville</span>
+													<span class="new-property-location">Perumahan Baru di Daan Mogot, Jakarta Barat</span>
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="new-property-image">
+												<a href="" class="box image-package thumb-image bg-cover-center" style="background-image: url(images/new-property/prop-1.jpg)"></a>
+											</div>
+											<div class="new-property-content">
+												<a href="">
+													<span class="new-property-title">Lotus Park at Grenville</span>
+													<span class="new-property-location">Perumahan Baru di Daan Mogot, Jakarta Barat</span>
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="new-property-image">
+												<a href="" class="box image-package thumb-image bg-cover-center" style="background-image: url(images/new-property/prop-1.jpg)"></a>
+											</div>
+											<div class="new-property-content">
+												<a href="">
+													<span class="new-property-title">Lotus Park at Grenville</span>
+													<span class="new-property-location">Perumahan Baru di Daan Mogot, Jakarta Barat</span>
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="new-property-image">
+												<a href="" class="box image-package thumb-image bg-cover-center" style="background-image: url(images/new-property/prop-1.jpg)"></a>
+											</div>
+											<div class="new-property-content">
+												<a href="">
+													<span class="new-property-title">Lotus Park at Grenville</span>
+													<span class="new-property-location">Perumahan Baru di Daan Mogot, Jakarta Barat</span>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="ads ads-300">
+									<a href="">
+										<img src="images/ads/ads.gif" alt="">
+									</a>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="short-article">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8 centered">
+					<h1 class="head-title">Wajah Perumahan di Jakarta</h1>
+					<div class="short-article-content">
+						<div class="text-editor">
+							<div class="text">
+								<div class="short-article-image right">
+									<img src="http://3.bp.blogspot.com/-LyJ2vW4lZPg/UzeSJ5VKS5I/AAAAAAAAAUI/SVoLunnx2Po/s1600/Skyline+Jakarta+2014.jpg" alt="">
+								</div>
+								<p class="opening">Jakarta adalah ibukota dari Indonesia, merupakan pusat bisnis dan perekenomian untuk seluruh negeri.</p>
+								<p class="first-paragraph">Jual beli hunian di Indonesia merupakan permintaan properti tertinggi. Meski lahan semakin menyempit di sejumlah kawasan di ibukota, namun permintaan jual beli rumah di ibukota seperti tak pernah ada matinya, bahkan semakin meningkat tajam, baik untuk pembelian unit baru ataupun bekas. Dengan segala kelengkapan infrastruktur dan fasilitas kotanya, ibukota negara Indonesia ini memang selalu menjadi primadona yang dipilih sebagai lokasi hunian.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda et culpa, cumque sunt consequatur autem non vero sapiente illo aspernatur dignissimos fuga tempore cum, est laboriosam veniam magni ad pariatur quod velit ab voluptate delectus consequuntur voluptates. Facilis assumenda tempora voluptatum nihil quia aut dicta, molestias atque voluptates provident, at natus quaerat excepturi! Esse sint error, quasi, enim voluptas porro recusandae quaerat quas rerum optio facilis! Id temporibus repellendus impedit maiores dignissimos maxime, libero harum iure aut in iste, alias. Nemo ad reiciendis architecto, minima quae error voluptatum eum libero! Deserunt asperiores rem et sapiente laboriosam! Asperiores minima natus odit.</p>
+								<div class="short-article-image left">
+									<img src="http://3.bp.blogspot.com/-LyJ2vW4lZPg/UzeSJ5VKS5I/AAAAAAAAAUI/SVoLunnx2Po/s1600/Skyline+Jakarta+2014.jpg" alt="">
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repudiandae facere, accusantium aut suscipit ipsum similique illo esse dicta molestias ipsam eveniet alias modi atque doloribus quia eos est nam eaque corporis provident quisquam, possimus sequi. Praesentium ut aspernatur cupiditate sit magni possimus voluptatibus ad, ullam numquam dolore perspiciatis quas non qui minima asperiores rem voluptas nostrum, adipisci velit dolorem impedit voluptates odio. Odio, doloribus sequi amet deserunt recusandae, eum tempore vel praesentium aperiam? Excepturi impedit assumenda nesciunt reprehenderit ut!</p>
+							</div>
+							<div class="text-editor-hide"></div>
+						</div>
+						<div class="text-center">
+							<a href="" class="open-more"><i class="rku-angle-bottom"></i> Selengkapnya</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="top-foot">
+			<div class="text-center">
+				<a href="" class="open-more"><i class="rku-angle-top"></i> Lihat Tautan Populer</a>
+			</div>
+			<div class="top-foot-content">
+				<div class="container">
+					<div class="">
+						<div class="short-link row">
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Jual Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Kemanggisan</a></li>
+									<li><a href="">Tomang</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li><a href="">Grogol</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Cari Rumah Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Jakarta</a></li>
+									<li><a href="">Surabaya</a></li>
+									<li><a href="">Bandung</a></li>
+									<li><a href="">Semarang</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Iklan Sewa Rumah</h1>
+								<ul class="short-link-list">
+									<li><a href="">Petojo</a></li>
+									<li><a href="">Daan Mogot</a></li>
+									<li><a href="">Joglo</a></li>
+									<li><a href="">Tanjung Duren</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Dijual</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Dijual di Jakarta Barat</a></li>
+									<li><a href="">Tanah Dijual di Jakarta Barat</a></li>
+									<li><a href="">Ruko Dijual di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="col-sm-4 col-md-2 no-side-pad">
+								<h1 class="title">Properti Disewa</h1>
+								<ul class="short-link-list">
+									<li><a href="">Rumah Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Apartemen Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruko Disewakan di Jakarta Barat</a></li>
+									<li><a href="">Ruang Kantor Disewakan di Jakarta Barat</a></li>
+									<li class="dropup">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Lainnya</a>
+										<ul class="dropdown-menu">
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+											<li><a href="">Kota A</a></li>
+											<li><a href="">Kota B</a></li>
+											<li><a href="">Kota C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="popular-link row">
+						<h1 class="title">Pencarian Populer:</h1>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Dijual di Kebayoran Baru - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Dijual di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Apartemen Disewakan di Kuningan - Jakarta Selatan</a></p>
+						<p><a href="">Rumah Disewakan di Pondok Indah - Jakarta Selatan</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mid-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-side-pad">
+						<ul>
+							<li><a href="">Tentang Rumahku</a></li>
+							<li><a href="">Redaksi</a></li>
+							<li><a href="">Kebijakan Layanan</a></li>
+							<li><a href="">Daftar Membership</a></li>
+							<li><a href="">Karir</a></li>
+							<li><a href="">Hubungi Rumahku</a></li>
+							<li><a href="">Sitemap</a></li>
+							<li><a href="">Widget</a></li>
+							<li><a href="">RSS</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-12 col-md-4 no-side-pad">
+						<ul class="social-media-link">
+							<li><a href=""><i class="rku-facebook"></i></a></li>
+							<li><a href=""><i class="rku-twitter"></i></a></li>
+							<li><a href=""><i class="rku-instagram"></i></a></li>
+							<li><a href=""><i class="rku-gplus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-8 no-left-pad">
+						<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+						<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+					</div>
+					<div class="col-sm-12 col-md-3 no-right-pad end">
+						<div class="text-right">
+							<a href="" class="sponsored"><img src="images/gsd-collo.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- SIDEMENU SECTION -->
+	<div id="sidemenu-container">
+		<div class="backdrop"></div>
+		<div class="sidemenu-list">
+			<div class="sidemenu-close"><a href=""><i class="rku-cross"></i></a></div>
+			<ul class="only-on-small-desktop">
+				<li><a href=""><span class="btn md full-width with-bg white margin-bottom-3">Iklankan Properti Anda</span></a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="">Artikel</a></li>
+			</ul>
+			<ul class="side-mainmenu">
+				<li><a href="">Event</a></li>
+				<li><a href="">Rumahku VIP</a></li>
+				<li><a href="">Badge</a></li>
+				<li><a href="">Testimonial</a></li>
+				<li><a href="">Karir</a></li>
+			</ul>
+			<ul class="side-secmenu">
+				<li><a href="">FAQ</a></li>
+				<li><a href="">Bantuan</a></li>
+				<li><a href="">Syarat dan Kebijakan</a></li>
+				<li><a href="">Berikan feedback untuk kami</a></li>
+			</ul>
+			<div class="mail-support">
+				<a href="">
+					<p>Butuh bantuan cepat? Sampaikan pada kami</p>
+					<span>info@rumahku.com</span>
+				</a>
+			</div>
+			<div class="social-media">
+				<p>Kunjungi media sosial kami</p>
+				<ul>
+					<li><a href=""><i class="rku-facebook"></i></a></li>
+					<li><a href=""><i class="rku-twitter"></i></a></li>
+					<li><a href=""><i class="rku-instagram"></i></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				<p>Hak cipta &copy; 2016 PT. Naga Langit. Dilindungi oleh undang-undang.</p>
+			</div>
+		</div>
+	</div>
+	<div id="main-menu">
+			<div class="whole-menu">
+				<div class="main-menu-header">
+					<button type="button" class="close-toggle" data-toggle="close-main-menu" aria-expanded="false">Tutup <i class="rku-cross"></i></button>
+					<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+				</div>
+				<div class="main-menu-content">
+					<div class="user-login">
+						<a href="">
+							<div class="image-package thumb-image bg-cover-center" style="background-image: url(images/user-photo.jpg)"></div>
+							<span class="name">Jamal Parveeja</span>
+							<span>Lihat profil</span>
+						</a>
+					</div>
+					<div class="main-action">
+						<div class="list-your-property padding-side-15 margin-vert-15 ">
+							<a href=""><span class="btn lg full-width border-only white text-uppercase">Iklankan Properti Anda</span></a>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Dijual <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Vila</a></li>
+									</ul>
+									<ul class="col-sm-6">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li class="all"><a href="">Semua Properti</a></li>
+							</ul>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Disewa <i class="rku-angle-bottom"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<ul class="col-sm-6">
+										<li><a href="">Rumah</a></li>
+										<li><a href="">Apartemen</a></li>
+										<li><a href="">Kondominium</a></li>
+										<li><a href="">Tanah</a></li>
+										<li><a href="">Vila</a></li>
+									</ul>
+									<ul class="col-sm-6">
+										<li><a href="">Ruko</a></li>
+										<li><a href="">Perkantoran</a></li>
+										<li><a href="">Pabrik</a></li>
+										<li><a href="">Gudang</a></li>
+										<li><a href="">Ruang Usaha</a></li>
+									</ul>
+								</li>
+								<li class="all"><a href="">Semua Properti</a></li>
+							</ul>
+						</div>
+						<a href="">Properti Baru</a>
+						<a href="">Direktori Apartemen</a>
+						<a href="">Direktori Agensi Properti</a>
+						<a href="">Rumahku Expo</a>
+						<a href="">Artikel</a>
+						<a href="">Event</a>
+						<a href="">Rumahku VIP</a>
+						<a href="">Badge</a>
+						<a href="">Testimonial</a>
+						<a href="">Karir</a>
+					</div>
+					<div class="sec-action">
+						<ul>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">Bantuan</a></li>
+							<li><a href="">Syarat dan Kebijakan</a></li>
+							<li>
+								<a href="tel:+62215332555">
+									<span>Butuh bantuan cepat? Hubungi kami:</span>
+									<span>(021) 533 2555</span>
+								</a>
+								<p></p>
+							</li>
+						</ul>
+					</div>
+					<div class="social-media">
+						<p>Kunjungi media sosial kami</p>
+						<ul>
+							<li><a href=""><i class="rku-facebook"></i></a></li>
+							<li><a href=""><i class="rku-twitter"></i></a></li>
+							<li><a href=""><i class="rku-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="copyright">
+						<a href="#" class="rku-logo">Rumahku.com | Solusi Cepat dan Tepat untuk jual-beli properti</a>
+						<p>Hak cipta &copy; 2016 PT. Naga Langit. <br>Dilindungi oleh undang-undang.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL SECTION -->
+	<div id="login" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position">
+			<div class="container">
+				<div class="col-sm-8 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-7 no-side-pad">
+							<div class="modal-inner">
+								<ul id="login-tab" class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="col-sm-6 no-side-pad active left">
+										<a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk</a>
+									</li>
+									<li role="presentation" class="col-sm-6 no-side-pad right">
+										<a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar</a>
+									</li>
+								</ul>
+								<div id="tab-content" class="tab-content">
+									<div class="tab-pane fade active in" id="login-section" aria-labelledby="login-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Masuk Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau masuk dengan akun Rumahku</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan username atau email Anda">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="password" class="md full-width" placeholder="Masukkan password akun Anda">
+											</div>
+											<div class="form-group">
+												<a href="" class="small-text forgot-password">Lupa password?</a>
+											</div>
+											<div class="form-group margin-top-6 last">
+												<a href=""><span class="btn md full-width with-bg green">Masuk Ke Rumahku</span></a>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Tidak punya akun?</span> <a href="#register-section" id="register-tab" role="tab" data-toggle="tab" aria-controls="register-tab" aria-expanded="true">Daftar Sekarang</a>.
+										</div>
+									</div>
+									<div class="tab-pane fade" id="register-section" aria-labelledby="register-tab">
+										<div class="social-media-login">
+											<a href=""><span class="btn md full-width with-bg facebook"><i class="rku-facebook"></i> Daftar Dengan Akun Facebook</span></a>
+										</div>
+										<div class="list-name text-center">
+											<span>atau daftar dengan email Anda</span>
+										</div>
+										<form action="">
+											<div class="form-group">
+												<input type="text" class="md full-width" placeholder="Masukkan nama lengkap Anda" required="required">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan email Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group margin-top-3">
+												<input type="email" class="md full-width" placeholder="Masukkan no. telepon Anda" required="required" autocomplete="off">
+											</div>
+											<div class="form-group last margin-top-6">
+												<a href=""><span class="btn md full-width with-bg green">Daftar</span></a>
+												<div class="small-text text-center">
+													Dengan menekan tombol "Daftar", Anda telah setuju dengan <a href="">syarat dan ketentuan</a> yang berlaku di Rumahku.com
+												</div>
+											</div>
+										</form>
+										<div class="text-center ask-account">
+											<span>Sudah punya akun?</span> <a href="#login-section" id="login-tab" role="tab" data-toggle="tab" aria-controls="login-tab" aria-expanded="true">Masuk di sini</a>.
+										</div>
+									</div>
+								</div>
+								<div class="modal-bottom"></div>
+							</div>
+						</div>
+						<div class="col-sm-5 no-side-pad">
+							<div class="rku-promo"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+					
+		</div>
+	</div>
+	<div id="setLocation" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-6 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div class="col-sm-6 centered">
+							<div class="icon-header padding-top-30">
+								<img src="images/loc-mark.png" alt="">
+							</div>
+						</div>
+						<p class="text-center">
+							Saat ini, Anda sedang melihat seluruh properti di wilayah:
+						</p>
+						<div class="col-sm-9 centered">
+							<div class="select dropdown md full-width with-label-inside">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jakarta Barat <label for="" class="normal"><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+								<div class="dropdown-menu">
+									<div class="free-text">
+										<div class="form-group">
+											<input type="text" class="md full-width" placeholder="Masukkan Kota">
+										</div>
+									</div>
+									<div class="list-name">
+										<span>Kota</span>
+									</div>
+									<ul>
+										<li><a href="">DKI Jakarta</a></li>
+										<li><a href="">Banten</a></li>
+										<li><a href="">Jawa Barat</a></li>
+										<li><a href="">Jawa Tengah</a></li>
+										<li><a href="">Jawa Timur</a></li>
+										<li><a href="">NTB</a></li>
+										<li><a href="">NTT</a></li>
+										<li><a href="">Bali</a></li>
+										<li><a href="">Lampung</a></li>
+										<li><a href="">Sumatera Selatan</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="modal-action">
+							<div class="col-sm-5 centered">
+								<a href=""><span class="btn full-width md with-bg green">Ganti Lokasi</span></a>
+							</div>
+							<div class="col-sm-6 centered text-center">
+								<a href="" class="see-prop-on-loc">Lihat properti di wilayah ini</a>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact-request" class="modal fade in" role="dialog" tabindex="-1">
+		<div class="modal-dialog has-modal-position" role="document">
+			<div class="container">
+				<div class="col-sm-5 centered">
+					<div class="modal-content modal-center">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="rku-cross"></i></span></button>
+						<div id="contact-stop" style="display: block">
+							<div class="col-sm-8 centered">
+								<div class="icon-header padding-top-30">
+									<img src="images/address-book.png" alt="">
+								</div>
+							</div>
+							<div class="padding-side-15">
+								<p class="text-center">Untuk memudahkan komunikasi dengan agent properti, harap masukkan identitas dan kontak Anda</p>
+							</div>
+							<div class="contact-form">
+								<form action="">
+									<div class="form-group padding-side-30">
+										<input type="text" class="md full-width" placeholder="Masukkan nama Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="tel" class="md full-width" placeholder="Masukkan nomor handphone Anda">
+									</div>
+									<div class="form-group padding-side-30 margin-top-3">
+										<input type="email" class="md full-width" placeholder="Masukkan email Anda">
+									</div>
+									<div class="form-group margin-top-6 last">
+										<a href=""><span class="btn md full-width with-bg green">Lanjut</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="contact-message" style="display: none">
+							<div class="contact-info-content">
+								<div class="photo">
+									<a href="" class="box image-package contact-photo">
+										<img src="images/agent/agent-1.jpg" alt="">
+									</a>
+								</div>
+								<div class="text">
+									<span class="contact-name">Toro del Benicio</span>
+									<div class="contact-number">
+										<label for="">Telepon</label>
+										<a href="tel:+62212255555">021 2255555</a>
+										<a href="tel:+6287751234522">087751234522</a>
+										<a href="tel:+62818242420">0818242420</a>
+									</div>
+									<div class="contact-number">
+										<label for="">BB Messenger</label>
+										<span>2128F625</span>
+									</div>
+								</div>
+							</div>
+							<div class="contact-message-content">
+								<form action="">
+									<div class="form-group margin-bottom-3">
+										<label for="" class="normal">Tulis pesan untuk Toro</label>
+									</div>
+									<div class="form-group margin-bottom-3">
+										<div class="select dropdown md full-width with-label-inside">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">- Pilih subjek pesan properti ini- <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+											<div class="dropdown-menu">
+												<ul>
+													<li><a href="">Detail Bangunan</a></li>
+													<li><a href="">Alamat</a></li>
+													<li><a href="">Lingkungan Sekitar</a></li>
+													<li><a href="">Fasilitas Pendukung</a></li>
+													<li><a href="">Fasilitas Sekitar</a></li>
+													<li><a href="">Lainnya</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="" id="" cols="30" rows="10" class="full-width margin-bottom-3" value>Hai Toro, saya tertarik dengan properti #RKU777888 (Rumah dijual di Sentul, Bogor). Saya ingin mendapatkan informasi lebih lanjut mengenai (Ambil dari subjek c:/ Detail Bangunan) dari properti ini.</textarea>
+									</div>
+									<div class="form-group">
+										<a href=""><span class="btn md full-width with-bg green">Kirim Pesan</span></a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-bottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="chooseLocation">
+			<div class="text-center">
+				<img src="images/loc-mark.png" alt="">
+				<div class="margin-top-4 margin-bottom-6">
+					<p>Saat ini Anda sedang melihat seluruh properti yang berada di <strong>Jakarta Barat</strong>.</p>
+					<p>Anda juga dapat memilih kota properti lain yang Anda minati.</p>
+				</div>
+			</div>
+			<div class="city-selection margin-bottom-2">
+				<a href="" id="jaksel" class="city text-center selected">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Jakarta Barat</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Bekasi</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Jakarta Selatan</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Bandung</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Bogor</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Depok</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Semarang</span>
+				</a>
+				<a href="" id="bekasi" class="city text-center">
+					<!-- <span class="city-image bg-cover-center" style="background-image: url(http://3.bp.blogspot.com/-iudD21COu8A/Uc61P-G5yoI/AAAAAAAABWg/XDPtWJ_GaGM/s1600/logo+pemkot+Administrasi++jakarta+selatan.png);"></span> -->
+					<span class="city-name">Surabaya</span>
+				</a>
+			</div>
+			<div class="container">
+				<div class="col-xs-11 col-sm-8 centered">
+					<form action="">
+						<div class="form-group padding-vert-15 margin-bottom-6">
+							<div class="input-group">
+								<input type="text" class="lg full-width" placeholder="Masukkan kota yang Anda minati">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="text-center this-city margin-top-3 padding-vert-15">
+				<span>atau,</span>
+				<a href="">tampilkan properti di kota ini (Jakarta Barat).</a>
+			</div>
+		</div>
+	<div class="src-overlay"></div>
+	<div class="load"></div>
+	<!-- COMPARE SECTION -->
+	<div id="compare" class="minime">
+		<div class="container">
+			<div class="col-md-10 centered">
+				<div class="row">
+					<div class="col-md-3 no-left-pad">
+						<div class="text margin-bottom-3 on-tablet on-desktop">
+							<h5 class="head-title">Bandingkan Properti</h5>
+							<p>Fitur ini dapat membantu Anda untuk menentukan properti idaman Anda dengan bijak. Anda dapat memilih hingga 3 properti pilihan sebagai perbandingan.</p>
+						</div>
+					</div>
+					<div class="col-md-9 no-right-pad">
+						<div class="property-compare">
+							<ul class="row">
+								<li class="col-xs-4 col-sm-4">
+									<div class="compare-image-container">
+										<div class="compare-image bg-cover-center" style="background-image: url(images/property/thumb-images-2.jpg)">
+											<div class="short-spec">
+												<ul>
+													<li>
+														<label for="" class="normal">L. Bangunan:</label>
+														<span>121 m<sup>2</sup></span>
+													</li>
+													<li>
+														<label for="" class="normal">K. Tidur:</label>
+														<span>3</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="compare-delete">
+										<a href="">Hapus</a>
+									</div>
+								</li>
+								<li class="col-xs-4 col-sm-4">
+									<div class="compare-image-container">
+										<div class="compare-image bg-cover-center" style="background-image: url(images/property/thumb-images-2.jpg)">
+											<div class="short-spec">
+												<ul>
+													<li>
+														<label for="" class="normal">L. Bangunan:</label>
+														<span>121 m<sup>2</sup></span>
+													</li>
+													<li>
+														<label for="" class="normal">K. Tidur:</label>
+														<span>3</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="compare-delete">
+										<a href="">Hapus</a>
+									</div>
+								</li>
+								<li class="col-xs-4 col-sm-4">
+									<div class="compare-image-container">
+										<div class="compare-image bg-cover-center" style="background-image: url(images/property/vertical-images.jpg)">
+											<div class="short-spec">
+												<ul>
+													<li>
+														<label for="" class="normal">L. Bangunan:</label>
+														<span>121 m<sup>2</sup></span>
+													</li>
+													<li>
+														<label for="" class="normal">K. Tidur:</label>
+														<span>3</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="compare-delete">
+										<a href="">Hapus</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="compare-apply text-center">
+						<a href="" id="apply"><span class="btn md border-only white">Dapatkan Perbandingan</span></a>
+						<a href="" id="cancel"><span class="btn md no-bg">Batal</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="compare-minimize">
+			<a href=""><i class="rku-downbottom"></i></a>
+		</div>
+	</div>
+	<script src="js/jquery1.12.0.min.js"></script>
+	<script src="js/bootstrap/collapse.js"></script>
+	<script src="js/bootstrap/dropdown.js"></script>
+	<script src="js/bootstrap/modal.js"></script>
+	<script src="js/bootstrap/transition.js"></script>
+	<script src="js/bootstrap/tab.js"></script>
+	<script>
+		$('[data-toggle="sidemenu"]').click(function(e) {
+			e.preventDefault();
+			$('#sidemenu-container').toggleClass('toggled');
+			$('.sidemenu-close').click(function(a) {
+				a.preventDefault();
+				$('#sidemenu-container.toggled').removeClass('toggled');
+			})
+		});
+		$('[data-toggle="main-menu"]').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('toggled');
+			$('.close-toggle').click(function(a) {
+				a.preventDefault();
+				$('body.toggled').removeClass('toggled');
+			})
+		});
+		$('.compare-minimize').click(function(e) {
+			e.preventDefault();
+			$('#compare').toggleClass('minime');
+		});
+		$('#setLocation').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('pick-location');
+		});
+		$('#mobileLocation').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('pick-location');
+		});
+		$('.search-trigger a').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('open-search');
+		});
+		$('.search-submit a').click(function(e) {
+			e.preventDefault();
+			$('body').removeClass('open-search');
+			$('body').removeClass('search-focus');
+		});
+		$('.src-trigger').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('search-focus');
+		});
+		$('.open-detail').click(function(e) {
+			e.preventDefault();
+			$('#search-detail-content').addClass('open');
+		});
+		$('.close-detail').click(function(e) {
+			e.preventDefault();
+			$('#search-detail-content').removeClass('open');
+			$('body').removeClass('search-focus');
+		});
+	</script>
+</body>
+</html>

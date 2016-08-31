@@ -1,0 +1,2 @@
+style 4.0.1
+- Menghilangkan margin-bottom pada #property-list di media queries (max-width: 992px), untuk kebutuhan search listing.
