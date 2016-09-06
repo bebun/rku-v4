@@ -1,4 +1,6 @@
 #main-search, #dashboard-search {
+	position: relative;
+	z-index: $three;
 	.search-detail {
 		color: $text;
 		i {
@@ -6,10 +8,37 @@
 			color: $text;
 		}
 	}
+	#search-detail-content {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 0;
+		background-color: #fcfcfc;
+		overflow: hidden;
+		@include transition(.1s linear);
+		.form-group {
+			margin-bottom: 30px;
+		}
+		&.open {
+			position: absolute;
+			height: auto;
+			overflow: initial;
+		}
+	}
+	.close-detail {
+		bottom: 0;
+		border-bottom: none;
+		@include border-radius(3px 3px 0 0);
+	}
+	.src-trigger {
+		> input, > select, > .select, > textarea {
+			&:active, &.open, &:focus {
+				@include box-shadow(none);
+			}
+		}
+	}
 }
 #main-search {
-	position: relative;
-	z-index: $two;
 	margin-bottom: 30px;
 	.main-search-info {
 		position: relative;
@@ -30,36 +59,6 @@
 			padding: 5px 25px;
 		}
 	}
-	.open-detail, .close-detail {
-		position: absolute;
-		left: 50%;
-		padding: 3px 30px;
-		background-color: darken($softwhite2, 5%);
-		border: 1px solid darken($softwhite2, 15%);
-		color: lighten($text, 30%);
-		font-size: em(13);
-		cursor: pointer;
-		@include text-shadow(0 1px 0 $white);
-		@include transform(translateX(-50%));
-		@include box-shadow(inset 0 2px 8px rgba(0, 0, 0, 0.05));
-	}
-	.open-detail {
-		bottom: -23px;
-		border-top: none;
-		@include border-radius(0 0 3px 3px);
-	}
-	.close-detail {
-		bottom: 0;
-		border-bottom: none;
-		@include border-radius(3px 3px 0 0);
-	}
-	.src-trigger {
-		> input, > select, > .select, > textarea {
-			&:active, &.open, &:focus {
-				@include box-shadow(none);
-			}
-		}
-	}
 	.for-location-search {
 		.btn {
 			cursor: default;
@@ -74,6 +73,12 @@
 	.free-text {
 		border-color: #e6e6e6;
 	}
+	#search-detail-content {
+		padding: 30px 0;
+		&.open {
+			top: 85px;
+		}
+	}
 	.search-detail {
 		display: block;
 		text-align: center;
@@ -81,24 +86,23 @@
 			font-size: em(8);
 		}
 	}
-	#search-detail-content {
+	.open-detail, .close-detail {
 		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 0;
-		padding: 30px 0;
-		background-color: #fcfcfc;
-		overflow: hidden;
-		@include transition(.1s linear);
-		.form-group {
-			margin-bottom: 30px;
-		}
-		&.open {
-			position: absolute;
-			top: 85px;
-			height: auto;
-			overflow: initial;
-		}
+		left: 50%;
+		padding: 3px 30px;
+		font-size: em(13);
+		background-color: darken($softwhite2, 5%);
+		border: 1px solid darken($softwhite2, 15%);
+		color: lighten($text, 30%);
+		cursor: pointer;
+		@include text-shadow(0 1px 0 $white);
+		@include transform(translateX(-50%));
+		@include box-shadow(inset 0 2px 8px rgba(0, 0, 0, 0.05));
+	}
+	.open-detail {
+		bottom: -23px;
+		border-top: none;
+		@include border-radius(0 0 3px 3px);
 	}
 }
 
@@ -127,6 +131,18 @@
 		display: block;
 		padding: 10px 4px;
 	}
+	.open-detail {
+		background-color: $softwhite2;
+	}
+	#search-detail-content {
+		left: -1px;
+		border: 1px solid $border;
+		@include box-sizing(content-box);
+		&.open {
+			top: 60px;
+			// @include box-shadow(inset 0 6px 10px -6px rgba(0, 0, 0, 0.3), 0 5px 10px -5px rgba(0, 0, 0, 0.3));
+		}
+	}
 }
 
 #search-title {
@@ -153,3 +169,10 @@
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
+.dashboard-search-info {
+	position: relative;
+	z-index: 11;
+	&:after {
+		@include clear;
+	}
+}

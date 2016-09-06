@@ -215,7 +215,7 @@
 										<p>150 Properti</p>
 									</div>
 								</div>
-								<div id="dashboard-search" class="on-desktop favorit-property">
+								<div id="dashboard-search" class="favorit-property">
 									<div class="dashboard-search-info">
 										<div class="col-sm-12 col-md-9 col-lg-10 no-side-pad">
 											<div class="form-group keyword-search">
@@ -227,17 +227,315 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-sm-12 col-md-3 col-lg-2 end no-side-pad">
-											<a href="" class="text-right full-width search-detail">Detail Penyaringan <i class="rku-angle-bottom"></i></a>
+										<div class="col-sm-12 col-md-3 col-lg-2 end no-side-pad on-desktop">
+											<a href="" class="text-center full-width search-detail on-desktop open-detail">Detail Penyaringan <i class="rku-angle-bottom"></i></a>
+										</div>
+									</div>
+									<div id="search-detail-content" class="padding-top-3">
+										<div class="container">
+											<form action="">
+												<div class="row">
+													<div class="col-sm-12 centered">
+														<div id="property-status" class="radio">
+															<label for="status">Status Properti</label>
+															<div class="row">
+																<div class="col-sm-6">
+																	<div class="form-group">
+																		<input type="radio" id="sale" name="property-status">
+																		<label for="sale" class="normal"><span><span></span></span> Dijual</label>
+																	</div>
+																	<div class="form-group">
+																		<input type="radio" id="rent" name="property-status">
+																		<label for="rent" class="normal"><span><span></span></span> Disewa</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-6 col-md-3">
+																<label for="" id="kt">Kamar Tidur</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Kamar Tidur <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Lebih dari 1</a></li>
+																				<li><a href="">Lebih dari 2</a></li>
+																				<li><a href="">Lebih dari 3</a></li>
+																				<li><a href="">Lebih dari 4</a></li>
+																				<li><a href="">Lebih dari 5</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6 col-md-3">
+																<label for="" id="kt">Kamar Mandi</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Kamar Mandi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Lebih dari 1</a></li>
+																				<li><a href="">Lebih dari 2</a></li>
+																				<li><a href="">Lebih dari 3</a></li>
+																				<li><a href="">Lebih dari 4</a></li>
+																				<li><a href="">Lebih dari 5</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6 col-md-3">
+																<label for="" id="kt">Sertifikat</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Sertifikat Properti <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">SHM</a></li>
+																				<li><a href="">HGB</a></li>
+																				<li><a href="">Girik</a></li>
+																				<li><a href="">Adat</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6 col-md-3">
+																<label for="" id="kt">Jumlah Lantai</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Lantai <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">1 Lantai</a></li>
+																				<li><a href="">2 Lantai</a></li>
+																				<li><a href="">3 Lantai</a></li>
+																				<li><a href="">4 Lantai</a></li>
+																				<li><a href="">Lebih dari 4 Lantai</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<label for="" id="kt">Provinsi</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Provinsi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href="">DKI Jakarta</a></li>
+																				<li><a href="">Banten</a></li>
+																				<li><a href="">Jawa Barat</a></li>
+																				<li><a href="">Jawa Tengah</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<label for="" id="kt">Kota</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kota <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Kota A</a></li>
+																				<li><a href="">Kota B</a></li>
+																				<li><a href="">Kota C</a></li>
+																				<li><a href="">Kota D</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<label for="" id="kt">Area</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Area <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Area A</a></li>
+																				<li><a href="">Area B</a></li>
+																				<li><a href="">Area C</a></li>
+																				<li><a href="">Area D</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-2">
+																<label for="" id="kt">Satuan Luas</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">M<sup>2</sup> <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href="">M<sup>2</sup></a></li>
+																				<li><a href="">Are</a></li>
+																				<li><a href="">Hektar</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-8 col-md-4">
+																<label for="" id="kt">Dimensi Tanah</label>
+																<div class="row">
+																	<div class="col-sm-6">
+																		<div class="form-group">
+																			<div class="input">
+																				<input type="text" class="full-width md" placeholder="Panjang">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-sm-6">
+																		<div class="form-group">
+																			<div class="input">
+																				<input type="text" class="full-width md" placeholder="Lebar">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Kondisi Properti</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Kondisi <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Timur</a></li>
+																				<li><a href="">Tenggara</a></li>
+																				<li><a href="">Selatan</a></li>
+																				<li><a href="">Barat Daya</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Interior</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Interior <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Full Furnished</a></li>
+																				<li><a href="">Semi Furnished</a></li>
+																				<li><a href="">No Furnished</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Garasi</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Mobil <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Maks. 1 Mobil</a></li>
+																				<li><a href="">Maks. 2 Mobil</a></li>
+																				<li><a href="">Maks. 3 Mobil</a></li>
+																				<li><a href="">Maks. 4 Mobil</a></li>
+																				<li><a href="">Lebih dari 4 Mobil</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Carport</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Jumlah Mobil <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Maks. 1 Mobil</a></li>
+																				<li><a href="">Maks. 2 Mobil</a></li>
+																				<li><a href="">Maks. 3 Mobil</a></li>
+																				<li><a href="">Maks. 4 Mobil</a></li>
+																				<li><a href="">Lebih dari 4 Mobil</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Arah Bangunan</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Arah Bangunan <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">Timur</a></li>
+																				<li><a href="">Tenggara</a></li>
+																				<li><a href="">Selatan</a></li>
+																				<li><a href="">Barat Daya</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4 col-md-3">
+																<label for="" id="kt">Usia Bangunan</label>
+																<div class="form-group">
+																	<div class="select dropdown md full-width with-label-inside">
+																		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true" aria-expanded="false">Pilih Usia Bangunan <label for=""><span class="btn square icon"><i class="rku-angle-bottom"></i></span></label></a>
+																		<div id="kt" class="dropdown-menu">
+																			<ul>
+																				<li><a href=""><strong>Semua Pilihan</strong></a></li>
+																				<li><a href="">&lt; 1 Tahun</a></li>
+																				<li><a href="">1 Tahun</a></li>
+																				<li><a href="">&gt; 1 Tahun</a></li>
+																				<li><a href="">&gt; 2 Tahun</a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row margin-top-3 margin-bottom-6 on-desktop">
+															<div class="col-sm-4 col-sm-offset-4">
+																<button><span class="btn md with-bg green">Saring</span></button>
+																<button><span class="btn text-only color-text">Batal</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="search-trigger on-mobile on-tablet"><a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a></div>
+									<div class="search-submit">
+										<a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a>
+										<div class="text-center margin-top-1">
+											<a href=""><span class="btn md full-width text-only color-gray">Batal</span></a>
 										</div>
 									</div>
 								</div>
 								<div id="view">
 									<div class="row">
-										<div class="col-sm-6 col-md-3">
+										<div class="col-sm-12 col-md-3">
 											<button class="full-width"><a href=""><span class="btn md full-width with-bg purple">Tambah Proyek</span></a></button>
 										</div>
-										<div class="col-sm-6 col-md-9 col-lg-7 col-lg-offset-2 text-right">
+										<div class="col-sm-12 col-md-9 col-lg-7 text-right">
 											<div class="sort">
 												<div class="row">
 													<div class="col-sm-6 no-right-pad">
@@ -1696,6 +1994,31 @@
 		$('.compare-minimize').click(function(e) {
 			e.preventDefault();
 			$('#compare').toggleClass('minime');
+		});
+		$('.search-trigger a').click(function(e) {
+			e.preventDefault();
+			$('body').addClass('open-search');
+		});
+		$('.search-submit a').click(function(e) {
+			e.preventDefault();
+			$('body').removeClass('open-search');
+			$('body').removeClass('search-focus');
+		});
+		$('.src-trigger').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('search-focus');
+		});
+		$('.open-detail').click(function(e) {
+			e.preventDefault();
+			$('#search-detail-content').toggleClass('open');
+		});
+		$(document).on("scroll", function(){
+			if ($(document).scrollTop() > 550) {
+				$('#dashboard-search').addClass('show-search-trigger');
+			}
+			else {
+				$('#dashboard-search').removeClass('show-search-trigger');
+			}
 		});
 	</script>
 </body>

@@ -6311,6 +6311,10 @@ header .user-menu-list ul li:last-child a {
 
 /* ===================================== */
 /* ============= SEARCH ================ */
+#main-search, #dashboard-search {
+  position: relative;
+  z-index: 3;
+}
 #main-search .search-detail, #dashboard-search .search-detail {
   color: #272e32;
 }
@@ -6318,10 +6322,38 @@ header .user-menu-list ul li:last-child a {
   font-size: 0.66667em;
   color: #272e32;
 }
+#main-search #search-detail-content, #dashboard-search #search-detail-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fcfcfc;
+  overflow: hidden;
+  -webkit-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+#main-search #search-detail-content .form-group, #dashboard-search #search-detail-content .form-group {
+  margin-bottom: 30px;
+}
+#main-search #search-detail-content.open, #dashboard-search #search-detail-content.open {
+  position: absolute;
+  height: auto;
+  overflow: initial;
+}
+#main-search .close-detail, #dashboard-search .close-detail {
+  bottom: 0;
+  border-bottom: none;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 3px 0 0;
+}
+#main-search .src-trigger > input:active, #main-search .src-trigger > input.open, #main-search .src-trigger > input:focus, #main-search .src-trigger > select:active, #main-search .src-trigger > select.open, #main-search .src-trigger > select:focus, #main-search .src-trigger > .select:active, #main-search .src-trigger > .select.open, #main-search .src-trigger > .select:focus, #main-search .src-trigger > textarea:active, #main-search .src-trigger > textarea.open, #main-search .src-trigger > textarea:focus, #dashboard-search .src-trigger > input:active, #dashboard-search .src-trigger > input.open, #dashboard-search .src-trigger > input:focus, #dashboard-search .src-trigger > select:active, #dashboard-search .src-trigger > select.open, #dashboard-search .src-trigger > select:focus, #dashboard-search .src-trigger > .select:active, #dashboard-search .src-trigger > .select.open, #dashboard-search .src-trigger > .select:focus, #dashboard-search .src-trigger > textarea:active, #dashboard-search .src-trigger > textarea.open, #dashboard-search .src-trigger > textarea:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 #main-search {
-  position: relative;
-  z-index: 2;
   margin-bottom: 30px;
 }
 #main-search .main-search-info {
@@ -6342,14 +6374,39 @@ header .user-menu-list ul li:last-child a {
 #main-search .main-search-info .btn.white {
   padding: 5px 25px;
 }
+#main-search .for-location-search .btn {
+  cursor: default;
+}
+#main-search .for-location-search input {
+  padding-right: 35px;
+}
+#main-search .for-location-search i {
+  vertical-align: initial;
+}
+#main-search .free-text {
+  border-color: #e6e6e6;
+}
+#main-search #search-detail-content {
+  padding: 30px 0;
+}
+#main-search #search-detail-content.open {
+  top: 85px;
+}
+#main-search .search-detail {
+  display: block;
+  text-align: center;
+}
+#main-search .search-detail i {
+  font-size: 0.53333em;
+}
 #main-search .open-detail, #main-search .close-detail {
   position: absolute;
   left: 50%;
   padding: 3px 30px;
+  font-size: 0.86667em;
   background-color: #e3e3e3;
   border: 1px solid #cacaca;
   color: #6a7d88;
-  font-size: 0.86667em;
   cursor: pointer;
   text-shadow: 0 1px 0 #ffffff;
   -moz-transform: translateX(-50%);
@@ -6365,57 +6422,6 @@ header .user-menu-list ul li:last-child a {
   -moz-border-radius: 0 0 3px 3px;
   -webkit-border-radius: 0;
   border-radius: 0 0 3px 3px;
-}
-#main-search .close-detail {
-  bottom: 0;
-  border-bottom: none;
-  -moz-border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px;
-  border-radius: 3px 3px 0 0;
-}
-#main-search .src-trigger > input:active, #main-search .src-trigger > input.open, #main-search .src-trigger > input:focus, #main-search .src-trigger > select:active, #main-search .src-trigger > select.open, #main-search .src-trigger > select:focus, #main-search .src-trigger > .select:active, #main-search .src-trigger > .select.open, #main-search .src-trigger > .select:focus, #main-search .src-trigger > textarea:active, #main-search .src-trigger > textarea.open, #main-search .src-trigger > textarea:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-#main-search .for-location-search .btn {
-  cursor: default;
-}
-#main-search .for-location-search input {
-  padding-right: 35px;
-}
-#main-search .for-location-search i {
-  vertical-align: initial;
-}
-#main-search .free-text {
-  border-color: #e6e6e6;
-}
-#main-search .search-detail {
-  display: block;
-  text-align: center;
-}
-#main-search .search-detail i {
-  font-size: 0.53333em;
-}
-#main-search #search-detail-content {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 0;
-  padding: 30px 0;
-  background-color: #fcfcfc;
-  overflow: hidden;
-  -webkit-transition: 0.1s linear;
-  -o-transition: 0.1s linear;
-  transition: 0.1s linear;
-}
-#main-search #search-detail-content .form-group {
-  margin-bottom: 30px;
-}
-#main-search #search-detail-content.open {
-  position: absolute;
-  top: 85px;
-  height: auto;
-  overflow: initial;
 }
 
 #dashboard-search {
@@ -6446,6 +6452,19 @@ header .user-menu-list ul li:last-child a {
   display: block;
   padding: 10px 4px;
 }
+#dashboard-search .open-detail {
+  background-color: #f0f0f0;
+}
+#dashboard-search #search-detail-content {
+  left: -1px;
+  border: 1px solid #e3e3e3;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+#dashboard-search #search-detail-content.open {
+  top: 60px;
+}
 
 #search-title {
   border-bottom: 1px solid #e3e3e3;
@@ -6471,6 +6490,16 @@ header .user-menu-list ul li:last-child a {
 .search-trigger, .contact-trigger {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dashboard-search-info {
+  position: relative;
+  z-index: 11;
+}
+.dashboard-search-info:after {
+  display: block;
+  content: '';
+  clear: both;
 }
 
 /* ===================================== */
@@ -13198,7 +13227,7 @@ body.open-search ::-webkit-scrollbar-thumb {
 body.open-search ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
 }
-body.open-search #main-search {
+body.open-search #main-search, body.open-search #dashboard-search {
   position: fixed;
   top: 0;
   width: 100%;
@@ -13209,16 +13238,16 @@ body.open-search #main-search {
   -o-transition: 0.1s, ease-out;
   transition: 0.1s, ease-out;
 }
-body.open-search #main-search .search-trigger {
+body.open-search #main-search .search-trigger, body.open-search #dashboard-search .search-trigger {
   display: none;
 }
-body.open-search #main-search .search-submit {
+body.open-search #main-search .search-submit, body.open-search #dashboard-search .search-submit {
   display: block;
 }
-body.open-search #main-search .main-search-info, body.open-search #main-search #search-detail-content {
+body.open-search #main-search .main-search-info, body.open-search #main-search #search-detail-content, body.open-search #dashboard-search .main-search-info, body.open-search #dashboard-search #search-detail-content {
   display: block;
 }
-body.open-search #main-search .search-container {
+body.open-search #main-search .search-container, body.open-search #dashboard-search .search-container {
   opacity: 1;
 }
 body.search-focus .src-overlay, body.pick-location .src-overlay {
@@ -14072,48 +14101,80 @@ body.pick-location #chooseLocation {
     padding: 15px 15px 0;
   }
 
-  #main-search {
+  #main-search, #dashboard-search {
     position: absolute;
     top: -100%;
     -webkit-transition: 0.1s, ease-in-out;
     -o-transition: 0.1s, ease-in-out;
     transition: 0.1s, ease-in-out;
   }
-  #main-search .no-side-pad {
+  #main-search .no-side-pad, #dashboard-search .no-side-pad {
     padding-right: 15px;
     padding-left: 15px;
   }
-  #main-search .main-search-info, #main-search #search-detail-content {
+  #main-search .main-search-info, #main-search #search-detail-content, #dashboard-search .main-search-info, #dashboard-search #search-detail-content {
     display: none;
   }
-  #main-search .search-container {
+  #main-search .search-container, #dashboard-search .search-container {
     overflow-y: auto;
     height: 100%;
     padding-bottom: 95px;
     opacity: 0;
     background-color: #ffffff;
   }
-  #main-search .main-search-info {
+  #main-search .main-search-info, #dashboard-search .main-search-info {
     padding-bottom: 0;
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  #main-search .main-search-info .select .dropdown-menu {
+  #main-search .main-search-info .select .dropdown-menu, #dashboard-search .main-search-info .select .dropdown-menu {
     min-width: 100%;
   }
-  #main-search .main-search-info .form-group {
+  #main-search .main-search-info .form-group, #dashboard-search .main-search-info .form-group {
     margin-bottom: 15px;
   }
-  #main-search .main-search-info .search-detail {
+  #main-search .main-search-info .search-detail, #dashboard-search .main-search-info .search-detail {
     text-align: center;
   }
-  #main-search #search-detail-content {
+  #main-search #search-detail-content, #dashboard-search #search-detail-content {
     position: relative;
     padding: 0;
     background-color: transparent;
     border-top: none;
     height: auto;
+  }
+
+  #dashboard-search .search-trigger {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+  }
+  #dashboard-search.show-search-trigger .search-trigger {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  body.open-search #dashboard-search {
+    left: 0;
+    padding: 15px 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  body.open-search #dashboard-search #search-detail-content {
+    padding: 15px 0 80px;
+  }
+  body.open-search #dashboard-search .keyword-search input {
+    border-right: none;
+    border: 1px solid #e3e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
   }
 
   #priority-property {

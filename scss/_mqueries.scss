@@ -284,7 +284,7 @@
 			padding: 15px 15px 0;
 		}
 	}
-	#main-search {
+	#main-search, #dashboard-search {
 		position: absolute;
 		top: -100%;
 		@include transition(.1s, ease-in-out);
@@ -325,6 +325,39 @@
 			border-top: none;
 			height: auto;
 		}
+	}
+	#dashboard-search {
+		.search-trigger {
+			opacity: 0;
+			z-index: -1;
+			@include transition(.2s linear);
+		}
+		&.show-search-trigger {
+			.search-trigger {
+				opacity: 1;
+				z-index: 1;
+			}
+		}
+	}
+	body.open-search {
+		#dashboard-search {
+			left: 0;
+			padding: 15px 0;
+			overflow: hidden;
+			overflow-y: auto;
+			@include border-radius(0);
+			#search-detail-content {
+				padding: 15px 0 80px;
+			}
+			.keyword-search {
+				input {
+					border-right: none;
+					border: 1px solid $border;
+					@include border-radius(3px);
+				}
+			}
+		}
+
 	}
 	#priority-property {
 		padding-left: 0;
