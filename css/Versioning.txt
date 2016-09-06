@@ -1,2 +1,6 @@
 style 4.0.1
 - Menghilangkan margin-bottom pada #property-list di media queries (max-width: 992px), untuk kebutuhan search listing.
+
+style 4.0.2 (01.09.2016)
+- Penambahan class affix (line: 4919)
+- Penambahan style untuk error-page (line: 8324 - 8395).

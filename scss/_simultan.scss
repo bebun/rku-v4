@@ -5,6 +5,10 @@
 	display: block;
 }
 
+.affix {
+	position: fixed;
+}
+
 .full-width {
 	/* paksa semua yang pakai class ini, jadi 100% width sesuai parent tag-nya */
 	width: 100%;

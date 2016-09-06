@@ -4916,6 +4916,10 @@ button:focus {
   display: block;
 }
 
+.affix {
+  position: fixed;
+}
+
 .full-width {
   /* paksa semua yang pakai class ini, jadi 100% width sesuai parent tag-nya */
   width: 100%;
@@ -6471,6 +6475,21 @@ header .user-menu-list ul li:last-child a {
 
 /* ===================================== */
 /* ============== DINI ================= */
+/*
+dashboard setting
+biodata & profile
+article
+detail article
+help site
+membership
+career
+testimonial
+about
+redaksi
+profile
+error page
+*/
+/* ===================================== */
 /* ============= DASHBOARD SETTING ============== */
 #dashboard .db-menu-list.setting li.active a {
   color: #000000;
@@ -8298,6 +8317,80 @@ header .user-menu-list ul li:last-child a {
 
   .form-recommend button .btn {
     display: block;
+  }
+}
+/* ===================================== */
+/* ============= ERROR PAGE =========== */
+.error-page {
+  width: 100%;
+  height: calc(100% - 124px);
+  background: #ffffff;
+  position: relative;
+}
+
+.error-cols div:last-child {
+  width: 30%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.error-cols {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.error-cols div:last-child h6 {
+  font-family: "hind_bold", Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  color: #c11b69;
+  text-shadow: 0 5px 20px rgba(204, 204, 204, 0.5);
+}
+
+.error-cols div:first-child {
+  width: 70%;
+  float: right;
+}
+
+.error-cols div:first-child img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .error-cols div:last-child {
+    top: 0;
+  }
+
+  .error-cols div:last-child h6 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .error-page {
+    height: calc(100% - 188px);
+    padding: 2%;
+  }
+
+  .error-cols div:first-child,
+  .error-cols div:last-child {
+    width: 100%;
+  }
+
+  .error-cols div:first-child img,
+  .error-cols div:last-child {
+    position: initial;
+  }
+
+  .error-cols div:last-child {
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  .error-cols {
+    text-align: center;
   }
 }
 /* ===================================== */
