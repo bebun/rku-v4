@@ -1573,9 +1573,11 @@
 			height: auto;
 		}
 		.hero-cell {
+			padding-top: 0;
 			position: absolute;
-			bottom: 25%;
+			top: 67%;
 			width: 100%;
+			@include transform(translateY(-33%));
 		}
 		.hero-title {
 			font-size: em(24);
@@ -1879,13 +1881,14 @@
 		.hero {
 			height: 320px;
 		}
-		.hero-cell, .hero-table, .hero-bg {
+		.hero-table, .hero-bg {
 			height: 100%;
 		}
 		.hero-cell {
 			position: absolute;
-			top: 58%;
+			top: 70%;
 			padding-top: 0;
+			@include transform(translateY(-30%));
 		}
 		.hero-promo-text {
 			position: relative;
@@ -1900,6 +1903,13 @@
 		}
 		.hero-search {
 			padding-bottom: 0;
+		}
+		.hero-search-container {
+			&.on-mobile {
+				span {
+					padding: 5px;
+				}
+			}
 		}
 		.hero-location-container {
 			.hero-location {
@@ -2111,6 +2121,18 @@
 				display: block;
 			}
 		}
+	}
+}
+@media (max-height: 420px) and (max-width: 768px) {
+	body {
+		&.pick-location {
+			#chooseLocation {
+				height: 100%;
+			}
+		}
+	}
+	#chooseLocation {
+		top: -200%;
 	}
 }
 

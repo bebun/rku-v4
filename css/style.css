@@ -6197,7 +6197,7 @@ header .user-menu-list ul li:last-child a {
 
 #chooseLocation {
   position: fixed;
-  top: -170%;
+  top: -180%;
   padding: 60px 0 0;
   width: 100%;
   background-color: #ffffff;
@@ -13459,6 +13459,7 @@ body.home.openSearch {
   overflow: hidden;
 }
 body.home.openSearch .srcProperty {
+  position: fixed;
   top: 0;
   z-index: 15;
   -webkit-transition: 0.1s linear;
@@ -15278,9 +15279,14 @@ body.pick-location #chooseLocation {
     height: auto;
   }
   body.home .hero-cell {
+    padding-top: 0;
     position: absolute;
-    bottom: 25%;
+    top: 67%;
     width: 100%;
+    -moz-transform: translateY(-33%);
+    -ms-transform: translateY(-33%);
+    -webkit-transform: translateY(-33%);
+    transform: translateY(-33%);
   }
   body.home .hero-title {
     font-size: 1.6em;
@@ -15551,13 +15557,17 @@ body.pick-location #chooseLocation {
   body.home .hero {
     height: 320px;
   }
-  body.home .hero-cell, body.home .hero-table, body.home .hero-bg {
+  body.home .hero-table, body.home .hero-bg {
     height: 100%;
   }
   body.home .hero-cell {
     position: absolute;
-    top: 58%;
+    top: 70%;
     padding-top: 0;
+    -moz-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
   }
   body.home .hero-promo-text {
     position: relative;
@@ -15572,6 +15582,9 @@ body.pick-location #chooseLocation {
   }
   body.home .hero-search {
     padding-bottom: 0;
+  }
+  body.home .hero-search-container.on-mobile span {
+    padding: 5px;
   }
   body.home .hero-location-container .hero-location {
     padding-top: 0;
@@ -15774,6 +15787,15 @@ body.pick-location #chooseLocation {
   }
   body.pick-location #chooseLocation .city {
     display: block;
+  }
+}
+@media (max-height: 420px) and (max-width: 768px) {
+  body.pick-location #chooseLocation {
+    height: 100%;
+  }
+
+  #chooseLocation {
+    top: -200%;
   }
 }
 /* ===================================== */
