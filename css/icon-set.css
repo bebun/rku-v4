@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.rku-rotate:before {
+  content: "\e971";
+}
 .rku-compare:before {
   content: "\e970";
 }

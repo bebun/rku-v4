@@ -2135,7 +2135,13 @@
 		top: -200%;
 	}
 }
-
+@media (max-height: 420px) {
+	.hide-height {
+		position: fixed;
+		z-index: 20;
+		display: block;
+	}
+}
 // @media (max-width: 360px) {
 // 	// body.home {
 // 	// 	.hero-cell {

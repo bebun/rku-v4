@@ -5612,6 +5612,30 @@ button:focus {
   opacity: 0;
 }
 
+.hide-height {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #1e1e22 url(../images/message-pattern.png) repeat;
+}
+.hide-height .text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: #ffffff;
+  font-size: 1.06667em;
+  -moz-transform: translateY(-50%) translateX(-20%);
+  -ms-transform: translateY(-50%) translateX(-20%);
+  -webkit-transform: translateY(-50%) translateX(-20%);
+  transform: translateY(-50%) translateX(-20%);
+}
+.hide-height i {
+  font-size: 3.2em;
+}
+
 /* ===================================== */
 /* =============== HEAD ================ */
 .select-location.on-mobile {
@@ -15796,6 +15820,13 @@ body.pick-location #chooseLocation {
 
   #chooseLocation {
     top: -200%;
+  }
+}
+@media (max-height: 420px) {
+  .hide-height {
+    position: fixed;
+    z-index: 20;
+    display: block;
   }
 }
 /* ===================================== */
