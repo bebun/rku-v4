@@ -15822,7 +15822,7 @@ body.pick-location #chooseLocation {
     top: -200%;
   }
 }
-@media (max-height: 420px) {
+@media screen and (max-height: 420px) and (max-aspect-ratio: 13 / 9) {
   .hide-height {
     position: fixed;
     z-index: 20;
