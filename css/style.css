@@ -6487,7 +6487,7 @@ header .user-menu-list ul li:last-child a {
   box-sizing: content-box;
 }
 #dashboard-search #search-detail-content.open {
-  top: 60px;
+  top: 41px;
 }
 
 #search-title {
@@ -14192,7 +14192,9 @@ body.pick-location #chooseLocation {
     border-radius: 0;
   }
   body.open-search #dashboard-search #search-detail-content {
-    padding: 15px 0 80px;
+    padding: 30px 0 80px;
+    border: none;
+    overflow: visible;
   }
   body.open-search #dashboard-search .keyword-search input {
     border-right: none;
