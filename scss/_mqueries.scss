@@ -347,7 +347,9 @@
 			overflow-y: auto;
 			@include border-radius(0);
 			#search-detail-content {
-				padding: 15px 0 80px;
+				padding: 30px 0 80px;
+				border: none;
+				overflow: visible;
 			}
 			.keyword-search {
 				input {
