@@ -35,7 +35,7 @@
 	<!--<![endif]-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="search">
+<body>
 	<div class="select-location on-mobile on-tablet text-center">
 		<a href="" id="mobileLocation" class="btn">Anda sedang melihat seluruh properti di <span>Kalimantan Selatan</span></a>
 	</div>
@@ -2585,6 +2585,14 @@
 			e.preventDefault();
 			$('#search-detail-content').removeClass('open');
 			$('body').removeClass('search-focus');
+		});
+		$(document).on("scroll", function(){
+			if ($(document).scrollTop() > 55) {
+				$('body').addClass('search');
+			}
+			else {
+				$('body').removeClass('search');
+			}
 		});
 	</script>
 </body>
