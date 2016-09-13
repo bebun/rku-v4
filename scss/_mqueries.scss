@@ -2128,10 +2128,14 @@
 			z-index: 14;
 			@include transition(.1s linear);
 			.this-city {
-				a {
+				span {
 					display: block;
-					padding-right: 15px;
-					padding-left: 15px;
+				}
+				a {
+					padding-top: 5px;
+					padding-bottom: 5px;
+					display: inline-block;
+					color: $green;
 				}
 			}
 			.city {

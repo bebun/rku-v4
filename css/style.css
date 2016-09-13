@@ -9476,7 +9476,6 @@ error page
   float: left;
 }
 #property-list .property-list-action {
-  margin-top: 15px;
   padding: 10px 15px;
   background-color: #f8f8f8;
   -webkit-box-shadow: 0 -1px 0 #e3e3e3;
@@ -15888,10 +15887,14 @@ body.pick-location #chooseLocation {
     -o-transition: 0.1s linear;
     transition: 0.1s linear;
   }
-  body.pick-location #chooseLocation .this-city a {
+  body.pick-location #chooseLocation .this-city span {
     display: block;
-    padding-right: 15px;
-    padding-left: 15px;
+  }
+  body.pick-location #chooseLocation .this-city a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    color: #009634;
   }
   body.pick-location #chooseLocation .city {
     display: block;
