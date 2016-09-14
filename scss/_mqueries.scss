@@ -82,12 +82,12 @@
 			&:before {
 				left: 0;
 				@include filter-gradient($black, $black, horizontal); // IE6-9
-				@include background-image(linear-gradient(left,  $black 0%, rgba(30,30,34,1) 80%,rgba(30,30,34,0.1) 100%));
+				@include background-image(linear-gradient(left,  $black 0%, rgba(30,30,34,1) 70%,rgba(30,30,34,0.1) 100%));
 			}
 			&:after {
 				right: 0;
 				@include filter-gradient($black, $black, horizontal); // IE6-9
-				@include background-image(linear-gradient(left,  rgba(30,30,34,0.1) 0%, rgba(30,30,34,1) 20%, $black 100%));
+				@include background-image(linear-gradient(left,  rgba(30,30,34,0.1) 0%, rgba(30,30,34,1) 30%, $black 100%));
 			}
 		}
 	}
@@ -2178,7 +2178,7 @@
 		top: -200%;
 	}
 }
-@media screen and (max-height: 420px) and (max-aspect-ratio: 17/9) {
+@media handheld and (orientation: landscape), (max-height: 420px) and (min-width: 479px) {
 	.hide-height {
 		position: fixed;
 		width: 100%;
