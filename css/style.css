@@ -5076,6 +5076,9 @@ button:focus {
   padding-right: 7.5px;
   padding-left: 7.5px;
 }
+.mortgage .mortgage-footer .btn {
+  padding: 8px 25px;
+}
 
 .text-editor {
   position: relative;
@@ -14166,7 +14169,7 @@ body.pick-location #chooseLocation {
     width: 100%;
   }
   body.search header {
-    z-index: 4;
+    z-index: 5;
   }
   body.search .navbar {
     padding: 0;
