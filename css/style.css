@@ -6224,7 +6224,7 @@ header .user-menu-list ul li:last-child a {
 
 #chooseLocation {
   position: fixed;
-  top: -180%;
+  top: -99em;
   padding: 60px 0 0;
   width: 100%;
   background-color: #ffffff;
@@ -14017,36 +14017,37 @@ body.pick-location #chooseLocation {
   body.home .hero-location {
     font-size: 1em;
   }
+  body.home .hero {
+    background-color: #272e32;
+  }
   body.home .hero:after, body.home .hero:before {
     content: '';
     position: absolute;
     top: 0;
-    width: 15%;
+    width: 16%;
     height: 100%;
     display: block;
     z-index: 1;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF000000', endColorstr='#FF000000');
   }
   body.home .hero:before {
     left: 0;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF1E1E22', endColorstr='#FF1E1E22');
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlMWUyMiIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjMWUxZTIyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWUxZTIyIiBzdG9wLW9wYWNpdHk9IjAuMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background-size: 100%;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1e1e22), color-stop(70%, #1e1e22), color-stop(100%, rgba(30, 30, 34, 0.1)));
-    background-image: -moz-linear-gradient(left, #1e1e22 0%, #1e1e22 70%, rgba(30, 30, 34, 0.1) 100%);
-    background-image: -webkit-linear-gradient(left, #1e1e22 0%, #1e1e22 70%, rgba(30, 30, 34, 0.1) 100%);
-    background-image: linear-gradient(to right, #1e1e22 0%, #1e1e22 70%, rgba(30, 30, 34, 0.1) 100%);
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #000000), color-stop(60%, #000000), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -moz-linear-gradient(left, #000000 0%, #000000 60%, rgba(0, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient(left, #000000 0%, #000000 60%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(to right, #000000 0%, #000000 60%, rgba(0, 0, 0, 0) 100%);
   }
   body.home .hero:after {
     right: 0;
-    *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF1E1E22', endColorstr='#FF1E1E22');
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlMWUyMiIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iIzFlMWUyMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMWUyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background-size: 100%;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(30, 30, 34, 0.1)), color-stop(30%, #1e1e22), color-stop(100%, #1e1e22));
-    background-image: -moz-linear-gradient(left, rgba(30, 30, 34, 0.1) 0%, #1e1e22 30%, #1e1e22 100%);
-    background-image: -webkit-linear-gradient(left, rgba(30, 30, 34, 0.1) 0%, #1e1e22 30%, #1e1e22 100%);
-    background-image: linear-gradient(to right, rgba(30, 30, 34, 0.1) 0%, #1e1e22 30%, #1e1e22 100%);
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, #000000), color-stop(100%, #1e1e22));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 40%, #1e1e22 100%);
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 40%, #1e1e22 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 40%, #1e1e22 100%);
   }
 
   #login-page .login-wrapper, #login-page .login-form {
@@ -15913,9 +15914,9 @@ body.pick-location #chooseLocation {
     height: calc(100% - 35px);
   }
   body.pick-location #chooseLocation {
-    top: 0;
-    padding: 40px 0 0;
-    height: 100%;
+    top: 33px;
+    padding: 30px 0 0;
+    height: calc(100% - 33px);
     overflow: auto;
     z-index: 14;
     -webkit-transition: 0.1s linear;
@@ -15939,10 +15940,6 @@ body.pick-location #chooseLocation {
   body.pick-location #chooseLocation {
     height: 100%;
   }
-
-  #chooseLocation {
-    top: -200%;
-  }
 }
 @media handheld and (orientation: landscape), (max-height: 420px) and (min-width: 479px) {
   .hide-height {
@@ -15952,6 +15949,16 @@ body.pick-location #chooseLocation {
     display: block;
     overflow: hidden;
     z-index: 20;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .ie {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1030;
   }
 }
 /* ===================================== */

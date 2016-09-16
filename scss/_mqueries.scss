@@ -70,24 +70,24 @@
 			font-size: em(15);
 		}
 		.hero {
+			background-color: $black2;
 			&:after, &:before {
 				content: '';
 				position: absolute;
 				top: 0;
-				width: 15%;
+				width: 16%;
 				height: 100%;
 				display: block;
 				z-index: 1;
+				@include filter-gradient(#000, #000, horizontal); // IE6-9
 			}
 			&:before {
 				left: 0;
-				@include filter-gradient($black, $black, horizontal); // IE6-9
-				@include background-image(linear-gradient(left,  $black 0%, rgba(30,30,34,1) 70%,rgba(30,30,34,0.1) 100%));
+				@include background-image(linear-gradient(left, #000 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%));
 			}
 			&:after {
 				right: 0;
-				@include filter-gradient($black, $black, horizontal); // IE6-9
-				@include background-image(linear-gradient(left,  rgba(30,30,34,0.1) 0%, rgba(30,30,34,1) 30%, $black 100%));
+				@include background-image(linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, $black 100%));
 			}
 		}
 	}
@@ -2143,9 +2143,9 @@
 			height: calc(100% - 35px);
 		}
 		#chooseLocation {
-			top: 0;
-			padding: 40px 0 0;
-			height: 100%;
+			top: 33px;
+			padding: 30px 0 0;
+			height: calc(100% - 33px);
 			overflow: auto;
 			z-index: 14;
 			@include transition(.1s linear);
@@ -2174,9 +2174,6 @@
 			}
 		}
 	}
-	#chooseLocation {
-		top: -200%;
-	}
 }
 @media handheld and (orientation: landscape), (max-height: 420px) and (min-width: 479px) {
 	.hide-height {
@@ -2204,3 +2201,14 @@
 // 	// 	}
 // 	// }
 // }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.ie {
+		background-color: #000;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 1030;
+	}
+}
