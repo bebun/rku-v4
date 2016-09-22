@@ -1078,9 +1078,18 @@
 		}
 	}
 	#login-page {
-		height: 100vh;
+		height: 100%;
 		.col-sm-7 {
 			width: 100%;
+		}
+		.modal-inner {
+			margin-right: 0;
+		}
+		.modal-content {
+			.col-sm-7, .col-sm-5 {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 	#message {

@@ -14982,10 +14982,17 @@ body.pick-location #chooseLocation {
   }
 
   #login-page {
-    height: 100vh;
+    height: 100%;
   }
   #login-page .col-sm-7 {
     width: 100%;
+  }
+  #login-page .modal-inner {
+    margin-right: 0;
+  }
+  #login-page .modal-content .col-sm-7, #login-page .modal-content .col-sm-5 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   #message .no-side-pad {
