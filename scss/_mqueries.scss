@@ -1,81 +1,80 @@
 @media (min-width: 1440px) {
 	body.home {
 		.hero-bg {
-			background-position: center;
-			background-size: 79% !important;
+			background-position-x: center;
+			background-size: initial;
+			height: 100%;
 		}
-		.hero-cell, .hero-promo-text {
-			.container {
-				max-width: 1800px;
-			}
+		// .hero-cell, .hero-promo-text {
+		// 	.container {
+		// 		max-width: 1260px;
+		// 	}
+		// }
+		#content-wrapper, .hero-table {
+			height: initial;
 		}
 		.hero-location {
 			@include border-radius(0 0 5px 5px);
 		}
 		.hero-cell {
-			padding-top: 15%;
+			position: absolute;
+			top: 70%;
+			width: 100%;
+			padding-top: 0;
+			@include transform(translateY(-50%));
 		}
 		.hero-title {
-			margin-bottom: 30px;
-			font-size: 280%;
+			margin-bottom: 5px;
+			font-size: 150%;
 		}
 		.hero-search {
-			padding: 30px 15px;
-			font-size: 110%;
+			padding: 15px;
 			@include border-radius(5px);
 			label {
-				padding: 12px 0; 
-				font-size: 125%;
 				text-align: center;
 			}
 			.select-group {
 				.select {
 					margin-right: 0;
-					height: 45px;
 				}
 			}
 			.select label {
 				padding: 0;
 			}
-			.input input, .btn.md {
-				height: 45px;
-			}
 			.input {
 				label {
 					padding-top: 10px;
 					padding-left: 10px;
-					font-size: 100%;
 				}
 				input {
 					padding-left: 45px;
-					font-size: 125%;
 				}
 			}
 			.dropdown-menu {
 				top: 95%;
 				a {
 					padding: 10px 15px;
-					font-size: 125%;
 				}
 			}
 			.btn.md {
-				padding: 12px 15px;
 			}
 			.dropdown-toggle {
-				padding: 10px 45px 10px 15px;
-				font-size: 125%;
 			}
 		}
 		.hero-location {
 			font-size: em(15);
 		}
+		.hero-promo-text {
+			position: relative;
+		}
 		.hero {
 			background-color: $black2;
+			max-height: 700px;
 			&:after, &:before {
 				content: '';
 				position: absolute;
 				top: 0;
-				width: 16%;
+				width: 12%;
 				height: 100%;
 				display: block;
 				z-index: 1;
@@ -107,8 +106,7 @@
 }
 @media (min-width: 769px) and (max-width: 1024px) {
 	.navbar-right {
-		li {
-			&.user-login, 
+		> li {
 			&:nth-child(2n+4),
 			&:last-child {
 				display: none;
@@ -1608,9 +1606,9 @@
 		.hero-table, .hero-cell {
 			display: block;
 		}
-		.hero-table {
-			height: auto;
-		}
+		// .hero-table {
+		// 	height: auto;
+		// }
 		.hero-cell {
 			padding-top: 0;
 			position: absolute;
@@ -2175,7 +2173,7 @@
 		}
 	}
 }
-@media handheld and (orientation: landscape), (max-height: 420px) and (min-width: 479px) {
+@media handheld and (orientation: landscape), (max-device-height: 420px) and (min-device-width: 479px) {
 	.hide-height {
 		position: fixed;
 		width: 100%;
@@ -2201,14 +2199,3 @@
 // 	// 	}
 // 	// }
 // }
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	/* IE10+ CSS styles go here */
-	.ie {
-		background-color: #000;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		z-index: 1030;
-	}
-}

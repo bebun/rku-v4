@@ -3900,7 +3900,7 @@ textarea:focus,
   display: inline-block;
 }
 .select-group .select .dropdown-toggle {
-  padding: 8px 45px 8px 15px;
+  padding: 6px 45px 6px 15px;
 }
 .select-group .form-group {
   display: inline-block;
@@ -4964,7 +4964,7 @@ button:focus {
 
 .rku-logo {
   display: block;
-  width: 170px;
+  width: 180px;
   height: 21px;
   margin-top: 10px;
   background: url(../images/rku-logo.png) no-repeat scroll;
@@ -11038,6 +11038,33 @@ error page
   height: 157px;
   background-color: #2e363b;
 }
+#compare .compare-other a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#compare .compare-other a:before, #compare .compare-other a:after {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.8);
+  vertical-align: middle;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#compare .compare-other a:before {
+  content: '\e970';
+  font-family: 'rkuv4';
+  font-size: 2.13333em;
+}
+#compare .compare-other a:after {
+  content: 'Tambahkan Properti Lain';
+  margin-top: 40px;
+}
 #compare .short-spec {
   position: absolute;
   bottom: 0;
@@ -13458,7 +13485,7 @@ body.home .carousel-control i {
 }
 body.home .hero-bg {
   position: absolute;
-  background: url(../images/hero-banner-home.jpg) no-repeat bottom center;
+  background: url(../images/hero-banner-home.jpg) no-repeat top center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -13951,11 +13978,12 @@ body.pick-location #chooseLocation {
 /* ========== MEDIA QUERIES ============ */
 @media (min-width: 1440px) {
   body.home .hero-bg {
-    background-position: center;
-    background-size: 79% !important;
+    background-position-x: center;
+    background-size: initial;
+    height: 100%;
   }
-  body.home .hero-cell .container, body.home .hero-promo-text .container {
-    max-width: 1800px;
+  body.home #content-wrapper, body.home .hero-table {
+    height: initial;
   }
   body.home .hero-location {
     -moz-border-radius: 0 0 5px 5px;
@@ -13963,68 +13991,62 @@ body.pick-location #chooseLocation {
     border-radius: 0 0 5px 5px;
   }
   body.home .hero-cell {
-    padding-top: 15%;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    padding-top: 0;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   body.home .hero-title {
-    margin-bottom: 30px;
-    font-size: 280%;
+    margin-bottom: 5px;
+    font-size: 150%;
   }
   body.home .hero-search {
-    padding: 30px 15px;
-    font-size: 110%;
+    padding: 15px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
   }
   body.home .hero-search label {
-    padding: 12px 0;
-    font-size: 125%;
     text-align: center;
   }
   body.home .hero-search .select-group .select {
     margin-right: 0;
-    height: 45px;
   }
   body.home .hero-search .select label {
     padding: 0;
   }
-  body.home .hero-search .input input, body.home .hero-search .btn.md {
-    height: 45px;
-  }
   body.home .hero-search .input label {
     padding-top: 10px;
     padding-left: 10px;
-    font-size: 100%;
   }
   body.home .hero-search .input input {
     padding-left: 45px;
-    font-size: 125%;
   }
   body.home .hero-search .dropdown-menu {
     top: 95%;
   }
   body.home .hero-search .dropdown-menu a {
     padding: 10px 15px;
-    font-size: 125%;
-  }
-  body.home .hero-search .btn.md {
-    padding: 12px 15px;
-  }
-  body.home .hero-search .dropdown-toggle {
-    padding: 10px 45px 10px 15px;
-    font-size: 125%;
   }
   body.home .hero-location {
     font-size: 1em;
   }
+  body.home .hero-promo-text {
+    position: relative;
+  }
   body.home .hero {
     background-color: #272e32;
+    max-height: 700px;
   }
   body.home .hero:after, body.home .hero:before {
     content: '';
     position: absolute;
     top: 0;
-    width: 16%;
+    width: 12%;
     height: 100%;
     display: block;
     z-index: 1;
@@ -14061,7 +14083,7 @@ body.pick-location #chooseLocation {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .navbar-right li.user-login, .navbar-right li:nth-child(2n+4), .navbar-right li:last-child {
+  .navbar-right > li:nth-child(2n+4), .navbar-right > li:last-child {
     display: none;
   }
 }
@@ -15418,9 +15440,6 @@ body.pick-location #chooseLocation {
   body.home .hero-table, body.home .hero-cell {
     display: block;
   }
-  body.home .hero-table {
-    height: auto;
-  }
   body.home .hero-cell {
     padding-top: 0;
     position: absolute;
@@ -15941,7 +15960,7 @@ body.pick-location #chooseLocation {
     height: 100%;
   }
 }
-@media handheld and (orientation: landscape), (max-height: 420px) and (min-width: 479px) {
+@media handheld and (orientation: landscape), (max-device-height: 420px) and (min-device-width: 479px) {
   .hide-height {
     position: fixed;
     width: 100%;
@@ -15949,16 +15968,6 @@ body.pick-location #chooseLocation {
     display: block;
     overflow: hidden;
     z-index: 20;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
-  .ie {
-    background-color: #000;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1030;
   }
 }
 /* ===================================== */

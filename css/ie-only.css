@@ -1,0 +1,69 @@
+/* IE HACKS */
+.ie {
+	display: none;
+}
+.ie ul {
+	margin: 15px 0;
+}
+.ie li {
+	margin: 15px 30px;
+	display: inline-block;
+}
+.ie img {
+	height: 40px;
+	vertical-align: middle;
+}
+.ie span {
+	display: block;
+	font-size: 0.9em;
+	line-height: 2.4em;
+}
+/* IE 8, 9, 10, 11 */
+@media screen\0 {
+	.ie {
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #1e1e22;
+		background-image: url(../images/message-pattern.png);
+		background-repeat: repeat;
+		vertical-align: middle;
+		z-index: 1030;
+	}
+	.ie-message {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		bottom: 50%;
+		left: 0;
+		width: 50%;
+		height: 200px;
+		background-color: #fff !important;
+		margin: auto;
+		padding: 30px;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+/* IE 6, 7 */
+@media screen\9 {
+	.ie {
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #1e1e22;
+		background-image: url(../images/message-pattern.png);
+		background-repeat: repeat;
+		z-index: 1030;
+	}
+	.ie-message {
+		width: 60%;
+		background-color: #fff !important;
+		margin: 15% auto 0;
+		padding: 15px;
+		text-align: center;
+	}
+}
