@@ -6045,10 +6045,11 @@ header .user-menu-list ul li:last-child a {
 }
 #main-menu .whole-menu {
   position: fixed;
-  top: 33px;
+  top: 0;
   left: 0;
+  margin-top: 33px;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 33px);
   background-color: #006b37;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF006B37', endColorstr='#FF03222B');
@@ -15437,6 +15438,9 @@ body.pick-location #chooseLocation {
   body.home, body.home #content-wrapper, body.home .hero {
     height: auto;
   }
+  body.home .hero-bg {
+    height: calc(100% - 100px);
+  }
 
   body.home .hero form > div:first-child {
     padding-right: 0;
@@ -15450,12 +15454,8 @@ body.pick-location #chooseLocation {
   body.home .hero-cell {
     padding-top: 0;
     position: absolute;
-    top: 67%;
+    top: 66%;
     width: 100%;
-    -moz-transform: translateY(-33%);
-    -ms-transform: translateY(-33%);
-    -webkit-transform: translateY(-33%);
-    transform: translateY(-33%);
   }
   body.home .hero-title {
     font-size: 1.6em;

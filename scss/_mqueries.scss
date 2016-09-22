@@ -1596,6 +1596,9 @@
 		&, #content-wrapper, .hero {
 			height: auto;
 		}
+		.hero-bg {
+			height: calc(100% - 100px);
+		}
 	}
 	body.home {
 		.hero {
@@ -1621,9 +1624,8 @@
 		.hero-cell {
 			padding-top: 0;
 			position: absolute;
-			top: 67%;
+			top: 66%;
 			width: 100%;
-			@include transform(translateY(-33%));
 		}
 		.hero-title {
 			font-size: em(24);
