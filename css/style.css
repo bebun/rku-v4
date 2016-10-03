@@ -8505,6 +8505,12 @@ error page
 #upload-process {
   padding: 45px 0;
 }
+#upload-process .back-to {
+  background-color: #fefefe;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-top: 1px solid #e1e3e5;
+}
 #upload-process .head-title {
   font-family: "hind_bold", Helvetica, Arial, sans-serif;
 }
@@ -8524,6 +8530,7 @@ error page
 }
 #upload-process .btn-group .btn.md {
   min-width: 120px;
+  padding: 8px 25px;
 }
 #upload-process .btn-group > .btn-group a {
   -moz-border-radius: 0;

@@ -53,6 +53,12 @@
 
 #upload-process {
 	padding: 45px 0;
+	.back-to {
+		background-color: #fefefe;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		border-top: 1px solid lighten($gray3, 12%);
+	}
 	.head-title {
 		font-family: $font-bold;
 	}
@@ -75,6 +81,7 @@
 			}
 			&.md {
 				min-width: 120px;
+				padding: 8px 25px;
 			}
 		}
 		> .btn-group {
@@ -363,7 +370,7 @@
 				left: 0;
 				right: 0;
 				color: $gray2;
-				font-size: em(12);	
+				font-size: em(12);
 			}
 			&.bar {
 				top: 0;
@@ -862,7 +869,7 @@
 			.property-image.box {
 				bottom: 0;
 				@include box-shadow(0);
-			}	
+			}
 		}
 		&.property-list-content {
 			overflow: hidden;
@@ -972,7 +979,7 @@
 			}
 		}
 	}
-	.property-rating { 
+	.property-rating {
 		margin-top: 5px;
 		label, .star {
 			display: inline-block;
@@ -1002,7 +1009,7 @@
 		.checkbox {
 			padding: 10px 0 5px;
 		}
-		.love, 
+		.love,
 		.call {
 			display: inline-block;
 			margin-left: 10px;
@@ -1083,7 +1090,7 @@
 	}
 }
 
-#property-information, 
+#property-information,
 #property-contact {
 	.contact-info-content {
 		background-color: $white;
@@ -1128,7 +1135,7 @@
 		.property-list-expand {
 			position: absolute;
 			top: 15px;
-			right: 15px; 
+			right: 15px;
 			a {
 				color: $green;
 				&:hover {
@@ -1214,13 +1221,13 @@
 			font-family: $font-bold;
 		}
 	}
-	.property-spec, 
-	.property-facilities, 
+	.property-spec,
+	.property-facilities,
 	.property-advantage,
-	.property-additional-info, 
+	.property-additional-info,
 	.property-social-media {
 		margin: 30px 0;
-		li { 
+		li {
 			margin-bottom: 30px;
 		}
 	}
@@ -1334,7 +1341,7 @@
 					}
 				}
 			}
-				
+
 		}
 	}
 	.property-social-media {
@@ -1627,8 +1634,8 @@
 			padding: 0 15px 15px 0;
 			display: block;
 			color: $text;
-			&:hover, 
-			&:focus, 
+			&:hover,
+			&:focus,
 			&:active {
 			  color: $link;
 			}
@@ -1766,7 +1773,7 @@
 			@include clear;
 		}
 	}
-	.flex-data, 
+	.flex-data,
 	.fixed-data {
 		span {
 			display: block;
@@ -2061,7 +2068,7 @@
 		padding: 15px;
 		margin-right: calc(100% / 12);
 		background-color: $white;
-		z-index: 2;	
+		z-index: 2;
 		@include box-shadow(0 5px 10px #eceeee);
 		li {
 			padding-top: 15px;
@@ -2145,7 +2152,7 @@
 		font-family: $font-semibold;
 		font-size: em(18);
 	}
-	#area-information, 
+	#area-information,
 	#new-property {
 		border: 1px solid $border;
 		@include box-shadow(0 2px 5px rgba(229, 229, 229, .6));
@@ -2499,12 +2506,12 @@
 	// .modal-center {
 	// 	top: 52%;
 	// }
-	.login-wrapper, 
+	.login-wrapper,
 	.login-form {
 		margin: auto;
 		padding: 4% 0 3%;
 	}
-	.col-sm-7, 
+	.col-sm-7,
 	.col-sm-5 {
 		height: 100%;
 	}
@@ -3422,7 +3429,7 @@
 		i {
 			padding-top: 0;
 		}
-	} 
+	}
 }
 
 #property-unit-tab, #banner {
@@ -3459,7 +3466,7 @@
 #generate-chart {
 	.rku-table {
 		th, td {
-			&.image, 
+			&.image,
 			&.status {
 				width: 100px;
 			}
