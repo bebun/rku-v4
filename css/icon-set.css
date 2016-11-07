@@ -24,6 +24,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.rku-facilities:before {
+  content: "\e973";
+}
+.rku-unavailable:before {
+  content: "\e972";
+}
 .rku-rotate:before {
   content: "\e971";
 }
@@ -363,5 +369,3 @@
 .rku-cross:before {
     content: "\e94b";
 }
-
-
