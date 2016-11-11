@@ -1081,9 +1081,26 @@
 	}
 	body.pick-location {
 		#chooseLocation {
-			top: 0;
+			top: 45px;
+			left: 0;
+			right: 0;
+			width: 60%;
 			height: auto;
-			overflow: auto;
+			margin: auto;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -8px;
+				left: 50%;
+				opacity: 1;
+				border: {
+					width: 8px;
+					style: none solid solid;
+					color: $white transparent;
+				}
+				@include transform(translateX(-50%));
+			}
 		}
 	}
 	body.search-focus {
@@ -2093,10 +2110,7 @@
 			height: calc(100% - 35px);
 		}
 		#chooseLocation {
-			top: 33px;
-			padding: 30px 0 0;
-			height: calc(100% - 33px);
-			overflow: auto;
+			width: 90%;
 			z-index: 14;
 			@include transition(.1s linear);
 			.this-city {
@@ -2109,9 +2123,6 @@
 					display: inline-block;
 					color: $green;
 				}
-			}
-			.city {
-				display: block;
 			}
 		}
 	}
