@@ -119,8 +119,8 @@
 		font-size: 13px;
 	}
 	#content {
-		#priority-property { 
-			.priority { 
+		#priority-property {
+			.priority {
 				.text {
 					p, .spec {
 						line-height: em(21);
@@ -228,6 +228,14 @@
 	#fourohfour {
 		img {
 			width: 100%;
+		}
+	}
+	#main-search {
+		.search-detail {
+			padding: 7px 25px;
+		}
+		.btn.md {
+			min-width: 115px;
 		}
 	}
 }
@@ -533,7 +541,7 @@
 		.hero-total-images {
 			bottom: 80px;
 		}
-		.detail-property-price, 
+		.detail-property-price,
 		.total-images {
 			position: absolute;
 			right: 0;
@@ -552,7 +560,7 @@
 				display: inline-block;
 			}
 		}
-		.total-images { 
+		.total-images {
 			position: absolute;
 			bottom: 80px;
 			width: 60px;
@@ -624,8 +632,8 @@
 			}
 		}
 	}
-	#detail-sticky-nav { 
-		.sticky-nav-icon { 
+	#detail-sticky-nav {
+		.sticky-nav-icon {
 			padding: 0;
 			&.on-desktop {
 				ul {
@@ -640,7 +648,7 @@
 					margin-bottom: 10px;
 					float: none;
 					text-align: center;
-					&:not(:last-child), 
+					&:not(:last-child),
 					&:nth-child(2n+3) {
 						margin-right: 0;
 					}
@@ -662,8 +670,8 @@
 	}
 	#property-information {
 		padding: 30px 0;
-		.contact-info-content { 
-			.btn-group { 
+		.contact-info-content {
+			.btn-group {
 				.btn {
 					padding-right: 0;
 					padding-left: 0;
@@ -671,7 +679,7 @@
 			}
 		}
 		.property-social-media {
-			margin: 30px 0 90px; 
+			margin: 30px 0 90px;
 			li {
 				&:last-child {
 					margin-right: 0;
@@ -824,9 +832,9 @@
 				padding: 15px;
 				background-color: transparent;
 				margin-left: -5px;
-				&, 
-				&.active, 
-				&.active.top, 
+				&,
+				&.active,
+				&.active.top,
 				&.active.bottom {
 					@include box-shadow(none);
 				}
@@ -855,7 +863,7 @@
 			}
 		}
 		.dev-product {
-			width: 100%;	
+			width: 100%;
 		}
 		.prop-content {
 			width: 100%;
@@ -979,7 +987,7 @@
 			}
 		}
 	}
-	#upload-process { 
+	#upload-process {
 		#product-info {
 			padding: 15px 0;
 		}
@@ -1032,7 +1040,7 @@
 		.hero-search {
 			margin: 0 15px;
 			padding: 15px 15px 0;
-		}		
+		}
 		.hero-controls {
 			top: initial;
 			right: 10px;
@@ -1737,11 +1745,11 @@
 				}
 			}
 		}
-		> table { 
+		> table {
 			&, thead, tbody, th, td, tr {
-				display: block; 
+				display: block;
 			}
-			thead tr { 
+			thead tr {
 				position: absolute;
 				top: -9999px;
 				left: -9999px;
@@ -1770,8 +1778,8 @@
 					/* Top/left values mimic padding */
 					top: 6px;
 					left: 6px;
-					width: 45%; 
-					padding-right: 10px; 
+					width: 45%;
+					padding-right: 10px;
 					white-space: nowrap;
 					content: attr(data-title);
 				}
@@ -1964,7 +1972,7 @@
 				padding-top: 0;
 			}
 		}
-		
+
 		.map-preview-content {
 			padding-bottom: 150px;
 			background-position-y: 230px;
