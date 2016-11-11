@@ -1,35 +1,15 @@
 @media (min-width: 1440px) {
 	body.home {
-		.hero-bg {
-			background-position-x: center;
-			background-size: initial;
-			height: 100%;
-		}
-		// .hero-cell, .hero-promo-text {
-		// 	.container {
-		// 		max-width: 1260px;
-		// 	}
-		// }
-		#content-wrapper, .hero-table {
-			height: initial;
+		.hero-cell {
+			.container {
+				max-width: 1440px;
+			}
 		}
 		.hero-location {
 			@include border-radius(0 0 5px 5px);
 		}
-		.hero-cell {
-			position: absolute;
-			top: 70%;
-			width: 100%;
-			padding-top: 0;
-			@include transform(translateY(-50%));
-		}
-		.hero-title {
-			margin-bottom: 5px;
-			font-size: 150%;
-		}
 		.hero-search {
-			padding: 15px;
-			@include border-radius(5px);
+			font-size: 120%;
 			label {
 				text-align: center;
 			}
@@ -43,7 +23,7 @@
 			}
 			.input {
 				label {
-					padding-top: 10px;
+					padding-top: 6px;
 					padding-left: 10px;
 				}
 				input {
@@ -51,7 +31,6 @@
 				}
 			}
 			.dropdown-menu {
-				top: 95%;
 				a {
 					padding: 10px 15px;
 				}
@@ -67,28 +46,6 @@
 		.hero-promo-text {
 			position: relative;
 		}
-		.hero {
-			background-color: $black2;
-			max-height: 700px;
-			&:after, &:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				width: 12%;
-				height: 100%;
-				display: block;
-				z-index: 1;
-				@include filter-gradient(#000, #000, horizontal); // IE6-9
-			}
-			&:before {
-				left: 0;
-				@include background-image(linear-gradient(left, #000 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%));
-			}
-			&:after {
-				right: 0;
-				@include background-image(linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, $black 100%));
-			}
-		}
 	}
 	#login-page .login-wrapper, #login-page .login-form {
 		padding: 7% 0;
@@ -100,9 +57,6 @@
 			background: #f1f2f2 url(../images/maintenance-2.png) center bottom no-repeat;
 		}
 	}
-	// #dashboard {
-	// 	min-height: 625px;
-	// }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
 	.navbar-right {
@@ -201,9 +155,6 @@
 					margin-left: auto;
 				}
 			}
-		}
-		.hero-cell {
-			padding-top: 32%;
 		}
 	}
 	#login-page {
@@ -1000,12 +951,10 @@
 		}
 	}
 	body.home {
-		header {
-			top: 30px;
-		}
 		.hero {
 			background: #1e1e22 url(../images/hero-banner-home.jpg) no-repeat -550px -80px;
 			background-size: cover;
+			height: calc(100vh - 250px);
 			form {
 				> div {
 					&:first-child {
@@ -1022,16 +971,16 @@
 			font-size: em(24);
 		}
 		.hero-promo-text {
-			position: relative;
-			height: 115px;
-			margin-top: -29%;
+			// position: relative;
+			// height: 115px;
+			// margin-top: -29%;
 			.promo-text {
 				padding-right: 15px;
 			}
 		}
 		.hero-search {
 			margin: 0 15px;
-			padding: 15px 15px 0;
+			padding: 15px;
 		}
 		.hero-controls {
 			top: initial;
@@ -1593,15 +1542,14 @@
 		height: auto;
 	}
 	body.home {
-		&, #content-wrapper, .hero {
-			height: auto;
+		.hero-search-container.on-tablet {
+			.hero-search {
+				margin: 0;
+			}
 		}
-		.hero-bg {
-			height: calc(100% - 100px);
-		}
-	}
-	body.home {
 		.hero {
+			margin-top: 72px;
+			height: 770px;
 			form {
 				> div {
 					&:first-child {
@@ -1622,10 +1570,13 @@
 		// 	height: auto;
 		// }
 		.hero-cell {
-			padding-top: 0;
 			position: absolute;
-			top: 66%;
+			top: 86px;
+			padding-top: 0;
 			width: 100%;
+			background: $black url(../images/pattern/noise_sm.png) repeat-x top center;
+			z-index: 11;
+			@include box-shadow(none);
 		}
 		.hero-title {
 			font-size: em(24);
@@ -1633,7 +1584,6 @@
 			line-height: em(24);
 		}
 		.hero-search {
-			padding-bottom: 0;
 			label {
 				display: none;
 			}
@@ -1927,16 +1877,10 @@
 	}
 	body.home {
 		.hero {
-			height: 320px;
+			height: 350px;
 		}
 		.hero-table, .hero-bg {
 			height: 100%;
-		}
-		.hero-cell {
-			position: absolute;
-			top: 70%;
-			padding-top: 0;
-			@include transform(translateY(-30%));
 		}
 		.hero-promo-text {
 			position: relative;
@@ -1949,13 +1893,10 @@
 		.hero-title {
 			font-size: em(18);
 		}
-		.hero-search {
-			padding-bottom: 0;
-		}
 		.hero-search-container {
 			&.on-mobile {
 				span {
-					padding: 5px;
+					padding: 10px;
 				}
 			}
 		}
