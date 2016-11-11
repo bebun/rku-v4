@@ -162,7 +162,7 @@
 					<div class="main-search-info">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-12 col-md-4 no-side-pad">
+								<div class="col-sm-12 col-md-3 no-side-pad">
 									<div class="src-trigger form-group for-location-search">
 										<label for="" class="on-mobile">Lokasi</label>
 										<div class="input with-label-inside">
@@ -284,13 +284,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-12 col-md-2 no-right-pad on-desktop on-tablet">
-									<a href=""><span class="btn full-width md border-only white">Saring</span></a>
+								<div class="col-sm-12 col-md-3 no-right-pad on-desktop on-tablet">
+									<a href=""class="src-trigger open-detail"><span class="btn border-only white search-detail">Filter <i class="rku-angle-bottom"></i></span></a>
+									<a href=""><span class="btn md with-bg green">Temukan</span></a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a href="" class="src-trigger on-desktop open-detail"><span class="search-detail">Detail <i class="rku-angle-bottom"></i></span></a>
 					<div id="search-detail-content">
 						<div class="container">
 							<div class="row">
@@ -573,12 +573,11 @@
 								</div>
 							</div>
 						</div>
-						<a href="" class="src-trigger on-desktop close-detail"><span class="search-detail">Detail <i class="rku-angle-top"></i></span></a>
-					</div>	
+					</div>
 				</div>
-				<div class="search-trigger on-mobile on-tablet"><a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a></div>
+				<div class="search-trigger on-mobile on-tablet"><a href=""><span class="btn md full-width with-bg green">Filter Pencarian</span></a></div>
 				<div class="search-submit">
-					<a href=""><span class="btn md full-width with-bg green">Saring Pencarian</span></a>
+					<a href=""><span class="btn md full-width with-bg green">Filter Pencarian</span></a>
 					<div class="text-center margin-top-1">
 						<a href=""><span class="btn md full-width text-only color-gray">Batal</span></a>
 					</div>
@@ -1558,7 +1557,7 @@
 												</div>
 											</div>
 										</div>
-									</li>									
+									</li>
 								</ul>
 								<div class="load-list">
 									<span class="load-icon"></span>
@@ -2251,7 +2250,7 @@
 					</div>
 				</div>
 			</div>
-					
+
 		</div>
 	</div>
 	<div id="setLocation" class="modal fade in" role="dialog" tabindex="-1">
@@ -2508,7 +2507,7 @@
 								</li>
 							</ul>
 						</div>
-						
+
 					</div>
 				</div>
 				<div class="row">
@@ -2573,12 +2572,7 @@
 		});
 		$('.open-detail').click(function(e) {
 			e.preventDefault();
-			$('#search-detail-content').addClass('open');
-		});
-		$('.close-detail').click(function(e) {
-			e.preventDefault();
-			$('#search-detail-content').removeClass('open');
-			$('body').removeClass('search-focus');
+			$('#search-detail-content').toggleClass('open');
 		});
 		$(document).on("scroll", function(){
 			if ($(document).scrollTop() > 55) {
