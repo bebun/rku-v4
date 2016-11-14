@@ -157,15 +157,10 @@ body {
 
 	&.home {
 		header {
-			position: absolute;
+			position: relative;
 			top: 0;
 			left: 0;
 			width: 100%;
-		}
-		.navbar-default {
-			background-color: transparent;
-			@include filter-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), vertical); // IE6-9
-			@include background-image(linear-gradient(top,  rgba(0,0,0,0.5) 60%,rgba(0,0,0,0) 100%));
 		}
 		.head-title {
 			line-height: em(21);
@@ -174,30 +169,20 @@ body {
 				margin: 22px auto 25px;
 			}
 		}
-
-		#content-wrapper {
-			height: 100vh;
-		}
-
 		.hero {
 			position: relative;
-			height: 100vh;
+			height: calc(100vh - 205px);
 		}
 
 		.hero-promo-text {
-			position: absolute;
-			bottom: 0;
-			left: 0;
 			width: 100%;
-			height: 80px;
-			margin-top: -80px;
 		}
 
 		.hero-promo {
-			padding: 20px 0;
+			padding: 15px 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.6);
+			background-color: $black;
 		}
 
 		.promo-image {
@@ -270,26 +255,22 @@ body {
 			background-size: cover;
 			width: 100%;
 			height: 100%;
-			height: 100vh;
 		}
 
-		.hero-table {
-			display: table;
-			width: 100%;
-			height: 100%;
-			height: 100vh;
-		}
 
 		.hero-cell {
-			padding-top: 21%;
-			display: table-cell;
+			background: darken($purple, 10%) url(../images/pattern/noise.png) repeat-x top center;
 			vertical-align: middle;
+			@include box-shadow(inset 0 1px 1px rgba(255, 255, 255, 0.2));
+			.btn {
+
+			}
 		}
 
 		.hero-title {
-			margin-bottom: 20px;
+			padding: 10px 0 0;
 			font-family: 'libre_bold', Garamond, serif;
-			font-size: em(31);
+			font-size: em(18);
 			color: $white;
 			@include text-shadow(0 1px 4px $black);
 		}
@@ -298,6 +279,7 @@ body {
 			&.on-mobile {
 				span {
 					padding: 10px;
+					cursor: text;
 				}
 				i {
 					font-size: em(21);
@@ -307,8 +289,7 @@ body {
 		}
 
 		.hero-search {
-			padding: 15px;
-			background-color: rgba(0, 0, 0, .75);
+			padding: 25px 15px 20px;
 			@include border-radius(3px);
 			&:after {
 				@include clear;
@@ -335,7 +316,7 @@ body {
 					position: absolute;
 					top: 0;
 					left: 0;
-					padding: 8px 5px 0;
+					padding: 8px 10px 0;
 					i {
 						font-size: em(24);
 					}
@@ -367,42 +348,26 @@ body {
 		&.openSearch {
 			height: 100%;
 			overflow: hidden;
+			.hero-cell {
+				z-index: 16;
+			}
 			.srcProperty {
-				position: fixed;
-				top: 0;
-				z-index: 15;
-				@include transition(.1s linear);
+				height: auto;
+				overflow: auto;
+				@include box-shadow(0 10px 50px 20px rgba(0, 0, 0, 0.85));
 			}
 		}
 		.srcProperty {
 			position: absolute;
-			top: -100%;
+			top: 158px;
 			width: 100%;
-			height: 100%;
+			height: 0;
 			background-color: #fafafa;
-			z-index: -1;
-			@include transition(.1s linear);
-			.title {
-				width: 100%;
-				padding: 10px 0;
-				background-color: $green;
-				color: $white;
-				font-family: $font-regular;
-				text-transform: uppercase;
-			}
-			form {
-				height: 100%;
-			}
-			.container {
-				position: absolute;
-				top: 45px;
-				width: 100%;
-				overflow: auto;
-				height: calc(100% - 140px);
-			}
+			overflow: hidden;
+			z-index: 15;
 			.search-submit {
-				position: absolute;
-				bottom: 0;
+				margin-top: 30px;
+				position: relative;;
 				display: block;
 			}
 		}

@@ -51,6 +51,31 @@
 	}
 }
 
+.home-slider {
+	&, .carousel-inner, .item, .item > a {
+		height: 100%;
+	}
+	.carousel-indicators {
+		bottom: 5px;
+		z-index: 3;
+		li {
+			width: 30px;
+			height: 5px;
+			padding: 3px;
+			margin: 0 1px;
+			background-color: rgba(255, 255, 255, 0.25);
+			border: none;
+			@include box-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+			@include border-radius(0);
+		}
+		.active {
+			border: none;
+			background-color: $white;
+			@include box-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+		}
+	}
+}
+
 #upload-process {
 	padding: 45px 0;
 	.back-to {
