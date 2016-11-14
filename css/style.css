@@ -6394,7 +6394,7 @@ header .user-menu-list ul li:last-child a {
 #main-search .main-search-info {
   position: relative;
   padding: 15px 0;
-  background-color: #ab185d;
+  background: #941551 url(../images/pattern/noise.png) repeat-x top center;
   z-index: 11;
   -webkit-box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -6405,9 +6405,6 @@ header .user-menu-list ul li:last-child a {
 #main-search .main-search-info .select .dropdown-menu {
   min-width: 250px;
   z-index: 12;
-}
-#main-search .main-search-info .btn.white {
-  padding: 5px 25px;
 }
 #main-search .for-location-search .btn {
   cursor: default;
@@ -6428,35 +6425,21 @@ header .user-menu-list ul li:last-child a {
   top: 65px;
 }
 #main-search .search-detail {
-  display: block;
+  padding: 6px 40px;
   text-align: center;
+}
+#main-search .search-detail, #main-search .search-detail i {
+  color: #ffffff;
 }
 #main-search .search-detail i {
   font-size: 0.53333em;
 }
-#main-search .open-detail, #main-search .close-detail {
-  position: absolute;
-  left: 50%;
-  padding: 3px 30px;
-  font-size: 0.86667em;
-  background-color: #e3e3e3;
-  border: 1px solid #cacaca;
-  color: #6a7d88;
-  cursor: pointer;
-  text-shadow: 0 1px 0 #ffffff;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+#main-search .search-detail:hover, #main-search .search-detail:hover i {
+  color: #272e32;
 }
 #main-search .open-detail {
-  bottom: -23px;
-  border-top: none;
-  -moz-border-radius: 0 0 3px 3px;
-  -webkit-border-radius: 0;
-  border-radius: 0 0 3px 3px;
+  margin-right: 12px;
+  display: inline;
 }
 
 #dashboard-search {
@@ -14110,6 +14093,13 @@ body.pick-location #chooseLocation {
 
   #fourohfour img {
     width: 100%;
+  }
+
+  #main-search .search-detail {
+    padding: 7px 25px;
+  }
+  #main-search .btn.md {
+    min-width: 115px;
   }
 }
 @media (min-width: 1025px) {

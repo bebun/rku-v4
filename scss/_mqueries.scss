@@ -181,6 +181,14 @@
 			width: 100%;
 		}
 	}
+	#main-search {
+		.search-detail {
+			padding: 7px 25px;
+		}
+		.btn.md {
+			min-width: 115px;
+		}
+	}
 }
 @media (min-width: 1025px) {
 	.only-on-small-desktop {
@@ -980,7 +988,11 @@
 		}
 		.hero-search {
 			margin: 0 15px;
+<<<<<<< HEAD
 			padding: 15px;
+=======
+			padding: 15px 15px 0;
+>>>>>>> refs/remotes/origin/master
 		}
 		.hero-controls {
 			top: initial;
