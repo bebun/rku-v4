@@ -4895,7 +4895,7 @@ button:focus {
 }
 
 .float-left, #hero-container .hero-short-information .left, #property-review .public-info .public-photo, #property-map #surround-property .image-package,
-#property-map #surround-property .surround-spec, #property-contact .contact-info-content .photo, #developer-location .tab-content li, #area-information #area-agent li > div, #new-property li > div, #short-article .first-paragraph:first-letter, #short-article .short-article-image.left img, #dashboard .requested-content .image-package, #dashboard .requested-content .requested-info, #dashboard #testimonial .image-package, #dashboard .req-prop-list .checkbox, #message .head-chat .chat-short-info, #message .from.sender {
+#property-map #surround-property .surround-spec, #developer-location .tab-content li, #area-information #area-agent li > div, #new-property li > div, #short-article .first-paragraph:first-letter, #short-article .short-article-image.left img, #dashboard .requested-content .image-package, #dashboard .requested-content .requested-info, #dashboard #testimonial .image-package, #dashboard .req-prop-list .checkbox, #message .head-chat .chat-short-info, #message .from.sender {
   float: left;
 }
 
@@ -10320,12 +10320,14 @@ error page
   padding: 30px;
   position: relative;
 }
-#property-contact .contact-info-content .text {
-  padding-left: 95px;
-  text-align: left;
+#property-contact .contact-info-content .contact-photo {
+  margin: auto;
+  width: 120px;
+  height: 120px;
 }
-#property-contact .contact-info-content .contact-photo, #property-contact .contact-info-content .register {
-  margin: 0;
+#property-contact .contact-info-content .text {
+  margin-top: 30px;
+  text-align: center;
 }
 #property-contact .contact-info-content.developer .photo {
   float: none;
@@ -10339,6 +10341,12 @@ error page
   border-top: 1px solid #f5f5f5;
 }
 #property-contact .btn-group .btn {
+  padding: 15px 0;
+  min-height: 0;
+  height: auto;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -15577,7 +15585,7 @@ body.pick-location #chooseLocation {
 
   .agent-list-action .float-right, .agent-list-action .end, .agent-list-action .float-left, .agent-list-action #hero-container .hero-short-information .left, #hero-container .hero-short-information .agent-list-action .left, .agent-list-action #property-review .public-info .public-photo, #property-review .public-info .agent-list-action .public-photo, .agent-list-action #property-map #surround-property .image-package, #property-map #surround-property .agent-list-action .image-package,
   .agent-list-action #property-map #surround-property .surround-spec,
-  #property-map #surround-property .agent-list-action .surround-spec, .agent-list-action #property-contact .contact-info-content .photo, #property-contact .contact-info-content .agent-list-action .photo, .agent-list-action #developer-location .tab-content li, #developer-location .tab-content .agent-list-action li, .agent-list-action #area-information #area-agent li > div, #area-information #area-agent .agent-list-action li > div, .agent-list-action #new-property li > div, #new-property .agent-list-action li > div, .agent-list-action #short-article .first-paragraph:first-letter, #short-article .agent-list-action .first-paragraph:first-letter, .agent-list-action #short-article .short-article-image.left img, #short-article .short-article-image.left .agent-list-action img, .agent-list-action #dashboard .requested-content .image-package, #dashboard .requested-content .agent-list-action .image-package, .agent-list-action #dashboard .requested-content .requested-info, #dashboard .requested-content .agent-list-action .requested-info, .agent-list-action #dashboard #testimonial .image-package, #dashboard #testimonial .agent-list-action .image-package, .agent-list-action #dashboard .req-prop-list .checkbox, #dashboard .req-prop-list .agent-list-action .checkbox, .agent-list-action #message .head-chat .chat-short-info, #message .head-chat .agent-list-action .chat-short-info, .agent-list-action #message .from.sender, #message .agent-list-action .from.sender {
+  #property-map #surround-property .agent-list-action .surround-spec, .agent-list-action #developer-location .tab-content li, #developer-location .tab-content .agent-list-action li, .agent-list-action #area-information #area-agent li > div, #area-information #area-agent .agent-list-action li > div, .agent-list-action #new-property li > div, #new-property .agent-list-action li > div, .agent-list-action #short-article .first-paragraph:first-letter, #short-article .agent-list-action .first-paragraph:first-letter, .agent-list-action #short-article .short-article-image.left img, #short-article .short-article-image.left .agent-list-action img, .agent-list-action #dashboard .requested-content .image-package, #dashboard .requested-content .agent-list-action .image-package, .agent-list-action #dashboard .requested-content .requested-info, #dashboard .requested-content .agent-list-action .requested-info, .agent-list-action #dashboard #testimonial .image-package, #dashboard #testimonial .agent-list-action .image-package, .agent-list-action #dashboard .req-prop-list .checkbox, #dashboard .req-prop-list .agent-list-action .checkbox, .agent-list-action #message .head-chat .chat-short-info, #message .head-chat .agent-list-action .chat-short-info, .agent-list-action #message .from.sender, #message .agent-list-action .from.sender {
     float: none;
     margin: 0 auto 5px;
     text-align: center;
@@ -15720,7 +15728,7 @@ body.pick-location #chooseLocation {
 
   #dashboard .agent-list-action .float-right, #dashboard .agent-list-action .end, #dashboard .agent-list-action .float-left, #dashboard .agent-list-action #hero-container .hero-short-information .left, #hero-container .hero-short-information #dashboard .agent-list-action .left, #dashboard .agent-list-action #property-review .public-info .public-photo, #property-review .public-info #dashboard .agent-list-action .public-photo, #dashboard .agent-list-action #property-map #surround-property .image-package, #property-map #surround-property #dashboard .agent-list-action .image-package,
   #dashboard .agent-list-action #property-map #surround-property .surround-spec,
-  #property-map #surround-property #dashboard .agent-list-action .surround-spec, #dashboard .agent-list-action #property-contact .contact-info-content .photo, #property-contact .contact-info-content #dashboard .agent-list-action .photo, #dashboard .agent-list-action #developer-location .tab-content li, #developer-location .tab-content #dashboard .agent-list-action li, #dashboard .agent-list-action #area-information #area-agent li > div, #area-information #area-agent #dashboard .agent-list-action li > div, #dashboard .agent-list-action #new-property li > div, #new-property #dashboard .agent-list-action li > div, #dashboard .agent-list-action #short-article .first-paragraph:first-letter, #short-article #dashboard .agent-list-action .first-paragraph:first-letter, #dashboard .agent-list-action #short-article .short-article-image.left img, #short-article .short-article-image.left #dashboard .agent-list-action img, #dashboard .agent-list-action .requested-content .image-package, #dashboard .requested-content .agent-list-action .image-package, #dashboard .agent-list-action .requested-content .requested-info, #dashboard .requested-content .agent-list-action .requested-info, #dashboard .agent-list-action #testimonial .image-package, #dashboard #testimonial .agent-list-action .image-package, #dashboard .agent-list-action .req-prop-list .checkbox, #dashboard .req-prop-list .agent-list-action .checkbox, #dashboard .agent-list-action #message .head-chat .chat-short-info, #message .head-chat #dashboard .agent-list-action .chat-short-info, #dashboard .agent-list-action #message .from.sender, #message #dashboard .agent-list-action .from.sender {
+  #property-map #surround-property #dashboard .agent-list-action .surround-spec, #dashboard .agent-list-action #developer-location .tab-content li, #developer-location .tab-content #dashboard .agent-list-action li, #dashboard .agent-list-action #area-information #area-agent li > div, #area-information #area-agent #dashboard .agent-list-action li > div, #dashboard .agent-list-action #new-property li > div, #new-property #dashboard .agent-list-action li > div, #dashboard .agent-list-action #short-article .first-paragraph:first-letter, #short-article #dashboard .agent-list-action .first-paragraph:first-letter, #dashboard .agent-list-action #short-article .short-article-image.left img, #short-article .short-article-image.left #dashboard .agent-list-action img, #dashboard .agent-list-action .requested-content .image-package, #dashboard .requested-content .agent-list-action .image-package, #dashboard .agent-list-action .requested-content .requested-info, #dashboard .requested-content .agent-list-action .requested-info, #dashboard .agent-list-action #testimonial .image-package, #dashboard #testimonial .agent-list-action .image-package, #dashboard .agent-list-action .req-prop-list .checkbox, #dashboard .req-prop-list .agent-list-action .checkbox, #dashboard .agent-list-action #message .head-chat .chat-short-info, #message .head-chat #dashboard .agent-list-action .chat-short-info, #dashboard .agent-list-action #message .from.sender, #message #dashboard .agent-list-action .from.sender {
     float: none;
     margin-left: 0;
   }

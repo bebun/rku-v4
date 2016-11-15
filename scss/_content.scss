@@ -1863,15 +1863,14 @@
 	.contact-info-content {
 		padding: 30px;
 		position: relative;
-		.photo {
-			@extend .float-left;
+		.contact-photo {
+			margin: auto;
+			width: 120px;
+			height: 120px;
 		}
 		.text {
-			padding-left: 95px;
-			text-align: left;
-		}
-		.contact-photo, .register {
-			margin: 0;
+			margin-top: 30px;
+			text-align: center;
 		}
 		&.developer {
 			.photo {
@@ -1887,6 +1886,10 @@
 	.btn-group {
 		border-top: 1px solid $softwhite;
 		.btn {
+			padding: 15px 0;
+			min-height: 0;
+			height: auto;
+			@include box-sizing(content-box);
 			@include border-radius(0);
 		}
 	}
