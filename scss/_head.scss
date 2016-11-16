@@ -581,15 +581,109 @@ header {
 	}
 }
 
-#chooseLocation, #chooseOtherLoc {
+#tour {
 	position: absolute;
+	max-width: 550px;
+	padding: 15px 15px;
+	z-index: 13;
+	background-color: darken($white, 3%);
+	border: 5px solid darken($white, 15%);
+	@include border-radius(3px);
+	@include box-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+	&.arrow {
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			opacity: 1;
+			border-width: 8px;
+			border-color: darken($white, 15%) transparent;
+		}
+		&.top {
+			&:before {
+				top: -13px;
+				border-style: none solid solid;
+			}
+		}
+		&.right {
+			&:before {
+				right: 7px;
+			}
+		}
+		&.bottom {
+			&:before {
+				bottom: -13px;
+				border-style: solid solid none;
+			}
+		}
+		&.left {
+			&:before {
+				left: 7px;
+			}
+		}
+	}
+	.tour-navigation {
+		margin-top: 15px;
+		&:after {
+			@include clear;
+		}
+	}
+	.title {
+		font-family: $font-bold;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $border;
+	}
+	.tour-step {
+		&:after {
+			content: '-';
+			padding: 0 3px 0 5px;
+		}
+	}
+	.desc {
+		padding-top: 10px;
+		border-top: 1px solid $white;
+	}
+	.btn {
+		padding: 4px 0;
+		min-width: 0;
+		display: inline-block;
+	}
+	.text-only {
+		text-decoration: underline;
+	}
+	.btn-group {
+		.btn {
+			padding: 4px 20px;
+		}
+		a {
+			&:first-child {
+				.btn {
+					@include border-radius(3px 0 0 3px);
+				}
+			}
+			&:last-child {
+				.btn {
+					@include border-radius(0 3px 3px 0);
+				}
+			}
+		}
+	}
+}
+
+#chooseLocation {
+	position: absolute;
+	top: -99em;
 	left: 210px;
+	width: 600px;
+	padding: 30px 0 0;
 	background-color: $white;
+	border-bottom: 3px solid $purple;
 	z-index: 13;
 	@include border-radius(3px);
 	@include transition(.3s linear);
 	&:before {
 		content: '';
+		opacity: 0;
 		display: block;
 		position: absolute;
 		top: -8px;
@@ -600,37 +694,6 @@ header {
 			color: $white transparent;
 		}
 		@include transform(translateX(-50%));
-	}
-}
-
-#chooseOtherLoc {
-	top: 55px;
-	padding: 20px;
-	background-color: darken($white, 3%);
-	@include box-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
-	&:before {
-		opacity: 1;
-		border-color: darken($white, 2%) transparent;
-	}
-	.btn {
-		padding: 5px 10px;
-		min-width: 0;
-		margin-right: 5px;
-		display: inline-block;
-		@include border-radius(3px);
-	}
-	.text-only {
-		text-decoration: underline;
-	}
-}
-
-#chooseLocation {
-	top: -99em;
-	padding: 30px 0 0;
-	width: 600px;
-	border-bottom: 3px solid $purple;
-	&:before {
-		opacity: 0;
 	}
 	.title {
 		font-family: $font-semibold;
