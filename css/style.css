@@ -5213,8 +5213,14 @@ button:focus {
   color: #1e1e22;
 }
 
+.pagination {
+  margin-top: 45px;
+  margin-bottom: 100px;
+}
 .pagination ul {
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .pagination ul:after {
   display: block;
@@ -5224,20 +5230,37 @@ button:focus {
 .pagination ul li {
   display: inline-block;
 }
+.pagination ul li span, .pagination ul li a {
+  padding: 5px 14px;
+}
 .pagination ul li a {
   display: block;
-  padding: 15px;
-  color: #9b9fa2;
+  color: #4d5153;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .pagination ul li a.active {
-  color: #009634;
-  font-family: "hind_bold", Helvetica, Arial, sans-serif;
+  background-color: #009634;
+  font-weight: bold;
+  color: #ffffff;
+}
+.pagination ul li a.active:hover {
+  color: #ffffff;
 }
 .pagination ul li a:hover {
   color: #009634;
 }
 .pagination ul li i {
   font-size: 0.66667em;
+}
+.pagination ul li:first-child a, .pagination ul li:last-child a {
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 1px 0 #ffffff;
+  box-shadow: 0 1px 0 #ffffff;
+}
+.pagination ul li:first-child a:hover, .pagination ul li:last-child a:hover {
+  background-color: #e8e8e8;
 }
 
 .love {

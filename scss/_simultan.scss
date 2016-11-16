@@ -231,7 +231,7 @@
 		bottom: -10px;
 		* {
 			color: $white;
-			@include text-shadow(0 2px 2px rgba(0, 0, 0, 0.5));	
+			@include text-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
 		}
 		a {
 			display: block;
@@ -280,20 +280,31 @@
 }
 
 .pagination {
+	margin-top: 45px;
+	margin-bottom: 100px;
 	ul {
 		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
 		&:after {
 			@include clear;
 		}
 		li {
 			display: inline-block;
+			span, a {
+				padding: 5px 14px;
+			}
 			a {
 				display: block;
-				padding: 15px;
-				color: $gray2;
+				color: $gray;
+				@include border-radius(3px);
 				&.active {
-					color: $green;
-					font-family: $font-bold;
+					background-color: $green;
+					font-weight: bold;
+					color: $white;
+					&:hover {
+						color: $white;
+					}
 				}
 				&:hover {
 					color: $green;
@@ -301,6 +312,15 @@
 			}
 			i {
 				font-size: em(10);
+			}
+			&:first-child, &:last-child {
+				a {
+					background-color: $softwhite;
+					@include box-shadow(0 1px 0 $white);
+					&:hover {
+						background-color: darken($softwhite, 5%);
+					}
+				}
 			}
 		}
 	}
@@ -413,8 +433,8 @@
 	background-color: $white;
 	@include box-shadow(0 0 5px #e5e5e5);
 	@include border-radius(3px);
-	.graph-head, 
-	.graph-body, 
+	.graph-head,
+	.graph-body,
 	.graph-foot {
 		padding: 15px;
 	}
@@ -428,7 +448,7 @@
 		.btn-group {
 			.btn {
 				min-width: 0;
-				&:active, 
+				&:active,
 				&:focus,
 				&.active {
 					border-color: $gray2;
